@@ -1,0 +1,167 @@
+@use 'global' as *;
+
+/* カード（flex使用） */
+// .p-sample1__inner {
+//   width: 100%;
+//   margin: auto;
+
+//   @include mq(md) {
+//     max-width: rem(1100);
+//   }
+// }
+
+/* 3枚横並びのブロック */
+// .p-card-list1 {
+//   @include mq(md) {
+//     display: flex;
+//     /* ２列目増設可能性への対応 */
+//     flex-wrap: wrap;
+//     /* gap使用時は.p-card-list__itemのmarginのleft、top不要 */
+//     gap: rem(25);
+//   }
+// }
+
+/* 25pxの余白で、3枚横並び */
+// .p-card-list1__item {
+//   /* gap使用でも書き方は同じ */
+//   max-width: calc(33.3333% - rem(25) * 2 / 3);
+//   width: 100%;
+// }
+
+// .p-card-list1__item+.p-card-list1__item {
+//   /* gap使用時は.p-card-listのみで指定するので不要 */
+//   margin-left: rem(25);
+// }
+
+// /* ２列目増設可能性への対応（gap使用時は不要） */
+// .p-card-list1__item:nth-child(3n + 1) {
+//   margin-left: 0;
+// }
+
+// /* ２列目増設可能性への対応（gap使用時は不要） */
+// .p-card-list1__item:nth-child(n + 4) {
+//   margin-top: rem(25);
+// }
+
+
+/* ---------
+１枚のカード（.p-blog-card）
+--------- */
+.p-introduction-card {
+  background-color: $white;
+
+  /* 要素がインラインなのでblock要素に。 */
+  // display: block;
+  /* フッター（カテゴリ＆日付）を底辺固定のためblockではなくflexに
+  これで、margin-topが有効となる。理由は不明 */
+  // display: flex;
+  display: inline-block;
+  // flex-direction: column;
+  border: solid 1px $black0;
+
+  width: rem(333);
+}
+
+/* 比率管理した画像 */
+.p-introduction-card__img {
+  /* 223/333=66.066967% */
+  padding-top: 66.066967%;
+  position: relative;
+}
+.p-introduction-card__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-introduction-card__body {
+  padding: rem(24) rem(16) rem(40);
+}
+
+.p-introduction-card__genre {
+  display: inline-block;
+  font-size: rem(12);
+  /* 22/12=1.833333 */
+  line-height: 1.833333;
+  padding: rem(6) rem(16);
+  border: solid 1px $green;
+}
+
+.p-introduction-card__name {
+  /* 24/16=1.5 */
+  line-height: 1.5;
+  margin-top: rem(4);
+  font-weight: $normal;
+}
+
+.p-introduction-card__text {
+  border-top: solid 1px $green;
+  /* 24/16=1.5 */
+  line-height: 1.5;
+  margin-top: rem(8);
+  padding-top: rem(16);
+  text-align: center;
+}
+
+.p-introduction-card__price {
+  display: flex;
+  gap: rem(24);
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: rem(8);
+}
+
+.p-introduction-card__price-before,
+.p-introduction-card__price-after {
+  font-family: 'Lato';
+  line-height: 1;
+}
+.p-introduction-card__price-before {
+  font-size: rem(24);
+  position: relative;
+}
+
+.p-introduction-card__price-before::after {
+  position: absolute;
+  content: '';
+  width: rem(91);
+  height: rem(3);
+  top: 50%;
+  left: 50%;
+  background-color: #C94800;
+  transform: translate(-50%, -50%);
+}
+
+.p-introduction-card__price-after {
+  font-size: rem(40);
+  color: $green;
+}
+
+
+
+
+// .p-introduction-card__info {
+//   padding: 0 0 rem(15);
+
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// /* フッター部分を底辺に固定 */
+// .p-introduction-card__info--test {
+//   margin-top: auto;
+// }
+
+// .p-introduction-card__category {
+//   background-color: yellow;
+//   /* 改行ないので */
+//   line-height: 1;
+//   padding: rem(6) rem(5);
+// }
+
+// .p-introduction-card__date {}

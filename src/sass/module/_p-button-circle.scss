@@ -1,0 +1,56 @@
+@use 'global' as *;
+
+/* ボタン（前へ後へ） */
+
+
+.p-button-circle {
+  position: relative;
+  width: rem(80);
+  height: rem(80);
+  border: solid rem(1) $green;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* 左 */
+.p-button-circle__previous::after {
+  position: absolute;
+  content: '';
+  background-image: url(../images/common/arrowleft-green.png);
+  width: rem(40);
+  height: rem(6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 右 */
+.p-button-circle__next::after {
+  position: absolute;
+  content: '';
+  background-image: url(../images/common/arrowRight-green.png);
+  width: rem(40);
+  height: rem(6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 上 */
+.p-button-circle__top::after {
+  position: absolute;
+  content: '';
+  background-image: url(../images/common/arrowTop-green.png);
+  width: rem(6);
+  height: rem(40);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

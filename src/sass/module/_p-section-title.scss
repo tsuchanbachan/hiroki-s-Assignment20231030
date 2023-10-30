@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+.p-section-title {
+  text-align: center;
+}
+
+.p-section-title__english {
+  font-weight: $regular;
+  font-size: rem(40);
+}
+
+.p-section-title__english--normal::first-letter {
+  color: $green;
+}
+
+.p-section-title__japanese {
+  font-size: rem(18);
+  margin-top: rem(8);
+}
+
