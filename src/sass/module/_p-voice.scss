@@ -1,0 +1,102 @@
+@use 'global' as *;
+
+.l-voice {
+  margin-top: rem(80);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}
+
+.p-voice {
+
+  @include mq(md) {
+
+  }
+}
+
+/* あしらい用（前） */
+.p-voice__background-fishes {
+  position: relative;
+}
+
+.p-voice__background-fishes::before {
+  @include mq(md) {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: rem(-120);
+    left: rem(-80);
+    /* 幅437、高さ201 */
+    width: rem(301);
+    height: rem(138);
+
+    background-image: url(../images/common/illustration3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+  }
+}
+
+.p-voice__title {
+
+  @include mq(md) {
+  }
+}
+
+.p-voice__inner {
+  display: flex;
+  gap: rem(40);
+  flex-direction: column;
+  padding-top: rem(24);
+
+  @include mq(md) {
+    flex-direction: row;
+    padding-top: rem(80);
+    /* これがないと、背景画像がabsoluteなので下にいってしまう */
+    position: relative;
+  }
+}
+
+/* 1枚のカード全体 */
+.p-voice__item {
+  width: 100%;
+
+  @include mq(md) {
+    max-width: calc(50% - rem(40) * 1 / 2);
+    
+  }
+}
+
+.p-voice__button {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+/* あしらい用（後） */
+.p-voice__background-fishes-last {
+  position: relative;
+}
+.p-voice__background-fishes-last::after {
+  @include mq(md) {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    bottom: rem(-67);
+    right: rem(25);
+    /* 幅71、高さ162 */
+    width: rem(71);
+    height: rem(162);
+
+    background-image: url(../images/common/illustration4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+    overflow: hidden;
+  }
+}

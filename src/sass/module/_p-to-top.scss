@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+/* 追加 */
+#js-pagetop {
+  position: fixed;
+  bottom: rem(20);
+  right: rem(20);
+  cursor: pointer;
+}
+
+#js-pagetop a {
+  // background: #00CC99;
+  // color: #fff;
+  // padding: 5px 20px;
+}
+
+/* ボタンの親要素に指定！ */
+body {
+  position: relative;
+}

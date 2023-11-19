@@ -6,7 +6,14 @@
 
 .p-section-title__english {
   font-weight: $regular;
-  font-size: rem(40);
+  font-size: rem(32);
+  /* 40/32=1.25 */
+  line-height: 1.25;
+  
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1;
+  }
 }
 
 .p-section-title__english--normal::first-letter {
@@ -14,7 +21,12 @@
 }
 
 .p-section-title__japanese {
-  font-size: rem(18);
-  margin-top: rem(8);
+  font-size: rem(12);
+  line-height: 1.5;
+  margin-top: rem(4);
+  
+  @include mq(md) {
+    margin-top: rem(8);
+  }
 }
 

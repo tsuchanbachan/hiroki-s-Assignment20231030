@@ -1,0 +1,72 @@
+@use 'global' as *;
+
+.l-campaign {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
+
+.p-campaign {
+
+
+}
+
+.p-campaign__wrap {
+  position: relative;
+}
+
+.p-campaign__title {
+
+}
+
+.p-campaign__circle-buttons {
+  display: none;
+  
+  @include mq(md) {
+    display: flex;
+    gap: rem(80);
+
+    position: absolute;
+    width: rem(240);
+    height: rem(80);
+    top: 0;
+    /* 円は擬似要素だから、矢印以外飛び出してしまう？？ */
+    right: rem(24);
+  }
+}
+
+.p-campaign__circle-button {
+
+}
+
+.p-campaign__card {
+  margin-top: rem(24);
+  display: flex;
+  gap: rem(24);
+
+  /* padding設定を無視？して右だけ幅を画面いっぱいにしたい */
+  // width: 100vw;
+  // margin-left: calc(50% - 50vw);
+
+  /* とりあえず！ */
+  // overflow: hidden;
+
+    @include mq(md) {
+      margin-top: rem(40);
+      gap: rem(40);
+    }
+}
+
+.p-campaign__card-link {
+
+}
+
+.p-campaign__button {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

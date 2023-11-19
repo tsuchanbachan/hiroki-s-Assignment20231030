@@ -1,0 +1,78 @@
+@use 'global' as *;
+
+.pc-nav {
+
+}
+
+.pc-nav__items {
+  display: flex;
+  gap: rem(40);
+  /*スマホ表示折り返し用なのでPCのみなら不要*/
+  // flex-wrap: wrap;
+}
+
+.pc-nav__item a {
+  display: block;
+  // padding: 10px 30px;
+  text-decoration: none;
+  color: $white;
+}
+
+.gnavi li {
+  margin-bottom: 20px;
+}
+
+.pc-nav__item {
+  text-align: center;
+  color: $white;
+}
+
+.pc-nav__item-english {
+  font-family: 'Gotu';
+  font-size: rem(18);
+  line-height: 1;
+}
+
+.pc-nav__item-japanese {
+  font-size: rem(10);
+  line-height: 1.5;
+  margin-top: rem(4);
+}
+
+
+
+/* 中心から外に線が伸びる（下部） */
+.pc-nav__item a {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+}
+
+// .pc-nav__item.current a,
+// .pc-nav__item a:hover {
+//   color: #0481A2;
+// }
+
+.pc-nav__item a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: rem(-4);
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 1px;
+  background: $white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  transform-origin: center top;
+  /*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.pc-nav__item.current a::after,
+.pc-nav__item a:hover::after {
+  transform: scale(1, 1);
+  /*X方向にスケール拡大*/
+}

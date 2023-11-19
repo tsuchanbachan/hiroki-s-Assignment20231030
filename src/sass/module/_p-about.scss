@@ -1,0 +1,156 @@
+@use 'global' as *;
+
+.l-about {
+  margin-top: rem(80);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}
+
+.p-about {
+
+}
+
+.p-about__title {
+
+}
+
+.p-about__inner {
+  margin-top: rem(24);
+  
+  @include mq(md) {
+    position: relative;
+    margin-top: rem(40);
+  }
+
+}
+
+.p-about__inner::after {
+  @include mq(md) {
+      position: absolute;
+  
+      content: '';
+      display: inline-block;
+  
+      bottom: rem(-90);
+      // right: rem(-97);
+      right: calc(50% - min(50vw, 650px));
+      width: rem(194);
+      height: rem(181);
+  
+      background-image: url(../images/common/illustration1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      /* coverは覆いつくす */
+      background-size: cover;
+      overflow: hidden;
+    }
+}
+
+.p-about__images {
+  position: relative;
+  width: 100%;
+  /* 幅345、高さ212 */
+  padding-top: 61.449275%;
+}
+
+.p-about__image {
+  // position: absolute;
+}
+
+/* 左 */
+.p-about__image:first-child {
+  /* 128/345=37.101449275% */
+  width: 37.101449275%;
+  /* 高さは、p-card__img--aboutでpadding-top指定 */
+  // height: rem(194);
+
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* 修正中 */
+  // padding-top: 151.5625%;
+  /* 幅345に対して高さ194=56.231884057%？？？ */
+  position: absolute;
+
+  @include mq(md) {
+    width: rem(400);
+    height: rem(600);
+  }
+}
+
+/* 右 */
+.p-about__image:last-child {
+  /* 281/345=81.449275362% */
+  width: 81.449275362%;
+  // height: rem(186);
+
+  bottom: 0;
+  right: 0;
+
+  z-index: 0;
+
+  /* 修正中 幅281、高さ186、186÷281 */
+  // padding-top: 66.1921708%;
+  position: absolute;
+
+  @include mq(md) {
+    width: rem(880);
+    height: rem(581);
+  }
+}
+
+.p-about__contents {
+  width: 100%;
+
+
+  @include mq(md) {
+    position: absolute;
+    display: flex;
+    top: rem(200);
+    right: rem(40);
+    max-width: rem(840);
+    z-index: 2;
+    color: #fff;
+  }
+}
+
+.p-about__lead {
+  font-size: rem(40);
+  line-height: 1;
+  margin-top: rem(40);
+  color: $green;
+
+  @include mq(md) {
+    font-size: rem(80);
+    /* 100/80=1.25 */
+    line-height: 1.25;
+    margin-top: 0;
+    margin-right: rem(40);
+    color: #fff;
+  }
+}
+
+.p-about__wrap {
+
+  @include mq(md) {
+    max-width: rem(400);
+  }
+}
+
+.p-about__text {
+  margin-top: rem(16);
+  
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-about__button {
+  margin-top: rem(50);
+  
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}

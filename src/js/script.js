@@ -1,5 +1,120 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+  /* ハンバーガーボタン */
+  $(".js-hamburger").click(function () {
+    if ($(".js-hamburger").hasClass('is-active')) {
+      $('.js-hamburger').removeClass("is-active");
+      $(".js-sp-nav").fadeOut(300);
+    } else {
+      $('.js-hamburger').addClass("is-active");
+      $(".js-sp-nav").fadeIn(300);
+    }
+  });
 
+
+  /* 要素の取得とスピードの設定 */
+  var box = $('.colorbox'),
+    speed = 700;
+
+
+  /* =============
+  swiper（基本形）
+  ============= */
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+});
+
+/* =============
+トップへ戻るボタン（スクロールで出現、フッター上で止まる）
+============= */
+/* スクロールで出現 */
+$(function () {
+  const pagetop = $("#js-pagetop");
+  /* 最初はボタンを非表示 */
+  pagetop.hide();
+  $(window).scroll(function () {
+    /* 100px以上スクロールしたら */
+    if ($(this).scrollTop() > 100) {
+      /* ボタンをフェードイン */
+      pagetop.fadeIn();
+    } else {
+      /* ボタンをフェードアウト */
+      pagetop.fadeOut();
+    }
+  });
+  pagetop.click(function () {
+    $("body,html").animate({
+      /* 上から0pxの位置に戻る */
+      scrollTop: 0,
+      /* 800ミリ秒かけて上に戻る */
+    }, 800);
+    return false;
+  });
+
+  /* =====================
+  画像背景色のアニメーション
+  ====================== */
+  /* 要素の取得とスピードの設定 */
+  var box = $('.colorbox'),
+    speed = 700;
+
+  /* .colorboxの付いた全ての要素に対して下記の処理を行う */
+  box.each(function () {
+    $(this).append('<div class="color"></div>')
+    var color = $(this).find($('.color')),
+      image = $(this).find('img');
+    var counter = 0;
+
+    image.css('opacity', '0');
+    color.css('width', '0%');
+    /* inviewを使って背景色が画面に現れたら処理をする */
+    color.on('inview', function () {
+      if (counter == 0) {
+        $(this).delay(200).animate({ 'width': '100%' }, speed, function () {
+          image.css('opacity', '1');
+          $(this).css({ 'left': '0', 'right': 'auto' });
+          $(this).animate({ 'width': '0%' }, speed);
+        })
+        counter = 1;
+      }
+    });
+  });
+
+});
+
+/* ================
+トップへ戻るボタン（フッター手前で止まるボタン）
+================ */
+$(document).ready(function () {
+  $("#js-pagetop").hide();
+
+  $(window).on("scroll", function () {
+    /* ドキュメントの高さ */
+    var scrollHeight = $(document).height();
+    /* 現在の位置 */
+    var scrollPosition = $(window).height() + $(window).scrollTop();
+    /* フッターの高さ */
+    var footHeight = $("footer").innerHeight();
+
+    /* ドキュメントの高さと現在の位置の差がフッターの高さ以下のとき */
+    if (scrollHeight - scrollPosition <= footHeight) {
+      $("#js-pagetop").css({ 
+        /* positionをabsoluteに変更 */
+        position: "absolute", 
+        bottom: footHeight + 20 
+      });
+    /* それ以外の場合は */
+    } else { //
+      $("#js-pagetop").css({ 
+        /* 固定で表示 */
+        position: "fixed", 
+        bottom: "20px" 
+      });
+    }
+  });
 });

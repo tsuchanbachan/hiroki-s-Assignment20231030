@@ -1,0 +1,103 @@
+@use 'global' as *;
+
+/* SPナビ */
+
+/* 通常 */
+.sp-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  /* left:0、right:0で要素が浮く */
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100vh;
+  background-color: $green;
+
+  /* １でも表示はされそう！？ */
+  // z-index: 1;
+}
+
+/* 「is-active」付与時 */
+.sp-nav.is-active {
+  display: block;
+  opacity: 1;
+}
+
+.sp-nav__inner {
+
+  display: flex;
+  /* 上から80+24 */
+  padding: rem(104) rem(37);
+  justify-content: center;
+      /* ヒトデ部分が無視されるるので「7+18+ヒトデ左余白4」=29 */
+        gap: rem(29);
+}
+
+.sp-nav__items {
+  min-height: 100vh;
+
+  // width: 50%;
+}
+
+.sp-nav__items--left {
+  width: rem(144);
+  // margin-right: rem(7);
+}
+.sp-nav__items--right {
+  width: rem(128);
+}
+
+.sp-nav__item {
+  width: 100%;
+  position: relative;
+  /* 間隔を40欲しいが、padding12取ったので差し引く */
+  margin-bottom: rem(28);
+}
+
+
+.sp-nav__item a {
+  color: $white;
+  // text-align: center;
+  /* text-align:centerでは、インライン要素なのでセンターにならない。
+    ブロック要素にすることで、幅いっぱいになってセンターに。 */
+  display: block;
+
+  /* クリック領域を広げる */
+  padding: rem(12) 0;
+
+  font-size: rem(16);
+  font-weight: $bold;
+  /* 18/16=1.125 */
+  line-height: 1.125;
+}
+
+/* ヒトデ */
+.sp-nav__item-a::before {
+  position: absolute;
+  content: '';
+  width: rem(18);
+  height: rem(18);
+  /* 幅18+余白4 */
+  left: rem(-22);
+  // top: 50%;
+  top: rem(12);
+  // transform: translateY(-50%);
+  background-image: url(../images/common/icon-star.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sp-nav__item-lists {
+
+}
+
+.sp-nav__item-list a {
+  font-weight: $normal;
+  /* クリック領域を広げる */
+    padding: rem(12) 0;
+  
+    font-size: rem(16);
+}
+

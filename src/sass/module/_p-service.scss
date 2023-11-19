@@ -1,0 +1,61 @@
+@use 'global' as *;
+
+/* priceの中の料金一覧部分 */
+.p-service {
+
+}
+
+.p-service__items {
+
+}
+
+
+.p-service__item {
+  margin-top: rem(40);
+}
+.p-service__item:first-child {
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-service__item h3 {
+  padding-bottom: rem(4);
+  border-bottom : solid 1px $green;
+  font-weight: $bold;
+}
+
+// .p-service__item h3::after {
+//   content: '';
+//   width: 100%;
+//   height: rem(1);
+//   bottom: 0;
+//   left: 0;
+//   background-color: $green;
+//   position: absolute;
+// }
+
+.p-service__item dl {
+  display: flex;
+  font-size: rem(14);
+  /* 24/14 */
+  line-height: 1.71428571428;
+  margin-top: rem(8);
+
+  @include mq(md) {
+    font-size: rem(16);
+    /* 24/16 */
+    line-height: 1.5;
+  }
+}
+
+.p-service__item dt {
+  /* 253/345 */
+  width: 73.33333333%;
+
+}
+
+.p-service__item dd {
+  width: 26.6666666%;
+  text-align: right;
+}

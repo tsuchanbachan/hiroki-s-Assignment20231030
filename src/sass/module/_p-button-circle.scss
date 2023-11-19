@@ -5,12 +5,17 @@
 
 .p-button-circle {
   position: relative;
-  width: rem(80);
-  height: rem(80);
+  width: rem(48);
+  height: rem(48);
   border: solid rem(1) $green;
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
+  
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+  }
 }
 
 /* 左 */
@@ -47,10 +52,14 @@
   content: '';
   background-image: url(../images/common/arrowTop-green.png);
   width: rem(6);
-  height: rem(40);
+  height: rem(28);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-repeat: no-repeat;
   background-size: contain;
+  
+  @include mq(md) {
+    height: rem(40);
+  }
 }

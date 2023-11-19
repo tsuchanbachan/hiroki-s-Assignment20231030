@@ -1,0 +1,103 @@
+@use 'global' as *;
+
+.l-blog {
+
+}
+
+.p-blog {
+  padding-top: rem(80);
+
+  @include mq(md) {
+    padding-top: rem(100);
+    /* 背景つけるのに、p-voiceに背景つけるとサイズ指定ができないので、
+    別要素につける。その時の位置指定のためにrelative */
+    position: relative;
+  }
+}
+
+/* 背景画像 */
+.p-blog__background {
+  @include mq(md) {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: 0;
+    left: 0;
+    /* 幅1440、高さ500 */
+    height: rem(500);
+    width: 100%;
+    
+    background-image: url(../images/common/sec4-blog-background-pc.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+  }
+}
+
+/* あしらい用 */
+.p-blog__background-fishes {
+  position: relative;
+}
+.p-blog__background-fishes::before {
+  @include mq(md) {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: rem(24);
+    left: rem(-80);
+    /* 幅437、高さ201 */
+    width: rem(437);
+    height: rem(201);
+
+    background-image: url(../images/common/illustration2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+
+.p-blog__title {
+  /* これがないと、背景画像がabsoluteなので下にいってしまう */
+  position: relative;
+
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.p-blog__inner {
+  display: flex;
+  gap: rem(40);
+  flex-direction: column;
+  padding-top: rem(24);
+
+  /* paddingを21にするため、.innerを外しているので。 */
+  padding-left: rem(21);
+  padding-right: rem(21);
+
+
+  @include mq(md) {
+
+
+    flex-direction: row;
+    padding-top: rem(80);
+    /* これがないと、背景画像がabsoluteなので下にいってしまう */
+    position: relative;
+  }
+}
+
+.p-blog__item {
+  
+}
+
+
+.p-blog__button {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

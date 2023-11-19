@@ -57,10 +57,18 @@
   // display: flex;
   display: inline-block;
   // flex-direction: column;
-  border: solid 1px $black0;
+  // border: solid 1px $black0;
   padding: rem(16) rem(16) rem(24);
 
-  width: rem(333);
+  width: 100%;
+
+  /* ぼかし */
+  /* https: //hiroyuki-n.github.io/boxShadow_generator/ */
+  box-shadow: 0px 0px 15px -5px #777777;
+
+  @include mq(md) {
+    max-width: calc(33.3333% - rem(25) * 2 / 3);
+  }
 }
 
 /* 比率管理した画像 */

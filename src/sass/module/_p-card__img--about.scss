@@ -1,0 +1,50 @@
+@use 'global' as *;
+
+/* p-カードパック */
+
+/* 画像の比率管理① まずはrelative */
+.p-card__img--about {
+  position: relative;
+}
+
+/* 画像の比率管理② 擬似要素を作る */
+.p-card__img--about:first-child::before {
+  content: "";
+  /* 擬似要素のinline要素のままだと高さ取れない */
+  display: block;
+
+  /* 幅128、高さ194、194÷128 */
+  padding-top: 151.5625%;
+  
+  @include mq(md) {
+    /* 幅400？、高さ606？、606÷400 */
+    padding-top: 151.5%;
+    
+  }
+}
+
+.p-card__img--about:last-child::before {
+  content: "";
+  /* 擬似要素のinline要素のままだと高さ取れない */
+  display: block;
+
+  /* 幅281、高さ186、186÷281 */
+  padding-top: 62.68656766.1921708%;
+  
+  @media screen {
+    /* 幅880、高さ581、581÷880 */
+    padding-top: 66.02272727%;
+  }
+}
+
+/* 画像の比率管理③ ②で作った箱に画像を入れる
+画像の比率が違う時にもはみ出さない */
+.p-card__img--about img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

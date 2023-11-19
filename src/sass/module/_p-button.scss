@@ -7,6 +7,9 @@
   /* 中のボタンをinline-blockにしているので
     text-alignでセンタリング */
   text-align: center;
+
+
+position: relative;
 }
 
 /* ==================
@@ -28,7 +31,22 @@
   line-height: 1;
   font-size: rem(14);
   text-align: center;
+
 }
+
+// .p-button__link-back {
+//   position: absolute;
+//   // content: '';
+//   width: 100%;
+//   height: rem(60);
+//   top: rem(4);
+//   left: rem(4);
+//   border-right: solid 1px $green;
+//   border-bottom: solid 1px $black0;
+//   background-color: yellow;
+//   z-index: -1;
+// }
+
 
 
 .p-button__link.slide {

@@ -1,0 +1,111 @@
+@use 'global' as *;
+
+/* ナビのfooter版 */
+
+/* 通常 */
+.nav-footer {
+  width: 100%;
+}
+
+.nav-footer__inner {
+
+
+  display: flex;
+  /* 上から80+24 */
+  // padding: rem(104) rem(37);
+  justify-content: space-between;
+  /* 擬似要素ヒトデ（width18）分+右余白4=22 */
+  padding-left: rem(22);
+
+  @include mq(md) {
+    /* ？？？ */
+    padding-left: rem(18);
+  }
+}
+
+.nav-footer__inner--left {
+  
+  @include mq(md) {
+    display: flex;
+    /* ヒトデ部分が無視されすので120+18+ヒトデ左余白4=142 */
+    gap: rem(142);
+  }
+}
+
+.nav-footer__inner--right {
+
+  @include mq(md) {
+    display: flex;
+    gap: rem(142);
+  }
+}
+
+.nav-footer__items {
+  /* 縦方向のセンタリング */
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+
+  // min-height: 100vh;
+
+  // width: 50%;
+}
+
+.nav-footer__item {
+  width: 100%;
+  position: relative;
+}
+
+.nav-footer__item:not(:first-child) {
+  /* 間隔を40欲しいが、padding12取ったので12*2差し引く */
+  // margin-bottom: rem(28);
+
+  margin-top: rem(16);
+}
+
+
+.nav-footer__item a {
+  color: $white;
+  // text-align: center;
+  /* text-align:centerでは、インライン要素なのでセンターにならない。
+    ブロック要素にすることで、幅いっぱいになってセンターに。 */
+  display: block;
+
+  /* クリック領域を広げる */
+  padding: rem(12) 0;
+
+  font-size: rem(16);
+  font-weight: $bold;
+  /* 18/16=1.125 */
+  line-height: 1.125;
+}
+
+/* ヒトデ */
+.nav-footer__item-a::before {
+  position: absolute;
+  content: '';
+  width: rem(18);
+  height: rem(18);
+  /* 幅18+余白4 */
+  left: rem(-22);
+  // top: 50%;
+  top: rem(12);
+  // transform: translateY(-50%);
+  background-image: url(../images/common/icon-star.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-footer__item-lists {
+
+}
+
+.nav-footer__item-list a {
+  font-weight: $normal;
+  /* クリック領域を広げる */
+    padding: rem(12) 0;
+  
+    font-size: rem(16);
+}
+
