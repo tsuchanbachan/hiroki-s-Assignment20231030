@@ -17,11 +17,42 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   var box = $('.colorbox'),
     speed = 700;
 
+  
+  /* =============
+  swiper（メインビュー）
+  ============= */
+  //「mySwiper」を「js-mv__swiper」へ
+  var swiper = new Swiper(".js-mv__swiper", {
+    loop: true,
+    /* 自動再生 */
+    /* 少しゆっくり(デフォルトは300) */
+    speed: 2000,
+    autoplay: {
+      /* 1.5秒後に次のスライド */
+      delay: 1500,
+      /* 矢印をクリックしても自動再生を止めない */
+      disableOnInteraction: false,
+    },
+
+    /* フェードモード（デフォルトは 'slide'） */
+    effect: 'fade',
+    fadeEffect: {
+      /* クロスフェードを有効にする（フェードモードの場合 true 推奨） */
+      crossFade: true,
+    },
+
+    pagination: {
+      //「swiper-pagination」を「js-mv-pagination」へ
+      el: ".js-mv__pagination",
+    },
+  });
+
 
   /* =============
-  swiper
+  swiper（campaign）
   ============= */
-  var swiper = new Swiper(".mySwiper", {
+  //「mySwiper」を「js-campaign__swiper」へ
+  var swiper = new Swiper(".js-campaign__swiper", {
     /* 表示枚数（今回は「slidesPerVies」ではなく「.swiper-slide」で幅高を指定。 */
     slidesPerView: "auto",
     /* 左右余白 */
@@ -36,6 +67,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // 768px以上
       768: {
         spaceBetween: 40,
+    
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
       },
     },
 

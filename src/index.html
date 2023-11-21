@@ -217,63 +217,134 @@
 
   <main>
 
-    <!-- ============
-    メインビュー
-    ============= -->
-    <section class="l-mv p-mv">
+<!-- ============
+メインビュー
+============= -->
+<section class="l-mv p-mv">
 
-      <div class="p-mv__inner">
+  <div class="p-mv__inner">
 
-        <!-- 画像 -->
-        <div class="p-mv__img">
-          <picture>
-            <!-- 767以下の場合 -->
-            <source srcset="../assets/images/common/MV-sp0-Rectangle207.jpg" media="(max-width: 767px)">
-            <!-- それ以外の場合 -->
-            <img src="../assets/images/common/MV-pc0-Rectangle1.jpg" alt="画像">
-          </picture>
+    <!-- Swiper（. mySwiper」→「.js-mv__swiper」へクラス名変更） -->
+    <div class="swiper js-mv__swiper">
+      <div class="swiper-wrapper">
+
+        <!-- スライド１ -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp0-Rectangle207.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc0-Rectangle1.jpg" alt="キャンペーンのイメージ画像１">
+            </picture>
+          </div>
         </div>
 
-        <!-- =======
-        Swiper
-        ======== -->
-        <div class="p-mv__swiper">
-
-          <!-- swiper（基本形） -->
-          <!-- <div class="swiper mySwiper"> -->
-            <!-- <div class="swiper-wrapper"> -->
-              <!-- <div class="swiper-slide">Slide 1</div> -->
-              <!-- <div class="swiper-slide">
-                <picture>
-                  <source media="(max-width: 767x)" srcset="../assets/images/common/MV-sp0-Rectangle207.jpg">
-                  <img src="../assets/images/common/MV-pc0-Rectangle1.jpg" alt="画像">
-                </picture>
-              </div>
-
-              <div class="swiper-slide">
-                <picture>
-                  <source media="(max-width: 767x)" srcset="../assets/images/common/MV-sp1-S__354388042.jpg">
-                  <img src="../assets/images/common/MV-pc1-S__354388041.jpg" alt="画像">
-                </picture>
-              </div>
-
-            </div> -->
-            <!-- Swiperのページネーション -->
-            <!-- <div class="swiper-pagination"></div> -->
-          <!-- </div> -->
-          <!-- ------swiper（基本形）終わり------ -->
-
+        <!-- スライド2 -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp1-S__354388042.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc1-S__354388041.jpg" alt="キャンペーンのイメージ画像２">
+            </picture>
+          </div>
         </div>
 
+        <!-- スライド3 -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp2-Maskgroup.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc2-Mask group.jpg" alt="キャンペーンのイメージ画像３">
+            </picture>
+          </div>
+        </div>
 
-        <div class="p-mv__header">
-          <h2 class="p-mv__title">DIVING</h2>
-          <p class="p-mv__subtitle">into the ocean</p>
+        <!-- スライド4 -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp3-Rectangle218.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc3-Rectangle217.jpg" alt="キャンペーンのイメージ画像４">
+            </picture>
+          </div>
+        </div>
+
+        <!-- スライド5 -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp0-Rectangle207.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc0-Rectangle1.jpg" alt="キャンペーンのイメージ画像５">
+            </picture>
+          </div>
+        </div>
+
+        <!-- スライド6 -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp1-S__354388042.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc1-S__354388041.jpg" alt="キャンペーンのイメージ画像６">
+            </picture>
+          </div>
+        </div>
+
+        <!-- スライド7 -->
+        <!-- スライド3 -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp2-Maskgroup.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc2-Mask group.jpg" alt="キャンペーンのイメージ画像７">
+            </picture>
+          </div>
+        </div>
+
+        <!-- スライド8 -->
+        <div class="swiper-slide">
+          <!-- 画像 -->
+          <div class="p-mv__img">
+            <picture>
+              <!-- 767以下の場合 -->
+              <source srcset="../assets/images/common/MV-sp3-Rectangle218.jpg" media="(max-width: 767px)">
+              <!-- それ以外の場合 -->
+              <img src="../assets/images/common/MV-pc3-Rectangle217.jpg" alt="キャンペーンのイメージ画像８">
+            </picture>
+          </div>
         </div>
 
       </div>
+      <!-- <div class="swiper-pagination js-mv__pagination"></div> -->
+    </div>
+    
+    <div class="p-mv__header">
+      <h2 class="p-mv__title">DIVING</h2>
+      <p class="p-mv__subtitle">into the ocean</p>
+    </div>
 
-    </section>
+  </div>
+
+</section>
 
 
       <!-- --------
@@ -288,18 +359,13 @@
             <h2 class="p-section-title__english p-section-title__english--normal">Campaign</h2>
             <div class="p-section-title__japanese">キャンペーン</div>
           </div>
-  
-          <!-- 前へ後へボタン -->
-          <div class="p-campaign__circle-buttons">
-            <div><a href="#" class="p-campaign__circle-button p-button-circle p-button-circle__previous"></a></div>
-            <div><a href="#" class="p-campaign__circle-button p-button-circle p-button-circle__next"></a></div>
-          </div><!-- /.p-campaign__link-button -->
+
   
           <!-- カードの集まり -->
           <div class="p-campaign__card">
 
               <!-- Swiper -->
-              <div class="swiper mySwiper">
+              <div class="swiper js-campaign__swiper">
                 <div class="swiper-wrapper">
 
                   <!-- =======
@@ -437,72 +503,15 @@
 
 
                   <!-- <div class="swiper-slide">Slide 3</div> -->
-                </div>
-
-                <!-- ページネーション -->
-                <!-- <div class="swiper-pagination"></div> -->
-              </div>
+                </div><!-- .swiper-wrapper -->
+              </div><!-- .Swiper -->
               <!-- Swiperここまで -->
 
-
-
-            
-            <!-- =======
-            カード2枚目
-            ======== -->
-            <!-- <a href="#" class="p-campaign__card-link p-introduction-card">
-              <figure class="p-introduction-card__img">
-                <img src="./assets/images/common/sec1-campaign2.jpg" alt="">
-              </figure>
-            
-              <div class="p-introduction-card__body">
-                <p class="p-introduction-card__genre">ライセンス講習</p>
-                <div class="p-introduction-card__name">ライセンス取得</div>
-                <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                <div class="p-introduction-card__price">
-                  <div class="p-introduction-card__price-before">¥56,000</div>
-                  <div class="p-introduction-card__price-after">¥46,000</div>
-                </div>
-              </div>
-            </a> -->
-
-            <!-- =======
-            カード3枚目
-            ======== -->
-            <!-- <a href="#" class="p-campaign__card-link p-introduction-card">
-              <figure class="p-introduction-card__img">
-                <img src="./assets/images/common/sec1-campaign2.jpg" alt="">
-              </figure>
-            
-              <div class="p-introduction-card__body">
-                <p class="p-introduction-card__genre">ライセンス講習</p>
-                <div class="p-introduction-card__name">ライセンス取得</div>
-                <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                <div class="p-introduction-card__price">
-                  <div class="p-introduction-card__price-before">¥56,000</div>
-                  <div class="p-introduction-card__price-after">¥46,000</div>
-                </div>
-              </div>
-            </a> -->
-
-            <!-- =======
-            カード4枚目
-            ======== -->
-            <!-- <a href="#" class="p-campaign__card-link p-introduction-card">
-              <figure class="p-introduction-card__img">
-                <img src="./assets/images/common/sec1-campaign2.jpg" alt="">
-              </figure>
-            
-              <div class="p-introduction-card__body">
-                <p class="p-introduction-card__genre">ライセンス講習</p>
-                <div class="p-introduction-card__name">ライセンス取得</div>
-                <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                <div class="p-introduction-card__price">
-                  <div class="p-introduction-card__price-before">¥56,000</div>
-                  <div class="p-introduction-card__price-after">¥46,000</div>
-                </div>
-              </div>
-            </a> -->
+              <!-- swiperの外に移動した、前へ後へボタン（2つ目のクラス名を付加した）→ -->
+              <div class="p-campaign__circle-buttons">
+                <div><a href="#" class="swiper-button-prev p-campaign__circle-button p-button-circle p-button-circle__previous"></a></div>
+                <div><a href="#" class="swiper-button-next p-campaign__circle-button p-button-circle p-button-circle__next"></a></div>
+              </div><!-- /.p-campaign__link-button -->
 
           </div><!-- /.p-campaign__card -->
   
