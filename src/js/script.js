@@ -19,14 +19,29 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
   /* =============
-  swiper（基本形）
+  swiper
   ============= */
   var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-pagination",
+    /* 表示枚数（今回は「slidesPerVies」ではなく「.swiper-slide」で幅高を指定。 */
+    slidesPerView: "auto",
+    /* 左右余白 */
+    spaceBetween: 24,
+
+    /* centeredSlidesを設定しないと中央寄せではなく右にはみ出した画像になる byじゅんぺい */
+
+    /* ループ有効 */
+    loop: true,
+
+    breakpoints: {
+      // 768px以上
+      768: {
+        spaceBetween: 40,
+      },
     },
+
   });
 
+  
 });
 
 /* =============

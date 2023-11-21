@@ -297,25 +297,155 @@
   
           <!-- カードの集まり -->
           <div class="p-campaign__card">
-            <!-- =======
-            カード１（grid仕様・hirokiライブタイプ別）
-            （縦長動画でも、同じサイズ感で）
-            ======== -->
-            <a href="#" class="p-campaign__card-link p-introduction-card">
-              <figure class="p-introduction-card__img">
-                <img src="./assets/images/common/sec1-campaign2.jpg" alt="">
-              </figure>
-            
-              <div class="p-introduction-card__body">
-                <p class="p-introduction-card__genre">ライセンス講習</p>
-                <div class="p-introduction-card__name">ライセンス取得</div>
-                <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                <div class="p-introduction-card__price">
-                  <div class="p-introduction-card__price-before">¥56,000</div>
-                  <div class="p-introduction-card__price-after">¥46,000</div>
+
+              <!-- Swiper -->
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                  <!-- =======
+                  カード１（grid仕様・hirokiライブタイプ別）
+                  （縦長動画でも、同じサイズ感で）
+
+                  バージョン9系では倍の枚数を書かないといけない（byじゅんぺい）
+                  jsでslidesPerView（一度に表示する枚数）がスライドの枚数より多くすると止まるので注意（3枚だったら4にすると止まる）
+                  ======== -->
+                  <div class="swiper-slide">
+                    <a href="#" class="p-campaign__card-link p-introduction-card">
+                      <figure class="p-introduction-card__img">
+                        <img src="./assets/images/common/sec1-campaign1.jpg" alt="">
+                      </figure>
+                    
+                      <div class="p-introduction-card__body">
+                        <p class="p-introduction-card__genre">ライセンス講習</p>
+                        <div class="p-introduction-card__name">ライセンス取得</div>
+                        <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
+                        <div class="p-introduction-card__price">
+                          <div class="p-introduction-card__price-before">¥56,000</div>
+                          <div class="p-introduction-card__price-after">¥46,000</div>
+                        </div>
+                      </div>
+                      </a>
+                  </div>
+
+                  <!-- =======
+                  カード2（grid仕様・hirokiライブタイプ別）
+                  （縦長動画でも、同じサイズ感で）
+                  ======== -->
+                  <div class="swiper-slide">
+                    <a href="#" class="p-campaign__card-link p-introduction-card">
+                      <figure class="p-introduction-card__img">
+                        <img src="./assets/images/common/sec1-campaign2.jpg" alt="">
+                      </figure>
+                    
+                      <div class="p-introduction-card__body">
+                        <p class="p-introduction-card__genre">ライセンス講習</p>
+                        <div class="p-introduction-card__name">ライセンス取得</div>
+                        <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
+                        <div class="p-introduction-card__price">
+                          <div class="p-introduction-card__price-before">¥56,000</div>
+                          <div class="p-introduction-card__price-after">¥46,000</div>
+                        </div>
+                      </div>
+                      </a>
+                  </div>
+
+                  <!-- =======
+                  カード3（grid仕様・hirokiライブタイプ別）
+                  （縦長動画でも、同じサイズ感で）
+                  ======== -->
+                  <div class="swiper-slide">
+                    <a href="#" class="p-campaign__card-link p-introduction-card">
+                      <figure class="p-introduction-card__img">
+                        <img src="./assets/images/common/sec1-campaign3.jpg" alt="">
+                      </figure>
+                    
+                      <div class="p-introduction-card__body">
+                        <p class="p-introduction-card__genre">ライセンス講習</p>
+                        <div class="p-introduction-card__name">ライセンス取得</div>
+                        <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
+                        <div class="p-introduction-card__price">
+                          <div class="p-introduction-card__price-before">¥56,000</div>
+                          <div class="p-introduction-card__price-after">¥46,000</div>
+                        </div>
+                      </div>
+                      </a>
+                  </div>
+
+                  <!-- =======
+                  カード4（１と同じ）
+                  ======== -->
+                  <div class="swiper-slide">
+                    <a href="#" class="p-campaign__card-link p-introduction-card">
+                      <figure class="p-introduction-card__img">
+                        <img src="./assets/images/common/sec1-campaign1.jpg" alt="">
+                      </figure>
+
+                      <div class="p-introduction-card__body">
+                        <p class="p-introduction-card__genre">ライセンス講習</p>
+                        <div class="p-introduction-card__name">ライセンス取得</div>
+                        <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
+                        <div class="p-introduction-card__price">
+                          <div class="p-introduction-card__price-before">¥56,000</div>
+                          <div class="p-introduction-card__price-after">¥46,000</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- =======
+                  カード5・・・２と同じ（grid仕様・hirokiライブタイプ別）
+                  （縦長動画でも、同じサイズ感で）
+                  ======== -->
+                  <div class="swiper-slide">
+                    <a href="#" class="p-campaign__card-link p-introduction-card">
+                      <figure class="p-introduction-card__img">
+                        <img src="./assets/images/common/sec1-campaign2.jpg" alt="">
+                      </figure>
+                  
+                      <div class="p-introduction-card__body">
+                        <p class="p-introduction-card__genre">ライセンス講習</p>
+                        <div class="p-introduction-card__name">ライセンス取得</div>
+                        <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
+                        <div class="p-introduction-card__price">
+                          <div class="p-introduction-card__price-before">¥56,000</div>
+                          <div class="p-introduction-card__price-after">¥46,000</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- =======
+                  カード6（3と同じ）
+                  ======== -->
+                  <div class="swiper-slide">
+                    <a href="#" class="p-campaign__card-link p-introduction-card">
+                      <figure class="p-introduction-card__img">
+                        <img src="./assets/images/common/sec1-campaign3.jpg" alt="">
+                      </figure>
+                  
+                      <div class="p-introduction-card__body">
+                        <p class="p-introduction-card__genre">ライセンス講習</p>
+                        <div class="p-introduction-card__name">ライセンス取得</div>
+                        <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
+                        <div class="p-introduction-card__price">
+                          <div class="p-introduction-card__price-before">¥56,000</div>
+                          <div class="p-introduction-card__price-after">¥46,000</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+
+                  <!-- <div class="swiper-slide">Slide 3</div> -->
                 </div>
+
+                <!-- ページネーション -->
+                <!-- <div class="swiper-pagination"></div> -->
               </div>
-            </a>
+              <!-- Swiperここまで -->
+
+
+
             
             <!-- =======
             カード2枚目

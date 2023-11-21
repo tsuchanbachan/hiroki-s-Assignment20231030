@@ -1,37 +1,57 @@
 @use 'global' as *;
 
 .swiper {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+
+}
+
+.mySwiper {
+
+  /* 右側だけはみ出す場合の幅を計算（スライダーのはみ出している部分） */
+  /* by https: //wp-theme-nishiki.pro/how-to-create-a-slider-with-margins-in-swiper/ */
+    // width: calc(100% + (100vw - $inner) / 2);
+  width: calc(100% + (100vw - 100%) / 2);
+  overflow: hidden;
+  z-index: 2;
+    
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // background: #fff;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  /* 「slidesPerView:2」とかではなく、
+  widthとheight、jsの「slidesPerView: "auto"」で表示枚数を決定 */
+  width: rem(280);
+  height: rem(366);
+
+  @include mq(md) {
+    width: rem(334);
+    height: rem(445);
+  }
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+// .swiper-slide img {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
 
 
 /* 検証ツールでページネーション部分を選択状態にして、出てきたクラス名をコピペ */
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: rem(-25);
-  text-align: right;
-}
+// .swiper-horizontal>.swiper-pagination-bullets,
+// .swiper-pagination-bullets.swiper-pagination-horizontal,
+// .swiper-pagination-custom,
+// .swiper-pagination-fraction {
+//   bottom: rem(-25);
+//   text-align: right;
+// }
 
 /* 検証ツールで、色を修正するクラスを選択、コピー */
-.swiper-pagination-bullet-active {
-  background: #391E88;
-}
+// .swiper-pagination-bullet-active {
+//   background: #391E88;
+// }

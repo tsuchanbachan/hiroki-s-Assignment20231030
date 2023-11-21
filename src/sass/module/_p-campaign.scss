@@ -43,19 +43,15 @@
 
 .p-campaign__card {
   margin-top: rem(24);
-  display: flex;
-  gap: rem(24);
+  /* flexは不要。カード間の左右余白はjsの「spaceBetween」で */
 
   /* padding設定を無視？して右だけ幅を画面いっぱいにしたい */
   // width: 100vw;
   // margin-left: calc(50% - 50vw);
+  
+  @include mq(md) {
 
-  /* とりあえず！ */
-  // overflow: hidden;
-
-    @include mq(md) {
       margin-top: rem(40);
-      gap: rem(40);
     }
 }
 
