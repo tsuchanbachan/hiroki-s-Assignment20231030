@@ -1,11 +1,13 @@
 @use 'global' as *;
 
+/* 終わったら削除するファイル */
+
 /* ボタン（moreボタン、アニメーション） */
 
 /* ------------
 親
 ------------ */
-.p-button {
+.t-p-button {
   position: relative;
   /* 作りたいボタンサイズ */
   width: rem(202);
@@ -20,7 +22,7 @@
 リンクボタン（スライドアニメーション）
 =================== */
 /* ボタン基本コード */
-.p-button__link {
+.t-p-button__link {
   cursor: pointer;
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
   background: $white;
@@ -41,17 +43,18 @@
   white-space: nowrap;
 }
 
-.p-button__link.slide {
+.t-p-button__link.t-slide {
   background: $green;
   color: $white;
   overflow: hidden;
   position: relative;
   z-index: 1;
-  /* ピクパ優先で調整追加 */
+
+  /* ピクパ優先で追加 */
   left: rem(-2);
 }
 /* 右側の矢印（通常時） */
-.p-button__link.slide::before {
+.t-p-button__link.t-slide::before {
   position: absolute;
   content: '';
   background-image: url(../images/common/arrowRight-white.png);
@@ -61,10 +64,11 @@
   transform: translateY(-50%);
   right: rem(40);
   background-repeat: no-repeat;
+  // background-size: contain;
   background-size: cover;
 }
 
-.p-button__link.slide::after {
+.t-p-button__link.t-slide::after {
   background: $white;
   position: absolute;
   top: 0;
@@ -80,11 +84,11 @@
 
 
 /* hover時 */
-.p-button__link.slide:hover {
+.t-p-button__link.t-slide:hover {
   color: $green;
 }
 /* 右側の矢印 */
-.p-button__link.slide:hover::before {
+.t-p-button__link.t-slide:hover::before {
   position: absolute;
   content: '';
   background-image: url(../images/common/arrowRight-green.png);
@@ -96,7 +100,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-.p-button__link.slide:hover::after {
+.t-p-button__link.t-slide:hover::after {
   transform: scale(1, 1);
 }
 
@@ -106,10 +110,10 @@
 /* ------------
 背景のボタン（後ろのチラ見せ）
 ------------ */
-.p-button__back {
+.t-p-button__back {
   position: absolute;
   top: rem(4);
-  /* ピクパ優先で-2調整 */
+  /* ピクパ優先4から2調整 */
   left: rem(4 - 2);
 
   /* ボタンの基本形をコピペ */
@@ -122,4 +126,10 @@
   height: 100%;
 }
 
-
+/* これは決して、下のクラスを作った */
+// .p-information__button {
+//   margin-top: rem(40);
+// }
+.t-p-information__button-wrap {
+  margin-top: rem(40);
+}

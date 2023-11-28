@@ -21,6 +21,10 @@
 
 }
 
+.p-campaign__title .p-section-title__japanese {
+  margin-top: rem(6);
+}
+
 .p-campaign__circle-buttons {
   display: none;
   
@@ -37,12 +41,15 @@
   }
 }
 
+/* 位置調整のために、検証ツール確認しながらswiperのデフォルトcss打ち消した */
 .p-campaign__circle-button {
-
+  margin-top: 0;
+  top: 0;
+  left: 0;
 }
 
 .p-campaign__card {
-  margin-top: rem(24);
+  margin-top: rem(26);
   /* flexは不要。カード間の左右余白はjsの「spaceBetween」で */
 
   /* padding設定を無視？して右だけ幅を画面いっぱいにしたい */
@@ -60,9 +67,10 @@
 }
 
 .p-campaign__button {
-  margin-top: rem(40);
+  /* ピクパ対応 */
+  margin-top: rem(40 - 4);
 
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(80 - 5);
   }
 }

@@ -2,10 +2,12 @@
 
 
 .l-price {
-  margin-top: rem(80);
+  /* ピクパ調整80→84 */
+  margin-top: rem(80 + 4);
 
   @include mq(md) {
-    margin-top: rem(140);
+    /* ボタンの影分の下ズレ4px */
+    margin-top: rem(140 + 4);
   }
 }
 
@@ -25,12 +27,18 @@
   @include mq(md) {
   }
 }
+.p-price__title .p-section-title__japanese {
+  /* ピクパ優先 */
+  margin-top: rem(7);
+}
 
 .p-price__inner {
-  padding-top: rem(24);
+  /* ピクパ */
+  padding-top: rem(24 + 3);
 
   @include mq(md) {
-    padding-top: rem(40);
+    /* ピクパ40→43 */
+    padding-top: rem(43);
 
   }
 }

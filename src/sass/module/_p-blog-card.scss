@@ -58,7 +58,8 @@
   display: inline-block;
   // flex-direction: column;
   // border: solid 1px $black0;
-  padding: rem(16) rem(16) rem(24);
+  /* ピクパ優先、bottomを24→23→20 */
+  padding: rem(16) rem(16) rem(21);
 
   width: 100%;
 
@@ -69,6 +70,10 @@
   @include mq(md) {
     max-width: calc(33.3333% - rem(25) * 2 / 3);
   }
+}
+
+.p-blog-card:hover {
+  opacity: 0.7;
 }
 
 /* 比率管理した画像 */
@@ -88,7 +93,13 @@
 }
 
 .p-blog-card__body {
-  margin-top: rem(24);
+  /* ピクパ優先 */
+  margin-top: rem(24 - 4);
+  
+  @include mq(md) {
+    /* ピクパ優先 */
+    margin-top: rem(20);
+  }
 }
 
 .p-blog-card__body time {
@@ -100,14 +111,22 @@
 .p-blog-card__title {
   /* 24/16=1.5 */
   line-height: 1.5;
-  padding-bottom: rem(4);
+ 
+  padding-bottom: rem(1);
+
   color: $black1;
   border-bottom: solid 1px $green;
+
+  @include mq(md) {
+    /* ピクパで合わせる */
+    padding-bottom: 0;
+  }
 }
 
 .p-blog-card__content {
   color: #000;
-  margin-top: rem(16);
+  /* ピクパ優先16→18 */
+  margin-top: rem(18);
 }
 
 

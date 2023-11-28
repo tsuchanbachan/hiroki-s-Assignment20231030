@@ -27,12 +27,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     /* 自動再生 */
     /* 少しゆっくり(デフォルトは300) */
     speed: 2000,
-    autoplay: {
-      /* 1.5秒後に次のスライド */
-      delay: 1500,
-      /* 矢印をクリックしても自動再生を止めない */
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   /* 1.5秒後に次のスライド */
+    //   delay: 1500,
+    //   /* 矢印をクリックしても自動再生を止めない */
+    //   disableOnInteraction: false,
+    // },
 
     /* フェードモード（デフォルトは 'slide'） */
     effect: 'fade',
@@ -156,14 +156,28 @@ $(document).ready(function () {
     if (scrollHeight - scrollPosition <= footHeight) {
       $("#js-pagetop").css({ 
         /* positionをabsoluteに変更 */
-        position: "absolute", 
-        bottom: footHeight + 20 
+        position: "absolute",
+        /* ピクパ20→16 */
+        bottom: footHeight + 16 ,
+
+        
+        breakpoints: {
+              // 768px以上
+              768: {
+                bottom: footHeight + 30,
+              },
+        },
+
+
+
+
       });
     /* それ以外の場合は */
     } else { //
       $("#js-pagetop").css({ 
         /* 固定で表示 */
-        position: "fixed", 
+        position: "fixed",
+        /* ピクパ20→16 */
         bottom: "20px" 
       });
     }

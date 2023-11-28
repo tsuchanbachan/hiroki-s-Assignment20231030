@@ -18,6 +18,10 @@
   }
 }
 
+.p-button-circle:hover {
+  opacity: 0.4;
+}
+
 /* 左 */
 .p-button-circle__previous::after {
   position: absolute;

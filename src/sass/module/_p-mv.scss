@@ -53,10 +53,13 @@
 .p-mv__title {
   font-family: Lato;
   font-size: rem(40);
-  font-weight: $regular;
+  /* GoogleサイトによるとRegular=400 */
+  font-weight: $normal;
   /* 48/40=1.2 */
   line-height: 1.2;
   letter-spacing: 0.54em;
+  margin-left: auto;
+  margin-right: auto;
 
   @include mq(md) {
     font-size: rem(80);
@@ -64,6 +67,15 @@
     line-height: 1.25;
   }
 }
+
+/* 最後の文字の後ろのletter-spacingをネガティブマージンで消す */
+.p-mv__title::after {
+  content: "";
+  margin-left: -0.54em;
+  @include mq(md) {
+  }
+}
+
 
 .p-mv__subtitle {
   font-size: rem(20);

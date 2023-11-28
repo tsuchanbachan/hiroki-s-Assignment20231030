@@ -11,7 +11,7 @@
 }
 
 .p-footer__inner {
-  /* 擬似要素ヒトデ分の右余白は「nav-footer__inner」で */
+  /* 擬似要素ヒトデ分の右余白は「」で */
   padding: rem(48) rem(15) 0;
   /* 左右余白を15として（copyrightは別）375-15*2=345だけど、paddingは別計算なので375 */
   max-width: rem(375);
@@ -50,6 +50,10 @@
   }
 }
 
+.p-footer__logo a:hover {
+  opacity: 0.4;
+}
+
 .p-footer__logoLink {
   position: relative;
   display: block;
@@ -79,14 +83,24 @@
 /* SNS */
 .p-footer__sns-items {
   display: flex;
-  gap: rem(16);
+  /* ピクパ16→14 */
+  gap: rem(14);
   margin-top: rem(16);
+
+  @include mq(md) {
+    gap: rem(16);
+  }
 }
 
 .p-footer__sns-item {
   display: block;
   width: rem(26);
   height: rem(26);
+  cursor: pointer;
+}
+
+.p-footer__sns-item:hover {
+  opacity: 0.4;
 }
 
 .p-footer__sns-item img {
@@ -109,8 +123,9 @@
 .p-footer__copyright {
   text-align: center;
   padding-bottom: rem(56);
-  /* 上余白40-最後の「.nav-footer__item-a」padding12=28 */
-  margin-top: rem(28);
+  /* 上余白40-最後の「.nav-footer__item-a」padding12=28
+  ピクパ優先28→21 */
+  margin-top: rem(21);
   color: $white;
   font-weight: $normal;
   

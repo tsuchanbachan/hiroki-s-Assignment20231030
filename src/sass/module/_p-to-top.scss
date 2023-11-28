@@ -1,11 +1,29 @@
 @use 'global' as *;
 
+/* ピクパで追加 */
+.p-to-top {
+  height: rem(48);
+
+  @include mq(md) {
+    height: rem(80);
+  }
+}
+
 /* 追加 */
 #js-pagetop {
   position: fixed;
-  bottom: rem(20);
-  right: rem(20);
+  /* ピクパ20→16 */
+  bottom: rem(16);
+
+  /* ピクパ20→15 */
+  right: rem(15);
+  
   cursor: pointer;
+
+  @include mq(md) {
+    right: rem(20);
+    bottom: rem(20);
+  }
 }
 
 #js-pagetop a {

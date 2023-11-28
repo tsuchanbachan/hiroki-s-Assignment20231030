@@ -71,7 +71,9 @@
     width: rem(333);
   }
 }
-
+.p-introduction-card:hover {
+  opacity: 0.4;
+}
 /* 比率管理した画像 */
 .p-introduction-card__img {
   position: relative;
@@ -79,8 +81,8 @@
   padding-top: 67.1428571428%;
 
   @include mq(md) {
-    /* 223/333=66.066967% */
-    padding-top: 66.066967%;
+    /* 223/333=66.966967% */
+    padding-top: 66.966967%;
     
   }
 }
@@ -96,13 +98,11 @@
 
 .p-introduction-card__body {
   padding: rem(16) rem(16) rem(24);
-  // border-right: solid 1px $black0;
-  // border-bottom: solid 1px $black0;
-  // border-left: solid 1px $black0;
   /* 1rem のぼかしで 3rem の広がりの赤っぽい影 */
   /* https: //www.bad-company.jp/drop-shadow */
   
   @include mq(md) {
+    /* ピクパtop24→25 */
     padding: rem(24) rem(16) rem(40);
     
   }
@@ -112,12 +112,21 @@
   display: inline-block;
   font-size: rem(12);
   /* 22/12=1.833333 */
-  line-height: 1.833333;
-  padding: rem(4) rem(12);
+  // line-height: 1.833333;
+  line-height: 1;
+
+  // padding: rem(4) rem(12);
+  /* 箱の高さ30、文字12pxなので、余白は9×2。
+  line-heightは1にして全てpaddingへ */
+  padding: rem(10) rem(11) rem(6);
+
+
   border: solid 1px $green;
+  color: $green;
 
   @include mq(md) {
-    padding: rem(6) rem(16);
+    /* ピクパ縦6→11 */
+    padding: rem(11) rem(16);
     
   }
 }
@@ -125,7 +134,8 @@
 .p-introduction-card__name {
   /* 24/16=1.5 */
   line-height: 1.5;
-  margin-top: rem(4);
+  /* ピクパ優先 */
+  margin-top: rem(7);
   font-weight: $normal;
 }
 
@@ -133,7 +143,8 @@
   border-top: solid 1px $green;
   /* 24/16=1.5 */
   line-height: 1.5;
-  margin-top: rem(8);
+  /* ピクパ8→6 */
+  margin-top: rem(5);
   padding-top: rem(8);
   text-align: center;
   font-size: rem(14);
@@ -150,10 +161,14 @@
 
 .p-introduction-card__price {
   display: flex;
-  gap: rem(24);
+  gap: rem(16);
   justify-content: center;
   align-items: flex-end;
-  margin-top: rem(8);
+  margin-top: rem(6);
+  
+  @include mq(md) {
+    gap: rem(24);
+  }
 }
 
 .p-introduction-card__price-before,
@@ -188,6 +203,7 @@
   
   @include mq(md) {
     font-size: rem(40);
+    width: rem(149);
     
   }
 }

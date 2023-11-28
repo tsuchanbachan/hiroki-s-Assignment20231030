@@ -3,10 +3,12 @@
 
 .l-contact {
   margin-top: rem(80);
-  margin-bottom: rem(100);
+  /* ピクパ100→+4 */
+  margin-bottom: rem(100 + 4);
 
   @include mq(md) {
     margin-top: rem(140);
+    margin-bottom: rem(160);
   }
 }
 
@@ -27,14 +29,14 @@
 .p-contact__inner {
   // padding-top: rem(24);
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   /* 295/375 */
   width: 100%;
   position: relative;
 
   @include mq(md) {
     padding-top: rem(80);
-    flex-direction: row-reverse;
+    flex-direction: row;
     
     max-width: rem(1080);
     padding-right: rem(112);
@@ -42,6 +44,8 @@
     padding-bottom: rem(80);
     /* ぼかし */
     box-shadow: 0px 0px 15px -5px #777777;
+
+    // text-align: center;
   }
 }
 
@@ -53,6 +57,7 @@
   position: absolute;
   content: '';
   display: inline-block;
+  
   top: rem(-26);
   right: rem(0);
   /* 幅109、高さ50 */
@@ -67,9 +72,9 @@
   // overflow: hidden;
 
   @include mq(md) {
-    top: rem(-40);
+    top: rem(-35);
     // right: rem(-130);
-    right: calc(50% - min(50vw, 650px));
+    right: calc(50% - min(50vw, 670px));
     /* 幅301、高さ138 */
     width: rem(301);
     height: rem(138);
@@ -86,6 +91,10 @@
     width: 34.313725%;
     /* 81/918 */
     margin-left: 8.823529%;
+
+    display: flex;
+    align-items: center;
+    
   }
 }
 
@@ -95,7 +104,8 @@
 }
 
 .p-contact__title .p-section-title__japanese{
-  margin-top: 0;
+  /* ピクパ優先 */
+  margin-top: rem(-5);
 }
 
 .p-contact__lead {
@@ -107,7 +117,8 @@
 }
 
 .p-contact__button {
-  margin-top: rem(40);
+  /* ピクパ優先（40→38） */
+  margin-top: rem(38);
 }
 
 /* 縦棒 */
@@ -144,14 +155,16 @@
 /* ロゴ */
 .p-contact__logo {
   width: 100%;
-  height: rem(75);
+  // height: rem(75);
   position: relative;
   // z-index: 1000;
 
-  padding-bottom: rem(6);
+  padding-bottom: rem(5);
   border-bottom: solid 1px $green;
 
   @include mq(md) {
+    /* pefrect-pixelの調整 */
+    padding-bottom: rem(10);
   }
 }
 
@@ -197,6 +210,8 @@
 
 
 .p-contact__items {
+  font-family: "Noto sans JP";
+
   @include mq(md) {
     text-align: left;    
   }
@@ -233,23 +248,22 @@
 /* イメージ画像 */
 .p-contact__image-wrap {
   /* 295×160 */
-  padding-top: 54.237288%
+  padding-top: 54.237288%;
 
   /* 746/492 */
   // padding-top: 151.626016%;
 
+  background-color: #D9D9D9;
+  width: rem(295);
+  // height: rem(160);
 
+
+  @include mq(md) {
+    width: rem(273);
+    height: rem(148);
+  }
 }
 
 .p-card__img--contact {
-
-}
-
-
-
-
-
-.p-contact__button {
-  margin-top: rem(40);
 
 }

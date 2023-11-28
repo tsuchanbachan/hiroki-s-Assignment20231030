@@ -23,8 +23,10 @@
 .p-section-title__japanese {
   font-size: rem(12);
   line-height: 1.5;
-  margin-top: rem(4);
-  
+  /* ピクパ優先 */
+  margin-top: rem(5);
+  color: $green;
+
   @include mq(md) {
     margin-top: rem(8);
   }

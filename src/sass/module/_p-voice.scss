@@ -1,10 +1,12 @@
 @use 'global' as *;
 
 .l-voice {
-  margin-top: rem(80);
+  /* ピクパ優先80→84 */
+  margin-top: rem(80 + 4);
 
   @include mq(md) {
-    margin-top: rem(140);
+    /* ボタンの影の下4px分 */
+    margin-top: rem(140 + 6);
   }
 }
 
@@ -26,7 +28,8 @@
     content: '';
     display: inline-block;
     top: rem(-120);
-    left: rem(-80);
+    /* ピクパ参考に80→50→56に */
+    left: rem(-56);
     /* 幅437、高さ201 */
     width: rem(301);
     height: rem(138);
@@ -47,13 +50,15 @@
 
 .p-voice__inner {
   display: flex;
-  gap: rem(40);
+  /* 40→41 */
+  gap: rem(41);
   flex-direction: column;
-  padding-top: rem(24);
+  /* 修正24→42 */
+  padding-top: rem(43);
 
   @include mq(md) {
     flex-direction: row;
-    padding-top: rem(80);
+    padding-top: rem(30);
     /* これがないと、背景画像がabsoluteなので下にいってしまう */
     position: relative;
   }

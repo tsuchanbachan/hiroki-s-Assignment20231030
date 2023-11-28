@@ -33,8 +33,11 @@
 }
 
 .nav-footer__inner--right {
+  /* ピクパ優先 */
+  width: rem(140);
 
   @include mq(md) {
+    width: auto;
     display: flex;
     gap: rem(142);
   }
@@ -50,6 +53,23 @@
   // min-height: 100vh;
 
   // width: 50%;
+}
+
+/* ピクパ */
+.nav-footer__inner--left .nav-footer__items:nth-child(2) {
+  margin-top: rem(16);
+
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+/* ピクパ */
+.nav-footer__inner--right .nav-footer__items:nth-child(2) {
+  margin-top: rem(16);
+
+  @include mq(md) {
+    margin-top: 0;
+  }
 }
 
 .nav-footer__item {
@@ -79,6 +99,10 @@
   font-weight: $bold;
   /* 18/16=1.125 */
   line-height: 1.125;
+}
+
+.nav-footer__item a:hover {
+  opacity: 0.4;
 }
 
 /* ヒトデ */

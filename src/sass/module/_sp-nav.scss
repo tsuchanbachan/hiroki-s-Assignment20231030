@@ -29,7 +29,7 @@
 
   display: flex;
   /* 上から80+24 */
-  padding: rem(104) rem(37);
+  padding: rem(94) rem(37) rem(114);
   justify-content: center;
       /* ヒトデ部分が無視されるるので「7+18+ヒトデ左余白4」=29 */
         gap: rem(29);
@@ -52,10 +52,18 @@
 .sp-nav__item {
   width: 100%;
   position: relative;
-  /* 間隔を40欲しいが、padding12取ったので差し引く */
-  margin-bottom: rem(28);
+
 }
 
+.sp-nav__item:not(:last-of-type) {
+  /* 間隔を40欲しいが、padding12取ったので差し引く */
+    margin-bottom: rem(18);
+}
+
+/* ピクパ */
+.sp-nav__items--left .sp-nav__item:not(:last-of-type) {
+
+}
 
 .sp-nav__item a {
   color: $white;

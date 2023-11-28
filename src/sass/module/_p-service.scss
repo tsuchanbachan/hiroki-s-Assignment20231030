@@ -11,7 +11,7 @@
 
 
 .p-service__item {
-  margin-top: rem(40);
+  margin-top: rem(41);
 }
 .p-service__item:first-child {
   @include mq(md) {
@@ -20,8 +20,10 @@
 }
 
 .p-service__item h3 {
-  padding-bottom: rem(4);
+  padding-bottom: rem(2);
   border-bottom : solid 1px $green;
+  font-size: rem(16);
+  line-height: 1.5;
   font-weight: $bold;
 }
 
@@ -58,4 +60,6 @@
 .p-service__item dd {
   width: 26.6666666%;
   text-align: right;
+  /* 指定しないと、数字なので？、Gotuになる */
+  font-family: 'Noto Sans JP'
 }
