@@ -26,9 +26,13 @@
 .p-button-circle__previous::after {
   position: absolute;
   content: '';
-  background-image: url(../images/common/arrowleft-green.png);
+  background-image: url(../images/common/arrowLeft-green.png);
+
+  /* 83×15→40とpadding-top15/83=18.0722891% */
   width: rem(40);
   height: rem(6);
+  // padding-top: 18.0722891%;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -56,7 +56,8 @@
   content: '';
   background-image: url(../images/common/arrowRight-white.png);
   width: rem(40);
-  height: rem(6);
+  /* ピクパ対応6→7 */
+  height: rem(7);
   top: 50%;
   transform: translateY(-50%);
   right: rem(40);
