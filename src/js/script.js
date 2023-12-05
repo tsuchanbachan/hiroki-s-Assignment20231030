@@ -27,12 +27,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     /* 自動再生 */
     /* 少しゆっくり(デフォルトは300) */
     speed: 2000,
-    // autoplay: {
-    //   /* 1.5秒後に次のスライド */
-    //   delay: 1500,
-    //   /* 矢印をクリックしても自動再生を止めない */
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      /* 1.5秒後に次のスライド */
+      delay: 1500,
+      /* 矢印をクリックしても自動再生を止めない */
+      disableOnInteraction: false,
+    },
 
     /* フェードモード（デフォルトは 'slide'） */
     effect: 'fade',

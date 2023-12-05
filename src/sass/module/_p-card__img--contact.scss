@@ -17,6 +17,9 @@
   // padding-top: 65.797101449%54.237288%;
   padding-top:54.237288%;
 
+  /* 中身のimgないので、こっちにabsolute? */
+  position: absolute;
+
   @include mq(md) {
     /* 幅492、高さ746、746÷492 */
     // padding-top: 151.62601526%;
