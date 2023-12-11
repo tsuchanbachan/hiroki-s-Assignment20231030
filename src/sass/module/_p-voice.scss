@@ -28,8 +28,13 @@
     content: '';
     display: inline-block;
     top: rem(-120);
+
+    /* テキストフィードバック */
     /* ピクパ参考に80→50→56に */
-    left: rem(-56);
+    // left: rem(-56);
+    /* キャンバス幅1440の半分720 - 左端から100 = 620 */
+    left: calc(50% - min(50vw, rem(620)));
+
     /* 幅437、高さ201 */
     width: rem(301);
     height: rem(138);
@@ -49,27 +54,40 @@
 }
 
 .p-voice__inner {
-  display: flex;
-  /* 40→41 */
-  gap: rem(41);
-  flex-direction: column;
   /* 修正24→42 */
   padding-top: rem(43);
 
   @include mq(md) {
-    flex-direction: row;
     padding-top: rem(30);
     /* これがないと、背景画像がabsoluteなので下にいってしまう */
     position: relative;
   }
 }
 
+/* カード群 */
+.p-voice__items {
+  /* flexからgridに */
+  // display: flex;
+  display: grid;
+  // flex-direction: column;
+  grid-template-columns: repeat(1, 1fr);
+  
+  /* 40→41 */
+  gap: rem(41);
+  
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    // flex-direction: row;
+  }
+
+}
+
 /* 1枚のカード全体 */
 .p-voice__item {
-  width: 100%;
+  // width: 100%;
 
   @include mq(md) {
-    max-width: calc(50% - rem(40) * 1 / 2);
+    // max-width: calc(50% - rem(40) * 1 / 2);
     
   }
 }

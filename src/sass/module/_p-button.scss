@@ -28,6 +28,7 @@
   color: $green;
   display: inline-block;
   font-weight: $normal;
+  font-family: $english-font-family;
 
   width: 100%;
 
@@ -90,7 +91,10 @@
   content: '';
   background-image: url(../images/common/arrowRight-green.png);
   width: rem(40);
-  height: rem(6);
+
+  /* テキストfbで修正（hover時のサイズ）6→7 */
+  height: rem(7);
+
   top: 50%;
   transform: translateY(-50%);
   right: rem(40);

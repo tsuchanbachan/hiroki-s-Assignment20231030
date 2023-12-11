@@ -45,8 +45,17 @@
     content: '';
     display: inline-block;
     top: rem(24);
+
     /* ピクパ参考に80→54に調整 */
-    left: rem(-54);
+    // left: rem(-54);
+    /* ---
+    テキストフィードバック
+    キャンバス幅1440の半分＝720
+    キャンバス左端から100なので、720-100=620、かな？
+    ----*/
+    left: calc(50% - min(50vw, rem(620)));
+
+
     /* 幅437、高さ201 */
     width: rem(437);
     height: rem(201);
@@ -76,9 +85,7 @@
 }
 
 .p-blog__inner {
-  display: flex;
-  gap: rem(40);
-  flex-direction: column;
+  
   padding-top: rem(27);
 
   /* paddingを21にするため、.innerを外しているので。 */
@@ -88,12 +95,23 @@
 
   @include mq(md) {
 
-
-    flex-direction: row;
     padding-top: rem(80);
     /* これがないと、背景画像がabsoluteなので下にいってしまう */
     position: relative;
   }
+}
+
+.p-blog__items {
+  // display: flex;
+  display: grid;
+  gap: rem(40);
+  // flex-direction: column;
+  grid-template-columns: repeat(1, 1fr);
+
+    @include mq(md) {
+      // flex-direction: row;
+      grid-template-columns: repeat(3, 1fr)
+    }
 }
 
 .p-blog__item {

@@ -21,7 +21,10 @@
 .p-header__inner {
   height: inherit;
   padding: 0 rem(15);
-  max-width: rem(1440);
+
+  /* フィードバック対応。左右にくっつける */
+  // max-width: rem(1440);
+
   width: 100%;
   margin-left: auto;
   margin-right: auto;

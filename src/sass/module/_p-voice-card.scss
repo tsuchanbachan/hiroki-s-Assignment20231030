@@ -15,7 +15,7 @@
 .p-voice-card__head {
   width: 100%;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
 }
 
 .p-voice-card__information {
@@ -23,6 +23,12 @@
   width: 47.604844%;
   /* 13/313=4.153355% */
   margin-right: 4.153355%;
+
+  /* テキストフィードバック（SP大きい幅時のレイアウト崩れ対応。画像の下端と揃える） */
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+
 
   @include mq(md) {
     /* 276/472=58.47457627% */
@@ -122,6 +128,9 @@
   /* ピクパ9→7 */
   padding-top: rem(7);
 
+    /* max-width付与しては？との指摘なので、PC版カンプ値*/
+      max-width: rem(180);
+
   @include mq(md) {
     /* 180/472=38.13559322% */
     width: 38.13559322%;
@@ -148,8 +157,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  /* 100%だと、親要素を無視して、左要素に合わせて高くなってしまう */
-  // height: 100%;
+
+  /* 100%だと、親要素を無視して、左要素に合わせて高くなってしまう
+  →フィードバック対応：大丈夫だった。ないと、画像差し替え時に対応不可 */
+  height: 100%;
+
   object-fit: cover;
 }
 

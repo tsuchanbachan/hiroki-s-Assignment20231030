@@ -10,7 +10,9 @@
 
 .p-campaign {
 
-
+  /* テキストフィードバック */
+  /* スワイパー部分の右はみ出しによって横スクロールするのを回避 */
+  overflow: hidden;
 }
 
 .p-campaign__wrap {
@@ -63,6 +65,7 @@
 }
 
 .p-campaign__card-link {
+  height: 100%;
 
 }
 

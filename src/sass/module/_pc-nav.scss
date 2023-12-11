@@ -9,48 +9,32 @@
   gap: rem(40);
   /*スマホ表示折り返し用なのでPCのみなら不要*/
   // flex-wrap: wrap;
+
+  /* テキストフィードバック。aをいっぱいに。（aにもflex）*/
+  height: 100%;
 }
 
 .pc-nav__item a {
-  display: block;
+  // display: block;
   // padding: 10px 30px;
   text-decoration: none;
   color: $white;
-}
 
-.gnavi li {
-  margin-bottom: 20px;
-}
-
-.pc-nav__item {
-  text-align: center;
-  color: $white;
-}
-
-.pc-nav__item-english {
-  font-family: 'Gotu';
-  font-size: rem(18);
-  line-height: 1;
-}
-
-.pc-nav__item-japanese {
-  font-size: rem(10);
-  line-height: 1.5;
-  margin-top: rem(4);
-}
-
-
-
-/* 中心から外に線が伸びる（下部） */
-.pc-nav__item a {
+  /* 中心から外に線が伸びる（下部） */
   /*線の基点とするためrelativeを指定*/
   position: relative;
+
+  /* テキストフィードバック（aをいっぱいに）。ulにもheight100付与 */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-// .pc-nav__item.current a,
-// .pc-nav__item a:hover {
-//   color: #0481A2;
-// }
+
+.pc-nav__item a {
+
+}
 
 .pc-nav__item a::after {
   content: '';
@@ -76,3 +60,27 @@
   transform: scale(1, 1);
   /*X方向にスケール拡大*/
 }
+
+// .gnavi li {
+//   margin-bottom: 20px;
+// }
+
+.pc-nav__item {
+  text-align: center;
+  color: $white;
+}
+
+.pc-nav__item-english {
+  font-family: 'Gotu';
+  font-size: rem(18);
+  line-height: 1;
+}
+
+.pc-nav__item-japanese {
+  font-size: rem(10);
+  line-height: 1.5;
+  margin-top: rem(4);
+}
+
+
+

@@ -4,6 +4,9 @@
 .p-to-top {
   height: rem(48);
 
+  /* テキストフィードバック（campaignで隠れる） */
+  z-index: 3;
+
   @include mq(md) {
     height: rem(80);
   }

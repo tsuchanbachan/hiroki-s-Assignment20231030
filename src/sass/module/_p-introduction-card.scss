@@ -56,7 +56,7 @@
   これで、margin-topが有効となる。理由は不明 */
   // display: flex;
   // display: inline-block;
-  display: block;
+  // display: block;
   // flex-direction: column;
 
   /* ぼかし */
@@ -66,6 +66,10 @@
   width: rem(280);
   /* flexで自動縮小をさせない */
   // flex-shrink: 0;
+
+  /* テキストフィードバック（テキスト部分が伸縮してもフッター（プライス）位置を一定に */
+  display: flex;
+  flex-direction: column;
 
   @include mq(md) {
     width: rem(333);
@@ -86,6 +90,8 @@
     
   }
 }
+
+/* ブロック① */
 .p-introduction-card__img img {
   position: absolute;
   top: 50%;
@@ -96,14 +102,15 @@
   object-fit: cover;
 }
 
+/* ブロック② */
 .p-introduction-card__body {
-  padding: rem(16) rem(16) rem(24);
+  padding: rem(16) rem(16) rem(0);
   /* 1rem のぼかしで 3rem の広がりの赤っぽい影 */
   /* https: //www.bad-company.jp/drop-shadow */
   
   @include mq(md) {
     /* ピクパtop24→25 */
-    padding: rem(24) rem(16) rem(40);
+    padding: rem(24) rem(16) rem(0);
     
   }
 }
@@ -137,6 +144,17 @@
   /* ピクパ優先 */
   margin-top: rem(7);
   font-weight: $normal;
+}
+
+/* ブロック③フッター部分（プライス） */
+.p-introduction-card__footer {
+  padding: rem(0) rem(16) rem(24);
+  /* 下寄せ */
+  margin-top: auto;
+
+  @include mq(md) {
+    padding: rem(0) rem(16) rem(40);
+  }
 }
 
 .p-introduction-card__text {

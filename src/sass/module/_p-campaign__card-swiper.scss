@@ -6,7 +6,9 @@
 
 }
 
-.js-campaign__swiper {
+/* テキストフィードバック：jsを接頭辞に付与するのは、js使用に限定する */
+// .js-campaign__swiper {
+.p-campaign__card-swiper {
 
   /* 右側だけはみ出す場合の幅を計算（スライダーのはみ出している部分） */
   /* by https: //wp-thema-nishiki.pro/how-to-create-a-slider-with-margins-in-swiper/ */
@@ -17,27 +19,32 @@
   /* ぼかしの見切れ防止 */
   padding-bottom: rem(5);
   // padding-left: rem(5);
+
 }
 
-.js-campaign__swiper .swiper-slide {
+.p-campaign__card-swiper .swiper-slide {
   /* 「slidesPerView:2」とかではなく、
   widthとheight、jsの「slidesPerView: "auto"」で表示枚数を決定 */
   width: rem(280);
-  height: rem(366);
+  // height: rem(366);
+  // height: 100%;
+
+  /* テキストフィードバック */
+  height: auto;
 
   @include mq(md) {
     width: rem(334);
-    height: rem(445);
+    // height: rem(445);
   }
 
 }
 
-.js-campaign-next,
-.js-campaign-prev {
-  @include mq(md) {
+// .js-campaign-next,
+// .js-campaign-prev {
+//   @include mq(md) {
 
-  }
-}
+//   }
+// }
 
 
 

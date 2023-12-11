@@ -1,6 +1,5 @@
 @use 'global' as *;
 
-
 .l-price {
   /* ピクパ調整80→84 */
   margin-top: rem(80 + 4);
@@ -109,7 +108,11 @@
     content: '';
     display: inline-block;
     bottom: rem(-44);
+
+    /* テキストフィードバック、見切れ */
     left: rem(-81);
+    left: calc(50% -  min(50vw, rem(620)));
+
     /* 幅437、高さ201 */
     width: rem(437);
     height: rem(201);
