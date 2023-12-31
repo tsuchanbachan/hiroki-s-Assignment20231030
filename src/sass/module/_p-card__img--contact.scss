@@ -14,22 +14,22 @@
   display: block;
   
   /* 幅295、高さ160、160÷295 */
-  // padding-top: 65.797101449%54.237288%;
   padding-top:54.237288%;
 
   /* 中身のimgないので、こっちにabsolute? */
   position: absolute;
 
   @include mq(md) {
-    /* 幅492、高さ746、746÷492 */
-    // padding-top: 151.62601526%;
+    /* 幅273、高さ148、148÷273=54.212454 */
+    // padding-top: 54.212454%;
   }
 
 }
 
+
 /* 画像の比率管理③ ②で作った箱に画像を入れる
 画像の比率が違う時にもはみ出さない */
-.p-card__img--contact img {
+.p-card__img--contact iframe {
   position: absolute;
   top: 50%;
   left: 50%;

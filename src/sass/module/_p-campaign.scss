@@ -69,11 +69,9 @@
 
 }
 
-.p-campaign__button {
-  /* ピクパ対応 */
-  margin-top: rem(40 - 4);
-
-  @include mq(md) {
-    margin-top: rem(80 - 5);
-  }
-}
+// .p-campaign__button {
+//   margin-top: rem(40 - 4);
+//   @include mq(md) {
+//     margin-top: rem(80 - 5);
+//   }
+// }

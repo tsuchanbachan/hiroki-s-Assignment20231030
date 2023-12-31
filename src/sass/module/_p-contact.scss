@@ -3,12 +3,12 @@
 
 .l-contact {
   margin-top: rem(80);
-  /* ピクパ100→+4 */
-  margin-bottom: rem(100 + 4);
+  /* ピクパ100→+4、footerのmargin-topにつける */
+  // margin-bottom: rem(100 + 4);
 
   @include mq(md) {
     margin-top: rem(140);
-    margin-bottom: rem(160);
+    // margin-bottom: rem(160);
   }
 }
 
@@ -253,8 +253,6 @@
   /* 746/492 */
   // padding-top: 151.626016%;
 
-  background-color: #D9D9D9;
-
   /* テキストフィードバック */
   // width: rem(295);
   width: 100%;
@@ -268,6 +266,8 @@
   }
 }
 
-.p-card__img--contact {
 
-}
+
+// .p-card__img--contact {
+
+// }

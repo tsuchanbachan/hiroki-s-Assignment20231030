@@ -6,9 +6,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if ($(".js-hamburger").hasClass('is-active')) {
       $('.js-hamburger').removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
+      
     } else {
       $('.js-hamburger').addClass("is-active");
       $(".js-sp-nav").fadeIn(300);
+
+      /* ハンバーガーメニュー表示時にはスクロール不可*/
+      /* codepen:https://codepen.io/tsuchanbachan/pen/NWMwzYE */
+      $('body').toggleClass('noscroll');
     }
   });
 

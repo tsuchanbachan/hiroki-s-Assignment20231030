@@ -29,14 +29,32 @@
 
   display: flex;
   /* 上から80+24 */
-  padding: rem(94) rem(37) rem(114);
+  // padding: rem(94) rem(37) rem(114);
+
+  /* 動画FBで高さ不足時対策用に修正中 */
+  padding-top: rem(94);
+  padding-left: rem(37);
+  padding-right: rem(37);
+  /* （仮）高さ不足時のため */
+  padding-bottom: rem(34);
+
   justify-content: center;
-      /* ヒトデ部分が無視されるるので「7+18+ヒトデ左余白4」=29 */
-        gap: rem(29);
+  /* ヒトデ部分が無視されるるので「7+18+ヒトデ左余白4」=29 */
+  gap: rem(29);
+
+
+  /* （動画FBで追加）ドロワーメニューの高さ不足の場合にスクロールさせる */
+  /* https: //web-note.org/programming/css/drawer-bg-scroll/ */
+  height: 100vh;
+  // height: calc(100% - rem(94));
+  overflow: scroll;
+
 }
 
 .sp-nav__items {
-  min-height: 100vh;
+  // min-height: 100vh;
+  // min-height: calc(100vh - 188px);
+  min-height: calc( 100vh - rem(188) );
 
   // width: 50%;
 }

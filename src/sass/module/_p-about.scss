@@ -39,7 +39,8 @@
       bottom: rem(-90);
       // right: rem(-97);
       /* ピクパに合わせて650→635へ */
-      right: calc(50% - min(50vw, 635px));
+      // right: calc(50% - min(50vw, 635px));
+      right: calc(50% - min(48vw, rem(635)));
       width: rem(194);
       height: rem(181);
   

@@ -1,18 +1,33 @@
 @use 'global' as *;
 
 
+.l-footer {
+  margin-top: rem(100 + 4);
+  @include mq(md) {
+    margin-top: rem(160);
+  }
+}
+
 .p-footer {
   background-color: $green;
   width: 100%;
 
-  // @include mq(md) {
+  /* 動画FB修正。上下paddingは、innnerではなく「p-footer」で。 */
+  padding-top: rem(48);
+  padding-bottom: 0;
 
-  // }
+  @include mq(md) {
+        padding-top: rem(80);
+  }
+
 }
 
 .p-footer__inner {
   /* 擬似要素ヒトデ分の右余白は「」で */
-  padding: rem(48) rem(15) 0;
+  // padding: rem(48) rem(15) 0;
+  padding-right: rem(15);
+    padding-left: rem(15);
+
   /* 左右余白を15として（copyrightは別）375-15*2=345だけど、paddingは別計算なので375 */
   max-width: rem(375);
   width: 100%;
@@ -28,7 +43,7 @@
     padding-left: rem(25);
     padding-right: rem(25);
 
-    padding-top: rem(80);
+
     /* 隙間（120）含めた総幅1008、
     レスポンシブ基準で仮決め左padding15*2を足して1008+15*2=1038 */
     max-width: rem(1038);
