@@ -2,11 +2,13 @@
 
 .l-about {
   /* ピクパ対応5px加算 */
-  margin-top: rem(80 + 5);
+  // margin-top: rem(80 + 5);
+  margin-top: rem(80);
 
   @include mq(md) {
     /* ボタンの影（4px下）分を加算 */
-    margin-top: rem(140 + 4);
+    // margin-top: rem(140 + 4);
+    margin-top: rem(140);
   }
 }
 
@@ -160,10 +162,20 @@
   }
 }
 
-.p-about__button {
-  margin-top: rem(48);
+/* ？なんだ？これ？20240101 */
+// .__button {
+//   margin-top: rem(48);
   
-  @include mq(md) {
-    margin-top: rem(40);
-  }
+//   @include mq(md) {
+//     margin-top: rem(40);
+//   }
+// }
+
+.p-about__button {
+  text-align: center;
+  margin-top: rem(48);
+
+    @include mq(md) {
+      margin-top: rem(40);
+    }
 }
