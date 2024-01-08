@@ -2,7 +2,7 @@
 
 .l-information {
   /* ピクパ優先 */
-  margin-top: rem(70 + 4);
+  margin-top: rem(70);
 
   @include mq(md) {
     margin-top: rem(140);
@@ -79,6 +79,11 @@
 }
 
 .p-information__button {
-  margin-top: rem(40);
   text-align-last: center;
+  margin-top: rem(36);
+
+  @include mq(md) {
+    margin-top: rem(40);
+    
+  }
 }

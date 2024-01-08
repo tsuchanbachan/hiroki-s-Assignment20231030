@@ -2,11 +2,11 @@
 
 .l-voice {
   /* ピクパ優先80→84 */
-  margin-top: rem(80 + 4);
+  margin-top: rem(80);
 
   @include mq(md) {
     /* ボタンの影の下4px分 */
-    margin-top: rem(140 + 6);
+    margin-top: rem(140);
   }
 }
 
@@ -33,7 +33,7 @@
     /* ピクパ参考に80→50→56に */
     // left: rem(-56);
     /* キャンバス幅1440の半分720 - 左端から100 = 620 */
-    left: calc(50% - min(50vw, rem(620)));
+    left: calc(50% - min(48vw, rem(620)));
 
     /* 幅437、高さ201 */
     width: rem(301);

@@ -25,86 +25,128 @@
   margin-top: rem(26);
   
   @include mq(md) {
+    /* gridに変更するので不要と思いきや、あしらいで必要だった */
     position: relative;
+
     margin-top: rem(40);
+
+    /* gridに変更 */
+    display: grid; //背景画像とテキストの重なりのgrid
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* align-itemsとjustify-itemsの一括指定*/
+    place-items: center;
   }
 
 }
 
+/* あしらい */
 .p-about__inner::after {
   @include mq(md) {
-      position: absolute;
-  
-      content: '';
-      display: inline-block;
-  
-      bottom: rem(-90);
-      // right: rem(-97);
-      /* ピクパに合わせて650→635へ */
-      // right: calc(50% - min(50vw, 635px));
-      right: calc(50% - min(48vw, rem(635)));
-      width: rem(194);
-      height: rem(181);
-  
-      background-image: url(../images/common/illustration1.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      /* coverは覆いつくす */
-      background-size: cover;
-      // overflow: hidden;
-    }
+    position: absolute;
+
+    content: '';
+    display: inline-block;
+
+    bottom: rem(-90);
+    // right: rem(-97);
+    /* ピクパに合わせて650→635へ */
+    // right: calc(50% - min(50vw, 635px));
+    right: calc(50% - min(48vw, rem(635)));
+    width: rem(194);
+    height: rem(181);
+
+    background-image: url(../images/common/illustration1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+    // overflow: hidden;
+  }
 }
 
+/* イメージ写真群 */
 .p-about__images {
-  position: relative;
+  /* gridへ変更で削除 */
+  // position: relative;
+
   width: 100%;
-  /* 幅345、高さ212 */
-  padding-top: 61.449275%;
+  /* 幅345、高さ212。gridでだとうまく効かず削除 */
+  // padding-top: 61.449275%;
+
+  /* gridへ変更 */
+  display: grid;
+  /* 縦方向の分割 */
+  /* 最初の横分割 全体の高さ２１２、ズレ26/212=12.2641509% */
+  /* 最後の横分割 18/212=8.49056603% */
+  /* 間の分割横は、3つに区切るって意味ある？？ */
+  grid-template-rows: 12.26% repeat(3, 1fr) 8.49%;
+
+
+  /* 横方向に何個並べるか。(repeat(繰返し回数,繰返す値） */
+  /* （繰返し2回、18.55%の幅で）と、（繰返し数3回、残りで）？？？*/
+  /* 最初の縦分轄 全体の幅345、ズレ64/345=18.5507246% */
+  /* 次の縦分割も、ズレ200なので、上記と同じ＝繰返し、となる*/
+  /* repeat(3, 1fr)に意味はあるのか？？ */
+  grid-template-columns: repeat(2, 18.55%) repeat(3, 1fr);
+
+  aspect-ratio: 345/212;
+  height: 100%;
+
+  @include mq(md) {
+    aspect-ratio: 1080 / 661;
+    // padding-top: 61.2037%;だとうまく効かない？
+  
+    /* 「.container（全体配置）」に対する指定 */
+    grid-area: 1/1/2/2;
+  }
 }
 
-.p-about__image {
-  // position: absolute;
-}
 
 /* 左 */
 .p-about__image:first-child {
-  /* 128/345=37.101449275% */
-  width: 37.101449275%;
+  /* 128/345=37.101449275%→gridに伴ってこれも不要 */
+  // width: 37.101449275%;
   /* 高さは、p-card__img--aboutでpadding-top指定 */
   // height: rem(194);
 
-  top: 0;
-  left: 0;
+  /* grid変更で削除 */
+  // top: 0;
+  // left: 0;
+  // position: absolute;
+
   z-index: 1;
-  /* 修正中 */
-  // padding-top: 151.5625%;
-  /* 幅345に対して高さ194=56.231884057%？？？ */
-  position: absolute;
+
+  /* gridに変更 */
+  grid-area: 1/1/5/3;
 
   @include mq(md) {
-    width: rem(400);
-    height: rem(600);
+    /* gridでは指定が不要？ */
+    // width: rem(400);
+    // height: rem(600);
   }
 }
 
 /* 右 */
 .p-about__image:last-child {
-  /* 281/345=81.449275362% */
-  width: 81.449275362%;
+  /* 281/345=81.449275362%→gridに伴ってこれも不要 */
+  // width: 81.449275362%;
   // height: rem(186);
 
-  bottom: 0;
-  right: 0;
+  /* gridで削除 */
+  // bottom: 0;
+  // right: 0;
+  // position: absolute;
+  /* gridで追加 */
+  grid-area: 2/2/6/6;
 
   z-index: 0;
 
-  /* 修正中 幅281、高さ186、186÷281 */
-  // padding-top: 66.1921708%;
-  position: absolute;
 
   @include mq(md) {
-    width: rem(880);
-    height: rem(581);
+    /* gridでは指定が不要？ */
+    // width: rem(880);
+    // height: rem(581);
   }
 }
 
@@ -113,16 +155,26 @@
 
 
   @include mq(md) {
-    position: absolute;
+    /* grid修正で削除 */
+    // position: absolute;
+    // top: rem(204);
+    // right: rem(66);
+
+    /* grid修正で追加。「.container（全体配置）」に対する指定 */
+    grid-area: 1/1/2/2;
+
+    /* grid修正で追加 */
+    margin-right: rem(40);
+    margin-left: auto;
+    /* 位置調整 */
+    padding-bottom: rem(19);
+
     display: flex;
-    top: rem(204);
-    right: rem(66);
     max-width: rem(840);
     z-index: 2;
     color: #fff;
-
-  /* テキストフィードバック後のピクパで0→-10 */
-  justify-content: space-between;
+    /* テキストフィードバック後のピクパで0→-10 */
+    justify-content: space-between;
   }
 }
 
@@ -139,7 +191,8 @@
     line-height: 1.25;
 
     /* テキストフィードバック後のピクパで0→-10 */
-    margin-top: rem(-10);
+    // margin-top: rem(-10);
+    margin-top: 0;
 
     margin-right: rem(40);
     color: #fff;
@@ -161,15 +214,6 @@
     margin-top: 0;
   }
 }
-
-/* ？なんだ？これ？20240101 */
-// .__button {
-//   margin-top: rem(48);
-  
-//   @include mq(md) {
-//     margin-top: rem(40);
-//   }
-// }
 
 .p-about__button {
   text-align: center;

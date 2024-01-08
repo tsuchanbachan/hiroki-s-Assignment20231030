@@ -2,17 +2,17 @@
 
 .l-price {
   /* ピクパ調整80→84 */
-  margin-top: rem(80 + 4);
+  margin-top: rem(80);
 
   @include mq(md) {
     /* ボタンの影分の下ズレ4px */
-    margin-top: rem(140 + 4);
+    margin-top: rem(140);
   }
 }
 
 .p-price {
   padding-top: rem(80);
-  padding-bottom: rem(84);
+  padding-bottom: rem(80);
   background-color: #DDF0F1;
 
   @include mq(md) {
@@ -33,11 +33,11 @@
 
 .p-price__inner {
   /* ピクパ */
-  padding-top: rem(24 + 3);
+  padding-top: rem(24);
 
   @include mq(md) {
     /* ピクパ40→43 */
-    padding-top: rem(43);
+    padding-top: rem(40);
 
   }
 }
@@ -91,7 +91,8 @@
 }
 
 .p-price__button {
-  margin-top: rem(40);
+  /* ピクパ */
+  margin-top: rem(40 - 2);
   text-align: center;
 
   @include mq(md) {

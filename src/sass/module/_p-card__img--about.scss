@@ -1,5 +1,7 @@
 @use 'global' as *;
 
+/* このファイルは不要！！！p-card__img（grid使用する）では、カードパックは使わない！ */
+
 /* p-カードパック */
 
 /* 画像の比率管理① まずはrelative */
@@ -14,11 +16,15 @@
   display: block;
 
   /* 幅128、高さ194、194÷128 */
-  padding-top: 151.5625%;
+  // padding-top: 151.5625%;
+  /* gridでpadding-topからaspect-ratioに変更 */
+  aspect-ratio: 128 / 194;
   
   @include mq(md) {
     /* 幅400？、高さ606？、606÷400 */
-    padding-top: 151.5%;
+    // padding-top: 151.5%;
+    /* gridでpadding-topから変更 */
+    aspect-ratio: 400 / 606;
     
   }
 }
@@ -30,11 +36,13 @@
 
   /* 幅281、高さ186、186÷281 */
   // padding-top: 62.68656766.1921708%;
-  padding-top: 66.192170818%;
+  // padding-top: 66.192170818%;grid使用でaspect-ratioに
+  aspect-ratio: 281 / 186;
   
   @media screen {
     /* 幅880、高さ581、581÷880 */
-    padding-top: 66.02272727%;
+    // padding-top: 66.02272727%;grid使用でaspect-ratioに
+    aspect-ratio: 880 / 581;
   }
 }
 

@@ -69,14 +69,16 @@
 
 }
 
-// .p-campaign__button {
-//   margin-top: rem(40 - 4);
-//   @include mq(md) {
-//     margin-top: rem(80 - 5);
-//   }
-// }
+.p-campaign__button {
+  margin-top: rem(40 - 4);
+  text-align: center;
 
- .p-campaign__button {
-   margin-top: 4.75rem;
-      text-align: center;
- }
+  @include mq(md) {
+    margin-top: rem(80 - 5);
+  }
+}
+
+//  .p-campaign__button {
+//    margin-top: 4.75rem;
+  
+//  }
