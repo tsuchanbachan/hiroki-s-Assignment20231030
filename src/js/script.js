@@ -4,11 +4,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   /* ハンバーガーボタン */
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass('is-active')) {
-      $('.js-hamburger').removeClass("is-active");
+      $('.js-hamburger').removeClass('is-active');
       $(".js-sp-nav").fadeOut(300);
-      
+      /* これがないと、通常表示の時に戻らない */
+      $('body').toggleClass('noscroll');
+
     } else {
-      $('.js-hamburger').addClass("is-active");
+      $('.js-hamburger').addClass('is-active');
       $(".js-sp-nav").fadeIn(300);
 
       /* ハンバーガーメニュー表示時にはスクロール不可*/

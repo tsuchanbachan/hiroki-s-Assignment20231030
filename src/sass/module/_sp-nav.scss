@@ -25,14 +25,21 @@
   opacity: 1;
 }
 
+/* ヘッダー部分（ロゴが載るところ）を一番上にしたいので要素を追加 */
+.sp-nav__header {
+  width: 100%;
+  height: rem(80);
+  background-color: $green;
+}
+
 .sp-nav__inner {
 
   display: flex;
   /* 上から80+24 */
   // padding: rem(94) rem(37) rem(114);
 
-  /* 動画FBで高さ不足時対策用に修正中 */
-  padding-top: rem(94);
+  /* 動画FBで高さ不足時対策用に修正中（topは */
+  padding-top: rem(14);
   padding-left: rem(37);
   padding-right: rem(37);
   /* （仮）高さ不足時のため */

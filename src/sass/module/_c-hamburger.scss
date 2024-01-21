@@ -52,6 +52,6 @@
 
 /* ハンバーガーメニュー表示時にはスクロール不可
 CSSとJSで実現 */
-.noscroll {
+body.noscroll {
   overflow: hidden;
 }
