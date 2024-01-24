@@ -5,12 +5,12 @@
 /* p-カードパック */
 
 /* 画像の比率管理① まずはrelative */
-.p-card__img--about {
+.card__img--about {
   position: relative;
 }
 
 /* 画像の比率管理② 擬似要素を作る */
-.p-card__img--about:first-child::before {
+.card__img--about:first-child::before {
   content: "";
   /* 擬似要素のinline要素のままだと高さ取れない */
   display: block;
@@ -29,7 +29,7 @@
   }
 }
 
-.p-card__img--about:last-child::before {
+.card__img--about:last-child::before {
   content: "";
   /* 擬似要素のinline要素のままだと高さ取れない */
   display: block;
@@ -48,7 +48,7 @@
 
 /* 画像の比率管理③ ②で作った箱に画像を入れる
 画像の比率が違う時にもはみ出さない */
-.p-card__img--about img {
+.card__img--about img {
   position: absolute;
   top: 50%;
   left: 50%;

@@ -3,7 +3,7 @@
 /* 不要では？？？ */
 /* ボタン（moreボタン、アニメーション） */
 
-// .p-button--basic {
+// .button--basic {
 //   // margin-top: rem(30);
 //   /* 中のボタンをinline-blockにしているので
 //     text-alignでセンタリング */
@@ -17,7 +17,7 @@
 // ボタン（スライドアニメーション）
 // =================== */
 // /* ボタン基本コード */
-// .p-button__link--basic {
+// .button__link--basic {
 //   cursor: pointer;
 //   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 //   background: $white;
@@ -35,7 +35,7 @@
 
 // }
 
-// // .p-button__link-back {
+// // .button__link-back {
 // //   position: absolute;
 // //   // content: '';
 // //   width: 100%;
@@ -50,7 +50,7 @@
 
 
 
-// .p-button__link--basic.slide {
+// .button__link--basic.slide {
 //   background: $green;
 //   color: $white;
 //   overflow: hidden;
@@ -58,7 +58,7 @@
 //   z-index: 1;
 // }
 // /* 右側の矢印（通常時） */
-// .p-button__link--basic.slide::before {
+// .button__link--basic.slide::before {
 //   position: absolute;
 //   content: '';
 //   background-image: url(../images/common/arrowRight-white.png);
@@ -71,7 +71,7 @@
 //   background-size: contain;
 // }
 
-// .p-button__link--basic.slide::after {
+// .button__link--basic.slide::after {
 //   background: $white;
 //   position: absolute;
 //   top: 0;
@@ -87,11 +87,11 @@
 
 
 // /* hover時 */
-// .p-button__link--basic.slide:hover {
+// .button__link--basic.slide:hover {
 //   color: $green;
 // }
 // /* 右側の矢印 */
-// .p-button__link--basic.slide:hover::before {
+// .button__link--basic.slide:hover::before {
 //   position: absolute;
 //   content: '';
 //   background-image: url(../images/common/arrowRight-green.png);
@@ -103,7 +103,7 @@
 //   background-repeat: no-repeat;
 //   background-size: contain;
 // }
-// .p-button__link--basic.slide:hover::after {
+// .button__link--basic.slide:hover::after {
 //   transform: scale(1, 1);
 // }
 
@@ -112,12 +112,12 @@
 作成中 sec6 コロスケさん参照、矢印は画像で
 ==============*/
 .sec6-copy {
-  // .p-campaign__button {
+  // .campaign__button {
   //   margin-top: 4.75rem;
   //   text-align: center;
   // }
 
-  // .p-button {
+  // .button {
   //   align-items: center;
   //   background-color: #408F95;
   //   border: 1px solid #408F95;
@@ -137,7 +137,7 @@
   // }
 
   // /* 背景の箱 */
-  // .p-button::before {
+  // .button::before {
   //   border: 1px solid #408F95;
   //   content: "";
   //   height: 100%;
@@ -149,12 +149,12 @@
   // }
 
   // /* 矢印 */
-  // .p-button span {
+  // .button span {
   //   display: inline-block;
   //   padding-bottom: 0.3125rem;
   // }
 
-  // .p-button span::before {
+  // .button span::before {
   //   background-image: url(../images/common/arrowRight-white.png);
   //   background-repeat: no-repeat;
   //   background-size: cover;
@@ -167,7 +167,7 @@
   //   width: 2.5rem;
   // }
 
-  // .p-button span:hover::before {
+  // .button span:hover::before {
   //   background-image: url(../images/common/arrowRight-green.png);
   //   background-repeat: no-repeat;
   //   background-size: contain;
@@ -181,11 +181,11 @@
   // }
 
   // /* スライドアニメーション*/
-  // .p-button:hover::after {
+  // .button:hover::after {
   //   transform: scale(1, 1);
   // }
 
-  // .p-button::after {
+  // .button::after {
   //   background-color: #fff;
   //   content: "";
   //   height: 100%;
@@ -199,7 +199,7 @@
   //   z-index: -1;
   // }
 
-  // .p-button:hover,
+  // .button:hover,
   // .button:hover span::after {
   //   color: #408F95;
   // }

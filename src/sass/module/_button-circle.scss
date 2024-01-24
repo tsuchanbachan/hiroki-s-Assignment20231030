@@ -3,7 +3,7 @@
 /* ボタン（前へ後へ） */
 
 
-.p-button-circle {
+.button-circle {
   position: relative;
   width: rem(48);
   height: rem(48);
@@ -18,12 +18,12 @@
   }
 }
 
-.p-button-circle:hover {
+.button-circle:hover {
   opacity: 0.4;
 }
 
 /* 左 */
-.p-button-circle__previous::after {
+.button-circle__previous::after {
   position: absolute;
   content: '';
   background-image: url(../images/common/arrowLeft-green.png);
@@ -41,7 +41,7 @@
 }
 
 /* 右 */
-.p-button-circle__next::after {
+.button-circle__next::after {
   position: absolute;
   content: '';
   background-image: url(../images/common/arrowRight-green.png);
@@ -55,7 +55,7 @@
 }
 
 /* 上 */
-.p-button-circle__top::after {
+.button-circle__top::after {
   position: absolute;
   content: '';
   background-image: url(../images/common/arrowTop-green.png);

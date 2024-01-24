@@ -4,7 +4,7 @@
 
 }
 
-.p-blog {
+.blog {
   padding-top: rem(80);
 
   @include mq(md) {
@@ -16,7 +16,7 @@
 }
 
 /* 背景画像 */
-.p-blog__background {
+.blog__background {
   @include mq(md) {
     position: absolute;
     content: '';
@@ -36,10 +36,10 @@
 }
 
 /* あしらい用 */
-.p-blog__background-fishes {
+.blog__background-fishes {
   position: relative;
 }
-.p-blog__background-fishes::before {
+.blog__background-fishes::before {
   @include mq(md) {
     position: absolute;
     content: '';
@@ -69,7 +69,7 @@
   }
 }
 
-.p-blog__title {
+.blog__title {
   /* これがないと、背景画像がabsoluteなので下にいってしまう */
   position: relative;
 
@@ -78,13 +78,13 @@
   }
 }
 
-.p-blog__title .p-section-title__japanese {
+.blog__title .section-title__japanese {
   @include mq(md) {
     color: $white;
   }
 }
 
-.p-blog__inner {
+.blog__inner {
   
   // padding-top: rem(27);
 
@@ -101,7 +101,7 @@
   }
 }
 
-.p-blog__items {
+.blog__items {
   // display: flex;
   display: grid;
   gap: rem(40);
@@ -116,12 +116,12 @@
     }
 }
 
-.p-blog__item {
+.blog__item {
   
 }
 
 
-.p-blog__button {
+.blog__button {
   margin-top: rem(40);
   text-align: center;
 

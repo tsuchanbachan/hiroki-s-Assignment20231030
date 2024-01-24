@@ -12,15 +12,15 @@
   }
 }
 
-.p-about {
+.about {
 
 }
 
-.p-about__title {
+.about__title {
 
 }
 
-.p-about__inner {
+.about__inner {
   // margin-top: rem(26);
   
   @include mq(md) {
@@ -39,7 +39,7 @@
 }
 
 /* あしらい */
-.p-about__inner::after {
+.about__inner::after {
   @include mq(md) {
     position: absolute;
 
@@ -63,7 +63,7 @@
   }
 }
 
-.p-about__body {
+.about__body {
   margin-top: rem(26);
   
     @include mq(md) {
@@ -81,7 +81,7 @@
 }
 
 /* イメージ写真群 */
-.p-about__images {
+.about__images {
   /* gridへ変更で削除 */
   // position: relative;
 
@@ -119,7 +119,7 @@
 
 
 /* 左 */
-.p-about__image:first-child {
+.about__image:first-child {
   /* 128/345=37.101449275%→gridに伴ってこれも不要 */
   // width: 37.101449275%;
   /* 高さは、p-card__img--aboutでpadding-top指定 */
@@ -143,7 +143,7 @@
 }
 
 /* 右 */
-.p-about__image:last-child {
+.about__image:last-child {
   /* 281/345=81.449275362%→gridに伴ってこれも不要 */
   // width: 81.449275362%;
   // height: rem(186);
@@ -165,7 +165,7 @@
   }
 }
 
-.p-about__contents {
+.about__contents {
   width: 100%;
 
 
@@ -193,7 +193,7 @@
   }
 }
 
-.p-about__lead {
+.about__lead {
   font-family: $english-font-family;
   font-size: rem(40);
   line-height: 1;
@@ -214,14 +214,14 @@
   }
 }
 
-.p-about__wrap {
+.about__wrap {
 
   @include mq(md) {
     max-width: rem(400);
   }
 }
 
-.p-about__text {
+.about__text {
   /* ピクパ優先16→18 */
   margin-top: rem(18);
   
@@ -230,7 +230,7 @@
   }
 }
 
-.p-about__button {
+.about__button {
   text-align: center;
   margin-top: rem(48);
 

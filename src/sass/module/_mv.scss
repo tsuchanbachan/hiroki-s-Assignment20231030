@@ -1,22 +1,22 @@
 @use 'global' as *;
 
 
-.p-mv {
+.mv {
 
 }
 
-.p-mv__inner {
+.mv__inner {
   position: relative;
 }
 
 
 /* p-カードパック */
 /* 画像の比率管理① まずはrelative */
-.p-mv__img {
+.mv__img {
   position: relative;
 }
 /* 画像の比率管理② 擬似要素を作る */
-.p-mv__img::before {
+.mv__img::before {
   content: "";
   /* 擬似要素のinline要素のままだと高さ取れない */
   display: block;
@@ -28,7 +28,7 @@
 }
 /* 画像の比率管理③ ②で作った箱に画像を入れる
 画像の比率が違う時にもはみ出さない */
-.p-mv__img img {
+.mv__img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,7 +40,7 @@
 }
 
 /* 文字 */
-.p-mv__header {
+.mv__header {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,7 +50,7 @@
   z-index: 2;
 }
 
-.p-mv__title {
+.mv__title {
   font-family: Lato;
   font-size: rem(40);
   /* GoogleサイトによるとRegular=400 */
@@ -69,7 +69,7 @@
 }
 
 /* 最後の文字の後ろのletter-spacingをネガティブマージンで消す */
-.p-mv__title::after {
+.mv__title::after {
   content: "";
   margin-left: -0.54em;
   @include mq(md) {
@@ -77,7 +77,7 @@
 }
 
 
-.p-mv__subtitle {
+.mv__subtitle {
   font-size: rem(20);
   /* 33/20=1.65 */
   line-height: 1.65;

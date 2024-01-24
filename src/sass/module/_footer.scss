@@ -16,7 +16,7 @@
   }
 }
 
-.p-footer {
+.footer {
   background-color: $green;
   width: 100%;
 
@@ -27,7 +27,7 @@
 
 }
 
-.p-footer__inner {
+.footer__inner {
   /* 擬似要素ヒトデ分の右余白は「」で */
   // padding: rem(48) rem(15) 0;
   padding-right: rem(15);
@@ -56,13 +56,13 @@
 
 }
 
-.p-footer__header {
+.footer__header {
   @include mq(md) {
     display: flex;
   }
 }
 
-.p-footer__logo {
+.footer__logo {
   width: rem(120);
   height: rem(45);
   // z-index: 1000;
@@ -74,11 +74,11 @@
   }
 }
 
-.p-footer__logo a:hover {
+.footer__logo a:hover {
   opacity: 0.4;
 }
 
-.p-footer__logoLink {
+.footer__logoLink {
   position: relative;
   display: block;
   width: 100%;
@@ -87,14 +87,14 @@
   }
 }
 
-.p-footer__logoLink::before {
+.footer__logoLink::before {
   content: '';
   /* 擬似要素のinline要素のままだと高さ取れない */
   display: block;
   /* PCもSPも比率は同じ。幅200、高さ75、75÷200 */
   padding-top: 37.5%;
 }
-.p-footer__logoLink img {
+.footer__logoLink img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -105,7 +105,7 @@
 }
 
 /* SNS */
-.p-footer__sns-items {
+.footer__sns-items {
   display: flex;
   /* ピクパ16→14 */
   gap: rem(14);
@@ -116,23 +116,23 @@
   }
 }
 
-.p-footer__sns-item {
+.footer__sns-item {
   display: block;
   width: rem(26);
   height: rem(26);
   cursor: pointer;
 }
 
-.p-footer__sns-item:hover {
+.footer__sns-item:hover {
   opacity: 0.4;
 }
 
-.p-footer__sns-item img {
+.footer__sns-item img {
   width: 100%;
   height: 100%;
 }
 
-.p-footer__nav {
+.footer__nav {
   /* 40-「.nav-footer__item a」の12=28 */
   margin-top: rem(40 - 12);
 
@@ -144,7 +144,7 @@
 }
 
 /* コピーライト */
-.p-footer__copyright {
+.footer__copyright {
   text-align: center;
 
   /* 上余白40-最後の「.nav-footer__item-a」padding12=28
@@ -160,7 +160,7 @@
   }
 }
 
-.p-footer__copyright small {
+.footer__copyright small {
   font-size: rem(12);
   line-height: 1.5;
   

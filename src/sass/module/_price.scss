@@ -10,7 +10,7 @@
   }
 }
 
-.p-price {
+.price {
   padding-top: rem(80);
   padding-bottom: rem(80);
   background-color: #DDF0F1;
@@ -21,17 +21,17 @@
   }
 }
 
-.p-price__title {
+.price__title {
 
   @include mq(md) {
   }
 }
-.p-price__title .p-section-title__japanese {
+.price__title .section-title__japanese {
   /* ピクパ優先 */
   margin-top: rem(7);
 }
 
-.p-price__inner {
+.price__inner {
 
 
   @include mq(md) {
@@ -40,7 +40,7 @@
   }
 }
 
-.p-price__wrapper {
+.price__wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -58,7 +58,7 @@
   }
 }
 
-.p-price__image-wrap {
+.price__image-wrap {
   width: 100%;
   
     @include mq(md) {
@@ -74,7 +74,7 @@
   }
   
   /* イメージ画像 */
-  .p-price__image {
+  .price__image {
     /* 746/492 */
     // padding-top: 151.626016%;
 
@@ -85,7 +85,7 @@
 
 }
 
-.p-price__table {
+.price__table {
   width: 100%;
 
   @include mq(md) {
@@ -94,7 +94,7 @@
   }
 }
 
-.p-price__button {
+.price__button {
   /* ピクパ */
   margin-top: rem(40 - 2);
   text-align: center;
@@ -105,10 +105,10 @@
 }
 
 /* あしらい用 */
-.p-price__background-fishes {
+.price__background-fishes {
   position: relative;
 }
-.p-price__background-fishes::after {
+.price__background-fishes::after {
   @include mq(md) {
     position: absolute;
     content: '';

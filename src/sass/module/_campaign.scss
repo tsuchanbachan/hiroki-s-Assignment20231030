@@ -8,26 +8,26 @@
   }
 }
 
-.p-campaign {
+.campaign {
 
   /* テキストフィードバック */
   /* スワイパー部分の右はみ出しによって横スクロールするのを回避 */
   overflow: hidden;
 }
 
-.p-campaign__wrap {
+.campaign__wrap {
   position: relative;
 }
 
-.p-campaign__title {
+.campaign__title {
 
 }
 
-.p-campaign__title .p-section-title__japanese {
+.campaign__title .section-title__japanese {
   margin-top: rem(6);
 }
 
-.p-campaign__circle-buttons {
+.campaign__circle-buttons {
   display: none;
   
   @include mq(md) {
@@ -44,13 +44,13 @@
 }
 
 /* 位置調整のために、検証ツール確認しながらswiperのデフォルトcss打ち消した */
-.p-campaign__circle-button {
+.campaign__circle-button {
   margin-top: 0;
   top: 0;
   left: 0;
 }
 
-.p-campaign__card {
+.campaign__card {
   margin-top: rem(26);
   /* flexは不要。カード間の左右余白はjsの「spaceBetween」で */
 
@@ -64,12 +64,12 @@
     }
 }
 
-.p-campaign__card-link {
+.campaign__card-link {
   height: 100%;
 
 }
 
-.p-campaign__button {
+.campaign__button {
   margin-top: rem(40 - 4);
   text-align: center;
 
@@ -78,7 +78,7 @@
   }
 }
 
-//  .p-campaign__button {
+//  .campaign__button {
 //    margin-top: 4.75rem;
   
 //  }

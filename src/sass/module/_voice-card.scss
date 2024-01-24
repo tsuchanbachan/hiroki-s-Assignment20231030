@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 /* カード（ボイス） */
-.p-voice-card {
+.voice-card {
   /* ぼかし */
   box-shadow: 0px 0px 15px -5px #777777;
   /* ピクパ優先top15→17 bottom24→21 */
@@ -12,13 +12,13 @@
   }
 }
 
-.p-voice-card__head {
+.voice-card__head {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.p-voice-card__information {
+.voice-card__information {
   /* 149/313=47.604844% */
   width: 47.604844%;
   /* 13/313=4.153355% */
@@ -40,7 +40,7 @@
 
 }
 
-.p-voice-card__category {
+.voice-card__category {
   display: flex;
   flex-direction: column;
 
@@ -51,7 +51,7 @@
   }
 }
 
-.p-voice-card__generation {
+.voice-card__generation {
   font-size: rem(12);
   line-height: 1;
   /* ピクパ優先 */
@@ -66,7 +66,7 @@
   }
 }
 
-.p-voice-card__thema span {
+.voice-card__thema span {
   display: inline-block;
   font-family: "Noto Sans JP";
   font-size: rem(12);
@@ -85,7 +85,7 @@
   }
 }
 
-.p-voice-card__title {
+.voice-card__title {
   font-size: rem(16);
   padding-bottom: rem(1);
   border-bottom: solid rem(1) $green;
@@ -104,7 +104,7 @@
 }
 
 /* 比率管理した画像 */
-// .p-voice-card__img {
+// .voice-card__img {
 //   position: relative;
 //   /* 151/313=48.242812% */
 //   width: 48.242812%;
@@ -122,7 +122,7 @@
 // }
 
 /* figureを囲むdiv（幅、高指定） */
-.p-voice-card__image {
+.voice-card__image {
   /* 151/313=48.242812% */
   width: 48.242812%;
   /* ピクパ9→7 */
@@ -139,7 +139,7 @@
 }
 
 /* imgを囲むfigure */
-.p-voice-card__img {
+.voice-card__img {
   position: relative;
   bottom: 0;
   /* 117/151 */
@@ -151,7 +151,7 @@
   }
 }
 
-.p-voice-card__img img {
+.voice-card__img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -165,7 +165,7 @@
   object-fit: cover;
 }
 
-.p-voice-card__contents {
+.voice-card__contents {
   margin-top: rem(17);
 
   @include mq(md) {

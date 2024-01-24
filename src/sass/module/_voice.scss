@@ -10,7 +10,7 @@
   }
 }
 
-.p-voice {
+.voice {
 
   @include mq(md) {
 
@@ -18,11 +18,11 @@
 }
 
 /* あしらい用（前） */
-.p-voice__background-fishes {
+.voice__background-fishes {
   position: relative;
 }
 
-.p-voice__background-fishes::before {
+.voice__background-fishes::before {
   @include mq(md) {
     position: absolute;
     content: '';
@@ -47,18 +47,18 @@
   }
 }
 
-.p-voice__title {
+.voice__title {
 
   @include mq(md) {
   }
 }
 
-.p-voice__inner {
+.voice__inner {
 
 }
 
 /* カード群 */
-.p-voice__items {
+.voice__items {
 
   /* 修正24→42 */
   margin-top: rem(43);
@@ -87,7 +87,7 @@
 }
 
 /* 1枚のカード全体 */
-.p-voice__item {
+.voice__item {
   // width: 100%;
 
   @include mq(md) {
@@ -96,7 +96,7 @@
   }
 }
 
-.p-voice__button {
+.voice__button {
   margin-top: rem(40);
   text-align: center;
 
@@ -106,10 +106,10 @@
 }
 
 /* あしらい用（後） */
-.p-voice__background-fishes-last {
+.voice__background-fishes-last {
   position: relative;
 }
-.p-voice__background-fishes-last::after {
+.voice__background-fishes-last::after {
   @include mq(md) {
     position: absolute;
     content: '';

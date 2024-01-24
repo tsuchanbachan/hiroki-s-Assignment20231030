@@ -1,10 +1,10 @@
 @use 'global' as *;
 
-.p-section-title {
+.section-title {
   text-align: center;
 }
 
-.p-section-title__english {
+.section-title__english {
   font-family: $english-font-family;
   font-weight: $regular;
   font-size: rem(32);
@@ -17,11 +17,11 @@
   }
 }
 
-.p-section-title__english--normal::first-letter {
+.section-title__english--normal::first-letter {
   color: $green;
 }
 
-.p-section-title__japanese {
+.section-title__japanese {
   font-size: rem(12);
   line-height: 1.5;
   /* ピクパ優先 */

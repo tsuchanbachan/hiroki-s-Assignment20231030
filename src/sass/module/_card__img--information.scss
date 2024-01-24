@@ -1,35 +1,33 @@
 @use 'global' as *;
 
-/* p-カードパック・コンタクト */
+/* p-カードパック */
 
 /* 画像の比率管理① まずはrelative */
-.p-card__img--contact {
+.card__img--information {
   position: relative;
 }
 
 /* 画像の比率管理② 擬似要素を作る */
-.p-card__img--contact::before {
+.card__img--information::before {
   content: "";
   /* 擬似要素のinline要素のままだと高さ取れない */
   display: block;
-  
-  /* 幅295、高さ160、160÷295 */
-  padding-top:54.237288%;
 
-  /* 中身のimgないので、こっちにabsolute? */
-  position: absolute;
+  /* 幅345、高さ227、227÷345 */
+  padding-top: 65.797101%;
 
   @include mq(md) {
-    /* 幅273、高さ148、148÷273=54.212454 */
-    // padding-top: 54.212454%;
+    /* 540、356=65.925925925% */
+    @include mq(md) {
+      padding-top: 65.925925925%;
+    }
   }
 
 }
 
-
 /* 画像の比率管理③ ②で作った箱に画像を入れる
 画像の比率が違う時にもはみ出さない */
-.p-card__img--contact iframe {
+.card__img--information img {
   position: absolute;
   top: 50%;
   left: 50%;

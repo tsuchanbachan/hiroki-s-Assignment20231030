@@ -5,7 +5,7 @@
 /* ------------
 親
 ------------ */
-// .p-button {
+// .button {
 //   position: relative;
 //   /* 作りたいボタンサイズ */
 //   width: rem(202);
@@ -20,7 +20,7 @@
 リンクボタン（スライドアニメーション）
 =================== */
 /* ボタン基本コード */
-// .p-button__link {
+// .button__link {
 //   cursor: pointer;
 //   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 //   background: $white;
@@ -41,7 +41,7 @@
 //   white-space: nowrap;
 // }
 
-// .p-button__link.slide {
+// .button__link.slide {
 //   background: $green;
 //   color: $white;
 //   overflow: hidden;
@@ -51,7 +51,7 @@
 //   left: rem(-2);
 // }
 // /* 右側の矢印（通常時） */
-// .p-button__link.slide::before {
+// .button__link.slide::before {
 //   position: absolute;
 //   content: '';
 //   background-image: url(../images/common/arrowRight-white.png);
@@ -65,7 +65,7 @@
 //   background-size: cover;
 // }
 
-// .p-button__link.slide::after {
+// .button__link.slide::after {
 //   background: $white;
 //   position: absolute;
 //   top: 0;
@@ -81,11 +81,11 @@
 
 
 // /* hover時 */
-// .p-button__link.slide:hover {
+// .button__link.slide:hover {
 //   color: $green;
 // }
 // /* 右側の矢印 */
-// .p-button__link.slide:hover::before {
+// .button__link.slide:hover::before {
 //   position: absolute;
 //   content: '';
 //   background-image: url(../images/common/arrowRight-green.png);
@@ -98,7 +98,7 @@
 //   background-repeat: no-repeat;
 //   background-size: contain;
 // }
-// .p-button__link.slide:hover::after {
+// .button__link.slide:hover::after {
 //   transform: scale(1, 1);
 // }
 
@@ -108,7 +108,7 @@
 // /* ------------
 // 背景のボタン（後ろのチラ見せ）
 // ------------ */
-// .p-button__back {
+// .button__back {
 //   position: absolute;
 //   top: rem(4);
 //   /* ピクパ優先で-2調整 */
@@ -127,11 +127,11 @@
     /* ============
     コロスケさん参照、矢印は画像で
     ==============*/  
-    .p-button-wrap {
+    .button-wrap {
       padding-bottom: rem(4);
     }
   
-    .p-button {
+    .button {
       align-items: center;
       // background-color: #408F95;
       background-color: $green;
@@ -153,7 +153,7 @@
     }
   
     /* 背景の箱 */
-    .p-button::before {
+    .button::before {
       border: rem(1) solid $green;
       content: "";
       height: 100%;
@@ -165,12 +165,12 @@
     }
   
     /* 矢印 */
-    .p-button span {
+    .button span {
       display: inline-block;
       padding-bottom: rem(5);
     }
   
-    .p-button span::before {
+    .button span::before {
       background-image: url(../images/common/arrowRight-white.png);
       background-repeat: no-repeat;
       background-size: cover;
@@ -183,7 +183,7 @@
       width: rem(40);
     }
   
-    .p-button:hover span::before {
+    .button:hover span::before {
       background-image: url(../images/common/arrowRight-green.png);
       background-repeat: no-repeat;
       // background-size: contain;
@@ -198,11 +198,11 @@
     }
   
     /* スライドアニメーション*/
-    .p-button:hover::after {
+    .button:hover::after {
       transform: scale(1, 1);
     }
   
-    .p-button::after {
+    .button::after {
       background-color: #fff;
       content: "";
       height: 100%;
@@ -216,7 +216,7 @@
       z-index: -1;
     }
   
-    .p-button:hover,
+    .button:hover,
     .button:hover span::after {
       color: $green;
     }

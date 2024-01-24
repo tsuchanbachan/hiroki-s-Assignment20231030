@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 /* カード（flex使用） */
-// .p-sample1__inner {
+// .sample1__inner {
 //   width: 100%;
 //   margin: auto;
 
@@ -11,43 +11,43 @@
 // }
 
 /* 3枚横並びのブロック */
-// .p-card-list1 {
+// .card-list1 {
 //   @include mq(md) {
 //     display: flex;
 //     /* ２列目増設可能性への対応 */
 //     flex-wrap: wrap;
-//     /* gap使用時は.p-card-list__itemのmarginのleft、top不要 */
+//     /* gap使用時は.card-list__itemのmarginのleft、top不要 */
 //     gap: rem(25);
 //   }
 // }
 
 /* 25pxの余白で、3枚横並び */
-// .p-card-list1__item {
+// .card-list1__item {
 //   /* gap使用でも書き方は同じ */
 //   max-width: calc(33.3333% - rem(25) * 2 / 3);
 //   width: 100%;
 // }
 
-// .p-card-list1__item+.p-card-list1__item {
-//   /* gap使用時は.p-card-listのみで指定するので不要 */
+// .card-list1__item+.card-list1__item {
+//   /* gap使用時は.card-listのみで指定するので不要 */
 //   margin-left: rem(25);
 // }
 
 // /* ２列目増設可能性への対応（gap使用時は不要） */
-// .p-card-list1__item:nth-child(3n + 1) {
+// .card-list1__item:nth-child(3n + 1) {
 //   margin-left: 0;
 // }
 
 // /* ２列目増設可能性への対応（gap使用時は不要） */
-// .p-card-list1__item:nth-child(n + 4) {
+// .card-list1__item:nth-child(n + 4) {
 //   margin-top: rem(25);
 // }
 
 
 /* ---------
-１枚のカード（.p-blog-card）
+１枚のカード（.blog-card）
 --------- */
-.p-introduction-card {
+.introduction-card {
   background-color: $white;
 
   /* 要素がインラインなのでblock要素に。 */
@@ -75,11 +75,11 @@
     width: rem(333);
   }
 }
-.p-introduction-card:hover {
+.introduction-card:hover {
   opacity: 0.4;
 }
 /* 比率管理した画像 */
-.p-introduction-card__img {
+.introduction-card__img {
   position: relative;
   /* 188/280=67.1428571428% */
   padding-top: 67.1428571428%;
@@ -92,7 +92,7 @@
 }
 
 /* ブロック① */
-.p-introduction-card__img img {
+.introduction-card__img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -103,7 +103,7 @@
 }
 
 /* ブロック② */
-.p-introduction-card__body {
+.introduction-card__body {
   padding: rem(16) rem(16) rem(0);
   /* 1rem のぼかしで 3rem の広がりの赤っぽい影 */
   /* https: //www.bad-company.jp/drop-shadow */
@@ -115,7 +115,7 @@
   }
 }
 
-.p-introduction-card__genre {
+.introduction-card__genre {
   display: inline-block;
   font-size: rem(12);
   /* 22/12=1.833333 */
@@ -138,7 +138,7 @@
   }
 }
 
-.p-introduction-card__name {
+.introduction-card__name {
   /* 24/16=1.5 */
   line-height: 1.5;
   /* ピクパ優先 */
@@ -147,7 +147,7 @@
 }
 
 /* ブロック③フッター部分（プライス） */
-.p-introduction-card__footer {
+.introduction-card__footer {
   padding: rem(0) rem(16) rem(24);
   /* 下寄せ */
   margin-top: auto;
@@ -157,7 +157,7 @@
   }
 }
 
-.p-introduction-card__text {
+.introduction-card__text {
   border-top: solid 1px $green;
   /* 24/16=1.5 */
   line-height: 1.5;
@@ -177,7 +177,7 @@
   }
 }
 
-.p-introduction-card__price {
+.introduction-card__price {
   display: flex;
   gap: rem(16);
   justify-content: center;
@@ -189,12 +189,12 @@
   }
 }
 
-.p-introduction-card__price-before,
-.p-introduction-card__price-after {
+.introduction-card__price-before,
+.introduction-card__price-after {
   font-family: 'Lato';
   line-height: 1;
 }
-.p-introduction-card__price-before {
+.introduction-card__price-before {
   position: relative;
   font-size: rem(20);
   
@@ -204,7 +204,7 @@
   }
 }
 
-.p-introduction-card__price-before::after {
+.introduction-card__price-before::after {
   position: absolute;
   content: '';
   width: rem(91);
@@ -215,7 +215,7 @@
   transform: translate(-50%, -50%);
 }
 
-.p-introduction-card__price-after {
+.introduction-card__price-after {
   font-size: rem(32);
   color: $green;
   
@@ -229,7 +229,7 @@
 
 
 
-// .p-introduction-card__info {
+// .introduction-card__info {
 //   padding: 0 0 rem(15);
 
 //   display: flex;
@@ -238,15 +238,15 @@
 // }
 
 // /* フッター部分を底辺に固定 */
-// .p-introduction-card__info--test {
+// .introduction-card__info--test {
 //   margin-top: auto;
 // }
 
-// .p-introduction-card__category {
+// .introduction-card__category {
 //   background-color: yellow;
 //   /* 改行ないので */
 //   line-height: 1;
 //   padding: rem(6) rem(5);
 // }
 
-// .p-introduction-card__date {}
+// .introduction-card__date {}

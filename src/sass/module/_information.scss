@@ -10,7 +10,7 @@
   }
 }
 
-.p-information {
+.information {
   background-color: #DDF0F1;
   padding-top: rem(80);
   /* ピクパ優先80→84 */
@@ -22,11 +22,11 @@
   }
 }
 
-.p-information__inner {
+.information__inner {
 
 }
 
-.p-information__body {
+.information__body {
   /* ピクパ優先24→26 */
   margin-top: rem(26);
 
@@ -39,7 +39,7 @@
   }
 }
 
-.p-information__image {
+.information__image {
 
   @include mq(md) {
     /* 540/1080 */
@@ -47,7 +47,7 @@
   }
 }
 
-.p-information__wrap {
+.information__wrap {
   // margin-top: rem(24);
   /* ピクパ優先 */
   margin-top: rem(30);
@@ -60,7 +60,7 @@
   }
 }
 
-.p-information__lead {
+.information__lead {
   font-weight: $bold;
   font-size: rem(20);
   /* 24/20=1.2 */
@@ -78,12 +78,12 @@
   }
 }
 
-.p-information__text {
+.information__text {
   margin-top: rem(8);
   font-family: "Noto Sans JP";
 }
 
-.p-information__button {
+.information__button {
   text-align-last: center;
   margin-top: rem(36);
 

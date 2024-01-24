@@ -46,23 +46,23 @@
   <!-- ========
   ヘッダー
   ========= -->
-  <header class="p-header">
-    <div class="p-header__inner">
+  <header class="header">
+    <div class="header__inner">
 
       <!-- ロゴ -->
-      <h1 class="p-header__logo">
-        <a href="#" class="p-header__logoLink"><img src="./assets/images/common/LogoWhite-pc-CodeUps.svg" alt="サイトのロゴ"></a>
+      <h1 class="header__logo">
+        <a href="#" class="header__logoLink"><img src="./assets/images/common/LogoWhite-pc-CodeUps.svg" alt="サイトのロゴ"></a>
       </h1>
 
       <!-- ハンバーガーボタン -->
-      <div class="p-header__drawer c-hamburger js-hamburger">
+      <div class="header__drawer c-hamburger js-hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
       <!-- PC版ナビ（hirokiさんライブ3） -->
-      <nav class="p-header__pc-nav pc-nav">
+      <nav class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
             <a href="#">
@@ -116,7 +116,7 @@
       </nav>
 
       <!-- スマホ用ナビ（hirokiさんライブ3） -->
-      <nav class="p-header__sp-nav sp-nav js-sp-nav">
+      <nav class="header__sp-nav sp-nav js-sp-nav">
 
         <!-- ヘッダー部分（ロゴが載るところ）を一番上にしたいので要素追加 -->
         <div class="sp-nav__header"></div>
@@ -222,9 +222,9 @@
     <!-- ============
     メインビュー
     ============= -->
-    <section class="l-mv p-mv">
+    <section class="l-mv mv">
 
-      <div class="p-mv__inner">
+      <div class="mv__inner">
 
         <!-- Swiper（. mySwiper」→「.js-mv__swiper」へクラス名変更） -->
         <div class="swiper js-mv__swiper">
@@ -233,7 +233,7 @@
             <!-- スライド１ -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp0.jpg" media="(max-width: 767px)">
@@ -246,7 +246,7 @@
             <!-- スライド2 -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp1.jpg" media="(max-width: 767px)">
@@ -259,7 +259,7 @@
             <!-- スライド3 -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp2.jpg" media="(max-width: 767px)">
@@ -272,7 +272,7 @@
             <!-- スライド4 -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp3.jpg" media="(max-width: 767px)">
@@ -285,7 +285,7 @@
             <!-- スライド5 -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp0.jpg" media="(max-width: 767px)">
@@ -298,7 +298,7 @@
             <!-- スライド6 -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp1.jpg" media="(max-width: 767px)">
@@ -311,7 +311,7 @@
             <!-- スライド7 -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp2.jpg" media="(max-width: 767px)">
@@ -324,7 +324,7 @@
             <!-- スライド8 -->
             <div class="swiper-slide">
               <!-- 画像 -->
-              <div class="p-mv__img">
+              <div class="mv__img">
                 <picture>
                   <!-- 767以下の場合 -->
                   <source srcset="./assets/images/common/MV-sp3.jpg" media="(max-width: 767px)">
@@ -338,9 +338,9 @@
           <!-- <div class="swiper-pagination js-mv__pagination"></div> -->
         </div>
         
-        <div class="p-mv__header">
-          <div class="p-mv__title">DIVING</div>
-          <p class="p-mv__subtitle">into the ocean</p>
+        <div class="mv__header">
+          <div class="mv__title">DIVING</div>
+          <p class="mv__subtitle">into the ocean</p>
         </div>
 
       </div>
@@ -350,22 +350,22 @@
     <!-- =============
     セクション1・campaign
     ============== -->
-    <section class="l-campaign p-campaign">
+    <section class="l-campaign campaign">
 
-      <div class="p-campaign__wrap inner">
+      <div class="campaign__wrap inner">
 
         <!-- タイトル -->
-        <div class="p-campaign__title p-section-title">
-          <div class="p-section-title__english p-section-title__english--normal">Campaign</div>
-          <h2 class="p-section-title__japanese">キャンペーン</h2>
+        <div class="campaign__title section-title">
+          <div class="section-title__english section-title__english--normal">Campaign</div>
+          <h2 class="section-title__japanese">キャンペーン</h2>
         </div>
 
 
         <!-- カードの集まり -->
-        <div class="p-campaign__card">
+        <div class="campaign__card">
 
             <!-- Swiper -->
-            <div class="swiper js-campaign__swiper p-campaign__card-swiper">
+            <div class="swiper js-campaign__swiper campaign__card-swiper">
               <div class="swiper-wrapper">
 
                 <!-- =======
@@ -376,25 +376,25 @@
                 jsでslidesPerView（一度に表示する枚数）がスライドの枚数より多くすると止まるので注意（3枚だったら4にすると止まる）
                 ======== -->
                 <div class="swiper-slide">
-                  <a href="#" class="p-campaign__card-link p-introduction-card">
+                  <a href="#" class="campaign__card-link introduction-card">
                   
                     <!-- ブロック① -->
-                    <figure class="p-introduction-card__img">
+                    <figure class="introduction-card__img">
                       <img src="./assets/images/common/sec1-campaign1.jpg" alt="キャンペーン画像１講習">
                     </figure>
                   
                     <!-- ブロック②-->
-                    <div class="p-introduction-card__body">
-                      <p class="p-introduction-card__genre">ライセンス講習</p>
-                      <div class="p-introduction-card__name">ライセンス取得</div>
+                    <div class="introduction-card__body">
+                      <p class="introduction-card__genre">ライセンス講習</p>
+                      <div class="introduction-card__name">ライセンス取得</div>
                     </div>
                   
                     <!-- ブロック③ -->
-                    <div class="p-introduction-card__footer">
-                      <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                      <div class="p-introduction-card__price">
-                        <div class="p-introduction-card__price-before">¥56,000</div>
-                        <div class="p-introduction-card__price-after">¥46,000</div>
+                    <div class="introduction-card__footer">
+                      <p class="introduction-card__text">全部コミコミ(お一人様)</p>
+                      <div class="introduction-card__price">
+                        <div class="introduction-card__price-before">¥56,000</div>
+                        <div class="introduction-card__price-after">¥46,000</div>
                       </div>
                     </div>
                   
@@ -406,22 +406,22 @@
                 （縦長動画でも、同じサイズ感で）
                 ======== -->
                 <div class="swiper-slide">
-                  <a href="#" class="p-campaign__card-link p-introduction-card">
-                    <figure class="p-introduction-card__img">
+                  <a href="#" class="campaign__card-link introduction-card">
+                    <figure class="introduction-card__img">
                       <img src="./assets/images/common/sec1-campaign2.jpg" alt="キャンペーン画像２体験">
                     </figure>
                   
-                    <div class="p-introduction-card__body">
-                      <p class="p-introduction-card__genre">体験ダイビング</p>
-                      <div class="p-introduction-card__name">貸切体験ダイビング</div>
+                    <div class="introduction-card__body">
+                      <p class="introduction-card__genre">体験ダイビング</p>
+                      <div class="introduction-card__name">貸切体験ダイビング</div>
                     </div>
                     
                     <!-- ブロック③ -->
-                    <div class="p-introduction-card__footer">
-                      <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                      <div class="p-introduction-card__price">
-                        <div class="p-introduction-card__price-before">¥24,000</div>
-                        <div class="p-introduction-card__price-after">¥18,000</div>
+                    <div class="introduction-card__footer">
+                      <p class="introduction-card__text">全部コミコミ(お一人様)</p>
+                      <div class="introduction-card__price">
+                        <div class="introduction-card__price-before">¥24,000</div>
+                        <div class="introduction-card__price-after">¥18,000</div>
                       </div>
                     </div>
                     </a>
@@ -432,22 +432,22 @@
                 （縦長動画でも、同じサイズ感で）
                 ======== -->
                 <div class="swiper-slide">
-                  <a href="#" class="p-campaign__card-link p-introduction-card">
-                    <figure class="p-introduction-card__img">
+                  <a href="#" class="campaign__card-link introduction-card">
+                    <figure class="introduction-card__img">
                       <img src="./assets/images/common/sec1-campaign3.jpg" alt="キャンペーン画像３体験">
                     </figure>
                   
-                    <div class="p-introduction-card__body">
-                      <p class="p-introduction-card__genre">体験ダイビング</p>
-                      <div class="p-introduction-card__name">ナイトダイビング</div>
+                    <div class="introduction-card__body">
+                      <p class="introduction-card__genre">体験ダイビング</p>
+                      <div class="introduction-card__name">ナイトダイビング</div>
                     </div>
                     
                     <!-- ブロック③ -->
-                    <div class="p-introduction-card__footer">
-                      <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                      <div class="p-introduction-card__price">
-                        <div class="p-introduction-card__price-before">¥10,000</div>
-                        <div class="p-introduction-card__price-after">¥8,000</div>
+                    <div class="introduction-card__footer">
+                      <p class="introduction-card__text">全部コミコミ(お一人様)</p>
+                      <div class="introduction-card__price">
+                        <div class="introduction-card__price-before">¥10,000</div>
+                        <div class="introduction-card__price-after">¥8,000</div>
                       </div>
                     </div>
                     </a>
@@ -457,22 +457,22 @@
                 カード4（１と同じ）
                 ======== -->
                 <div class="swiper-slide">
-                  <a href="#" class="p-campaign__card-link p-introduction-card">
-                    <figure class="p-introduction-card__img">
+                  <a href="#" class="campaign__card-link introduction-card">
+                    <figure class="introduction-card__img">
                       <img src="./assets/images/common/sec1-campaign1.jpg" alt="キャンペーン画像４ダイビング">
                     </figure>
 
-                    <div class="p-introduction-card__body">
-                      <p class="p-introduction-card__genre">ファンダイビング</p>
-                      <div class="p-introduction-card__name">貸切ファンダイビング</div>
+                    <div class="introduction-card__body">
+                      <p class="introduction-card__genre">ファンダイビング</p>
+                      <div class="introduction-card__name">貸切ファンダイビング</div>
                     </div>
                     
                     <!-- ブロック③ -->
-                    <div class="p-introduction-card__footer">
-                      <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                      <div class="p-introduction-card__price">
-                        <div class="p-introduction-card__price-before">¥20,000</div>
-                        <div class="p-introduction-card__price-after">¥16,000</div>
+                    <div class="introduction-card__footer">
+                      <p class="introduction-card__text">全部コミコミ(お一人様)</p>
+                      <div class="introduction-card__price">
+                        <div class="introduction-card__price-before">¥20,000</div>
+                        <div class="introduction-card__price-after">¥16,000</div>
                       </div>
                     </div>
                   </a>
@@ -483,22 +483,22 @@
                 （縦長動画でも、同じサイズ感で）
                 ======== -->
                 <div class="swiper-slide">
-                  <a href="#" class="p-campaign__card-link p-introduction-card">
-                    <figure class="p-introduction-card__img">
+                  <a href="#" class="campaign__card-link introduction-card">
+                    <figure class="introduction-card__img">
                       <img src="./assets/images/common/sec1-campaign2.jpg" alt="キャンペーン画像５講習">
                     </figure>
                 
-                    <div class="p-introduction-card__body">
-                      <p class="p-introduction-card__genre">ライセンス講習</p>
-                      <div class="p-introduction-card__name">ライセンス取得</div>
+                    <div class="introduction-card__body">
+                      <p class="introduction-card__genre">ライセンス講習</p>
+                      <div class="introduction-card__name">ライセンス取得</div>
                     </div>
                     
                     <!-- ブロック③ -->
-                    <div class="p-introduction-card__footer">
-                      <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                      <div class="p-introduction-card__price">
-                        <div class="p-introduction-card__price-before">¥56,000</div>
-                        <div class="p-introduction-card__price-after">¥46,000</div>
+                    <div class="introduction-card__footer">
+                      <p class="introduction-card__text">全部コミコミ(お一人様)</p>
+                      <div class="introduction-card__price">
+                        <div class="introduction-card__price-before">¥56,000</div>
+                        <div class="introduction-card__price-after">¥46,000</div>
                       </div>
                     </div>
                   </a>
@@ -508,22 +508,22 @@
                 カード6（3と同じ）
                 ======== -->
                 <div class="swiper-slide">
-                  <a href="#" class="p-campaign__card-link p-introduction-card">
-                    <figure class="p-introduction-card__img">
+                  <a href="#" class="campaign__card-link introduction-card">
+                    <figure class="introduction-card__img">
                       <img src="./assets/images/common/sec1-campaign3.jpg" alt="キャンペーン画像６講習">
                     </figure>
                 
-                    <div class="p-introduction-card__body">
-                      <p class="p-introduction-card__genre">ライセンス講習</p>
-                      <div class="p-introduction-card__name">ライセンス取得</div>
+                    <div class="introduction-card__body">
+                      <p class="introduction-card__genre">ライセンス講習</p>
+                      <div class="introduction-card__name">ライセンス取得</div>
                     </div>
                     
                     <!-- ブロック③ -->
-                    <div class="p-introduction-card__footer">
-                      <p class="p-introduction-card__text">全部コミコミ(お一人様)</p>
-                      <div class="p-introduction-card__price">
-                        <div class="p-introduction-card__price-before">¥56,000</div>
-                        <div class="p-introduction-card__price-after">¥46,000</div>
+                    <div class="introduction-card__footer">
+                      <p class="introduction-card__text">全部コミコミ(お一人様)</p>
+                      <div class="introduction-card__price">
+                        <div class="introduction-card__price-before">¥56,000</div>
+                        <div class="introduction-card__price-after">¥46,000</div>
                       </div>
                     </div>
                   </a>
@@ -536,84 +536,84 @@
             <!-- Swiperここまで -->
 
             <!-- swiperの外に移動した、前へ後へボタン（2つ目のクラス名を付加した）→ -->
-            <div class="p-campaign__circle-buttons">
-              <div><a href="#" class="swiper-button-prev p-campaign__circle-button p-button-circle p-button-circle__previous"></a></div>
-              <div><a href="#" class="swiper-button-next p-campaign__circle-button p-button-circle p-button-circle__next"></a></div>
-            </div><!-- /.p-campaign__link-button -->
+            <div class="campaign__circle-buttons">
+              <div><a href="#" class="swiper-button-prev campaign__circle-button button-circle button-circle__previous"></a></div>
+              <div><a href="#" class="swiper-button-next campaign__circle-button button-circle button-circle__next"></a></div>
+            </div><!-- /.campaign__link-button -->
 
-        </div><!-- /.p-campaign__card -->
+        </div><!-- /.campaign__card -->
 
         <!-- =======
         ボタン（more）
         ======== -->
-        <div class="p-campaign__button p-button-wrap">
-          <a href="#" class="p-button">
+        <div class="campaign__button button-wrap">
+          <a href="#" class="button">
             View more
             <!-- 矢印 -->
             <span></span>
           </a>
         </div>
-      </div><!-- /.p-campaign__wrap -->
+      </div><!-- /.campaign__wrap -->
 
     </section>
 
     <!-- =============
     セクション2・About us
     ============== -->
-    <section class="l-about p-about">
+    <section class="l-about about">
       
-      <div class="p-about__inner inner">
+      <div class="about__inner inner">
 
         <!-- タイトル -->
-        <div class="p-about__title p-section-title">
-          <div class="p-section-title__english p-section-title__english--normal">About us</div>
-          <h2 class="p-section-title__japanese">私たちについて</h2>
+        <div class="about__title section-title">
+          <div class="section-title__english section-title__english--normal">About us</div>
+          <h2 class="section-title__japanese">私たちについて</h2>
         </div>
 
         <!-- セクション・aboutのタイトル以外の中身 -->
-        <div class="p-about__body">
+        <div class="about__body">
           <!-- イメージ写真 -->
-          <div class="p-about__images">
+          <div class="about__images">
             <!-- 左 -->
-            <!-- gridへの変更で、p-card__img--aboutを不使用に！ -->
-            <div class="p-about__image">
+            <!-- gridへの変更で、card__img--aboutを不使用に！ -->
+            <div class="about__image">
               <img src="./assets/images/common/sec2-aboutUs-pc1.jpg" alt="aboutのイメージ左">
             </div>
             <!-- 右 -->
-            <div class="p-about__image">
+            <div class="about__image">
               <img src="./assets/images/common/sec2-aboutUs-pc2.jpg" alt="aboutのイメージ右">
             </div>
           </div>
           
-          <div class="p-about__contents">
+          <div class="about__contents">
           
             <!-- タイトル -->
-            <div class="p-about__lead">
+            <div class="about__lead">
               Dive into<br>the Ocean
-            </div><!-- /.p-about__lead -->
+            </div><!-- /.about__lead -->
           
-            <div class="p-about__wrap">
+            <div class="about__wrap">
               <!-- 説明 -->
-              <p class="p-about__text">
+              <p class="about__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-              </p><!-- /.p-about__contents -->
+              </p><!-- /.about__contents -->
           
               <!-- =======
                         ボタン（more）
                         ======== -->
-              <div class="p-about__button p-button-wrap">
-                <a href="#" class="p-button">
+              <div class="about__button button-wrap">
+                <a href="#" class="button">
                   View more
                   <!-- 矢印 -->
                   <span></span>
                 </a>
               </div>
           
-            </div><!-- /.p-about__wrap -->
+            </div><!-- /.about__wrap -->
           
-          </div><!-- /.p-about__contents -->
-        </div><!-- /.p-about__body -->
+          </div><!-- /.about__contents -->
+        </div><!-- /.about__body -->
 
 
       </div>
@@ -623,43 +623,43 @@
     <!-- =============
     セクション3・information
     ============== -->
-    <section class="l-information p-information">
+    <section class="l-information information">
 
       
-      <div class="p-information__inner inner">
+      <div class="information__inner inner">
 
         <!-- タイトル -->
-        <div class="p-information__title p-section-title">
-          <div class="p-section-title__english p-section-title__english--normal">Information</div>
-          <h2 class="p-section-title__japanese">ダイビング情報</h2>
+        <div class="information__title section-title">
+          <div class="section-title__english section-title__english--normal">Information</div>
+          <h2 class="section-title__japanese">ダイビング情報</h2>
         </div>
 
-        <div class="p-information__body">
+        <div class="information__body">
           <!-- 画像（アニメーション） -->
           <!-- jquery使用 -->
-          <div class="p-information__image p-card__img--information colorbox">
+          <div class="information__image card__img--information colorbox">
             <img src="./assets/images/common/sec3-information1.jpg" alt="イメージ画像information">
           </div>
 
-          <div class="p-information__wrap">
-            <div class="p-information__lead">ライセンス講習</div>
-            <div class="p-information__text">
+          <div class="information__wrap">
+            <div class="information__lead">ライセンス講習</div>
+            <div class="information__text">
               当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
               正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
-            </div><!-- /.p-information__text -->
+            </div><!-- /.information__text -->
 
             <!-- =======
             ボタン（more）
             ======== -->
-            <div class="p-information__button p-button-wrap">
-              <a href="#" class="p-button">
+            <div class="information__button button-wrap">
+              <a href="#" class="button">
                 View more
                 <!-- 矢印 -->
                 <span></span>
               </a>
             </div>
 
-          </div><!-- /.p-information__wrap -->
+          </div><!-- /.information__wrap -->
         </div><!-- /.information__body -->
 
 
@@ -670,41 +670,41 @@
     <!-- =============
     セクション4・blog
     ============== -->
-    <section class="l-blog p-blog">
+    <section class="l-blog blog">
 
       <!-- 背景画像 -->
-      <div class="p-blog__background">
+      <div class="blog__background">
         <!-- あしらい -->
-        <div class="p-blog__background-fishes inner"></div>
+        <div class="blog__background-fishes inner"></div>
       </div>
 
     
-      <!-- <div class="p-blog__inner inner"> -->
-      <div class="p-blog__inner inner">
+      <!-- <div class="blog__inner inner"> -->
+      <div class="blog__inner inner">
 
         <!-- タイトル -->
-        <div class="p-blog__title p-section-title">
-          <div class="p-section-title__english">Blog</div>
-          <h2 class="p-section-title__japanese">ブログ</h2>
+        <div class="blog__title section-title">
+          <div class="section-title__english">Blog</div>
+          <h2 class="section-title__japanese">ブログ</h2>
         </div>
 
         <!-- カード群 -->
-        <div class="p-blog__items">
+        <div class="blog__items">
 
           <!-- =======
           カード２（grid仕様・hirokiライブタイプ別より）
           （縦長動画でも、同じサイズ感で）
           1枚目
           ======== -->
-          <a href="#" class="p-blog__item p-blog-card">
-            <figure class="p-blog-card__img">
+          <a href="#" class="blog__item blog-card">
+            <figure class="blog-card__img">
               <img src="./assets/images/common/sec4-blog1.jpg" alt="ブログ画像１">
             </figure>
           
-            <div class="p-blog-card__body">
+            <div class="blog-card__body">
               <time datetime="2023-11-17">2023.11.17</time>
-              <p class="p-blog-card__title">ライセンス取得</p>
-              <p class="p-blog-card__content p-normal-text">
+              <p class="blog-card__title">ライセンス取得</p>
+              <p class="blog-card__content normal-text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
               </p>
@@ -713,15 +713,15 @@
           <!-- =======
           2枚目
           ======== -->
-          <a href="#" class="p-blog__item p-blog-card">
-            <figure class="p-blog-card__img">
+          <a href="#" class="blog__item blog-card">
+            <figure class="blog-card__img">
               <img src="./assets/images/common/sec4-blog2.jpg" alt="ブログ画像２">
             </figure>
           
-            <div class="p-blog-card__body">
+            <div class="blog-card__body">
               <time datetime="2023-11-17">2023.11.17</time>
-              <p class="p-blog-card__title">ウミガメと泳ぐ</p>
-              <div class="p-blog-card__content p-normal-text">
+              <p class="blog-card__title">ウミガメと泳ぐ</p>
+              <div class="blog-card__content normal-text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
               </div>
@@ -730,15 +730,15 @@
           <!-- =======
           3枚目
           ======== -->
-          <a href="#" class="p-blog__item p-blog-card">
-            <figure class="p-blog-card__img">
+          <a href="#" class="blog__item blog-card">
+            <figure class="blog-card__img">
               <img src="./assets/images/common/sec4-blog3.jpg" alt="ブログ画像３">
             </figure>
           
-            <div class="p-blog-card__body">
+            <div class="blog-card__body">
               <time datetime="2023-11-17">2023.11.17</time>
-              <p class="p-blog-card__title">カクレクマノミ</p>
-              <div class="p-blog-card__content p-normal-text">
+              <p class="blog-card__title">カクレクマノミ</p>
+              <div class="blog-card__content normal-text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
               </div>
@@ -746,13 +746,13 @@
           </a>
 
 
-        </div><!-- /.p-blog__items -->
+        </div><!-- /.blog__items -->
 
         <!-- =======
         ボタン（more）
         ======== -->
-        <div class="p-blog__button p-button-wrap">
-          <a href="#" class="p-button">
+        <div class="blog__button button-wrap">
+          <a href="#" class="button">
             View more
             <!-- 矢印 -->
             <span></span>
@@ -767,52 +767,52 @@
     <!-- =============
     セクション5・voice
     ============== -->
-    <section class="l-voice p-voice">
+    <section class="l-voice voice">
 
       <!-- あしらい -->
-      <div class="p-voice__background-fishes inner"></div>
+      <div class="voice__background-fishes inner"></div>
 
-      <div class="p-voice__inner inner">
+      <div class="voice__inner inner">
 
         <!-- タイトル -->
-        <div class="p-voice__title p-section-title">
-          <div class="p-section-title__english p-section-title__english--normal">Voice</div>
-          <h2 class="p-section-title__japanese">お客様の声</h2>
+        <div class="voice__title section-title">
+          <div class="section-title__english section-title__english--normal">Voice</div>
+          <h2 class="section-title__japanese">お客様の声</h2>
         </div>
 
         <!-- カード群のグループ化 -->
-        <div class="p-voice__items">
+        <div class="voice__items">
 
           <!-- =======
           カード3（grid仕様・hirokiライブタイプ別より）
           リンクなし
           1枚目
           ======== -->
-          <div class="p-voice__item p-voice-card">
+          <div class="voice__item voice-card">
 
-            <div class="p-voice-card__head">
-              <div class="p-voice-card__information">
-                <div class="p-voice-card__category">
-                  <div class="p-voice-card__generation">20代(女性)</div>
-                  <div class="p-voice-card__thema"><span>ライセンス講習</span></div>
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(女性)</div>
+                  <div class="voice-card__thema"><span>ライセンス講習</span></div>
                 </div>
-                <div class="p-voice-card__title">
+                <div class="voice-card__title">
                   ここにタイトルが入ります。ここにタイトル
                 </div>
               </div>
 
               <!-- サイズ（幅・高さ）を指定 -->
-              <div class="p-voice-card__image">
+              <div class="voice-card__image">
                 <!-- 枠を作る（擬似要素もセットで） -->
                 <!-- 「.colorbox」でアニメーション -->
-                <figure class="p-voice-card__image-figure p-voice-card__img colorbox">
+                <figure class="voice-card__image-figure voice-card__img colorbox">
                   <img src="./assets/images/common/sec5-voice1.jpg" alt="お客様の声1">
                 </figure>
               </div>
 
             </div>
 
-            <div class="p-voice-card__contents">
+            <div class="voice-card__contents">
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。
@@ -823,28 +823,28 @@
           <!-- =======
           2枚目
           ======== -->
-          <div class="p-voice__item p-voice-card">
+          <div class="voice__item voice-card">
 
-            <div class="p-voice-card__head">
-              <div class="p-voice-card__information">
-                <div class="p-voice-card__category">
-                  <div class="p-voice-card__generation">20代(男性)</div>
-                  <div class="p-voice-card__thema"><span>ファンダイビング</span></div>
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(男性)</div>
+                  <div class="voice-card__thema"><span>ファンダイビング</span></div>
                 </div>
-                <div class="p-voice-card__title">
+                <div class="voice-card__title">
                   ここにタイトルが入ります。ここにタイトル
                 </div>
               </div>
 
-              <div class="p-voice-card__image">
-                <figure class="p-voice-card__image-figure p-voice-card__img colorbox">
+              <div class="voice-card__image">
+                <figure class="voice-card__image-figure voice-card__img colorbox">
                   <img src="./assets/images/common/sec5-voice2.jpg" alt="お客様の声2">
                 </figure>
               </div>
 
             </div>
 
-            <div class="p-voice-card__contents">
+            <div class="voice-card__contents">
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。
@@ -852,13 +852,13 @@
 
           </div>
 
-        </div><!-- /.p-voice__items -->
+        </div><!-- /.voice__items -->
 
         <!-- =======
               ボタン（more）
               ======== -->
-        <div class="p-voice__button p-button-wrap">
-          <a href="#" class="p-button">
+        <div class="voice__button button-wrap">
+          <a href="#" class="button">
             View more
             <!-- 矢印 -->
             <span></span>
@@ -868,28 +868,28 @@
       </div><!-- /.inner -->
 
       <!-- あしらい（後） -->
-      <div class="p-voice__background-fishes-last inner"></div>
+      <div class="voice__background-fishes-last inner"></div>
 
     </section>
 
     <!-- =============
     セクション6・price
     ============== -->
-    <section class="l-price p-price">
+    <section class="l-price price">
     
-      <div class="p-price__inner inner">
+      <div class="price__inner inner">
 
         <!-- タイトル -->
-        <div class="p-price__title p-section-title">
-          <div class="p-section-title__english p-section-title__english--normal">Price</div>
-          <h2 class="p-section-title__japanese">料金一覧</h2>
+        <div class="price__title section-title">
+          <div class="section-title__english section-title__english--normal">Price</div>
+          <h2 class="section-title__japanese">料金一覧</h2>
         </div>
 
-        <div class="p-price__wrapper">
+        <div class="price__wrapper">
 
           <!-- イメージ画像 -->
-          <div class="p-price__image-wrap">
-            <picture class="p-price__image p-card__img--price colorbox">
+          <div class="price__image-wrap">
+            <picture class="price__image card__img--price colorbox">
               <!-- 767以下の場合 -->
               <source srcset="./assets/images/common/sec6-price-sp1.jpg" media="(max-width: 767px)">
               <!-- それ以外の場合 -->
@@ -898,10 +898,10 @@
           </div>
 
           <!-- 料金一覧 -->
-          <div class="p-price__table p-service">
-            <ul class="p-service__items">
+          <div class="price__table service">
+            <ul class="service__items">
               <!-- 1つ目 -->
-              <li class="p-service__item">
+              <li class="service__item">
                 <h3>ライセンス講習</h3>
                 <dl>
                   <dt>オープンウォーターダイバーコース</dt>
@@ -917,7 +917,7 @@
                 </dl>
               </li>
               <!-- 2つ目 -->
-              <li class="p-service__item">
+              <li class="service__item">
                 <h3>体験ダイビング</h3>
                 <dl>
                   <dt>ビーチ体験ダイビング(半日)</dt>
@@ -937,7 +937,7 @@
                 </dl>
               </li>
               <!-- 3つ目 -->
-              <li class="p-service__item">
+              <li class="service__item">
                 <h3>ファンダイビング</h3>
                 <dl>
                   <dt>ビーチダイビング(2ダイブ)</dt>
@@ -957,7 +957,7 @@
                 </dl>
               </li>
               <!-- 4つ目 -->
-              <li class="p-service__item">
+              <li class="service__item">
                 <h3>スペシャルダイビング</h3>
                 <dl>
                   <dt>貸切ダイビング(2ダイブ)</dt>
@@ -976,8 +976,8 @@
         <!-- =======
         ボタン（more）
         ======== -->
-        <div class="p-price__button p-button-wrap">
-          <a href="#" class="p-button">
+        <div class="price__button button-wrap">
+          <a href="#" class="button">
             View more
             <!-- 矢印 -->
             <span></span>
@@ -985,7 +985,7 @@
         </div>
 
         <!-- あしらい -->
-        <div class="p-price__background-fishes"></div>
+        <div class="price__background-fishes"></div>
 
       </div>
     
@@ -994,33 +994,33 @@
     <!-- =============
     セクション7・contact
     ============== -->
-    <section class="l-contact p-contact">
+    <section class="l-contact contact">
       
       <div class="inner">
         
-        <div class="p-contact__inner">
+        <div class="contact__inner">
 
           <!-- PCの左側 -->
-          <div class="p-contact__contents">
+          <div class="contact__contents">
           
             <!-- ロゴ -->
-            <div class="p-contact__logo">
-              <a href="#" class="p-contact__logoLink"><img src="/assets/images/common/LogoBllue-pc-CodeUps.svg" alt="ロゴ"></a>
+            <div class="contact__logo">
+              <a href="#" class="contact__logoLink"><img src="/assets/images/common/LogoBllue-pc-CodeUps.svg" alt="ロゴ"></a>
             </div>
           
             <!-- ロゴ下の住所・地図 -->
-            <div class="p-contact__access">
+            <div class="contact__access">
           
-              <div class="p-contact__information p-contact__items">
-                <div class="p-contact__item">沖縄県那覇市1-1</div>
-                <div class="p-contact__item">TEL:0120-000-0000</div>
-                <div class="p-contact__item">営業時間:8:30-19:00</div>
-                <div class="p-contact__item">定休日:毎週火曜日</div>
-              </div><!-- /.p-contact__contents -->
+              <div class="contact__information contact__items">
+                <div class="contact__item">沖縄県那覇市1-1</div>
+                <div class="contact__item">TEL:0120-000-0000</div>
+                <div class="contact__item">営業時間:8:30-19:00</div>
+                <div class="contact__item">定休日:毎週火曜日</div>
+              </div><!-- /.contact__contents -->
           
               <!-- 地図 -->
-              <div class="p-contact__image">
-                <div class="p-contact__image-wrap p-card__img--contact">
+              <div class="contact__image">
+                <div class="contact__image-wrap card__img--contact">
                   <!-- <img src="./assets/images/common/sec6-price-sp1.jpg" alt=""> -->
                   <!-- Googleの最低高さが200だったため、カンプPCサイズ「273×148」から200÷148×273=369としている -->
                   <iframe
@@ -1032,39 +1032,39 @@
 
             </div>
           
-          </div><!-- /.p-contact__contents -->
+          </div><!-- /.contact__contents -->
 
           <!-- 縦棒 -->
-          <div class="p-contact__stripe"></div>
+          <div class="contact__stripe"></div>
 
           <!-- PCの右側 -->
-          <div class="p-contact__pop">
+          <div class="contact__pop">
 
-            <div class="p-contact__pop-inner">
+            <div class="contact__pop-inner">
               <!-- タイトル -->
-              <div class="p-contact__title p-section-title">
-                <div class="p-section-title__english p-section-title__english--normal">Contact</div>
-                <h2 class="p-section-title__japanese">お問い合わせ</h2>
+              <div class="contact__title section-title">
+                <div class="section-title__english section-title__english--normal">Contact</div>
+                <h2 class="section-title__japanese">お問い合わせ</h2>
               </div>
               
-              <div class="p-contact__lead">
+              <div class="contact__lead">
                 ご予約・お問い合わせはコチラ
               </div>
 
               <!-- =======
               ボタン（more）
               ======== -->
-              <div class="p-contact__button p-button-wrap">
-                <a href="#" class="p-button">
+              <div class="contact__button button-wrap">
+                <a href="#" class="button">
                   View more
                   <!-- 矢印 -->
                   <span></span>
                 </a>
               </div>
             </div>
-          </div><!-- /.p-contact__pop-inner -->
+          </div><!-- /.contact__pop-inner -->
 
-        </div><!-- /.p-contact__inner -->
+        </div><!-- /.contact__inner -->
 
       </div>
     
@@ -1076,30 +1076,30 @@
   <!-- =============
   セクション7・contact
   ============== -->
-  <footer class="l-footer p-footer">
-    <div class="p-footer__inner">
+  <footer class="l-footer footer">
+    <div class="footer__inner">
 
-      <div class="p-footer__header">
+      <div class="footer__header">
         <!-- ロゴ -->
-        <div class="p-footer__logo">
-          <a href="#" class="p-footer__logoLink">
+        <div class="footer__logo">
+          <a href="#" class="footer__logoLink">
             <img src="./assets/images/common/LogoWhite-pc-CodeUps.svg" alt="フッターナビのロゴ">
           </a>
         </div>
   
         <!-- SNS -->
-        <div class="p-footer__sns-items">
-          <a class="p-footer__sns-item">
+        <div class="footer__sns-items">
+          <a class="footer__sns-item">
             <img src="./assets/images/common/LogoFb.png" alt="フッターナビのFBロゴ">
           </a>
-          <a class="p-footer__sns-item">
+          <a class="footer__sns-item">
             <img src="./assets/images/common/LogoInsta.png" alt="フッターナビのインスタロゴ">
           </a>
-        </div><!-- /.p-footer__sns-items -->
+        </div><!-- /.footer__sns-items -->
       </div>
   
       <!-- フッターナビ（SPヘッダーと似てるが違う） -->
-      <nav class="p-footer__nav nav-footer">
+      <nav class="footer__nav nav-footer">
   
         <div class="nav-footer__inner">
 
@@ -1212,7 +1212,7 @@
       </nav>
             
       <!-- コピーライト -->
-      <div class="p-footer__copyright">
+      <div class="footer__copyright">
         <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
       </div>
 
@@ -1224,8 +1224,8 @@
   <!-- =======
   ボタン（上へ）
   ======== -->
-  <div class="p-to-top" id="js-pagetop">
-    <a href="#" class="p-to-top__button p-button-circle p-button-circle__top"></a>
+  <div class="to-top" id="js-pagetop">
+    <a href="#" class="to-top__button button-circle button-circle__top"></a>
   </div>
 
 </body>

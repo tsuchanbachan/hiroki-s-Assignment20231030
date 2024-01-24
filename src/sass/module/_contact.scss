@@ -12,7 +12,7 @@
   }
 }
 
-.p-contact {
+.contact {
   // padding-top: rem(80);
   // padding-bottom: rem(84);
   // padding-left: rem(25);
@@ -26,7 +26,7 @@
 }
 
 
-.p-contact__inner {
+.contact__inner {
   // padding-top: rem(24);
   display: flex;
   flex-direction: column;
@@ -49,11 +49,11 @@
   }
 }
 
-.p-contact__box {
+.contact__box {
 }
 
 /* あしらい */
-.p-contact__inner::before {
+.contact__inner::before {
   position: absolute;
   content: '';
   display: inline-block;
@@ -82,7 +82,7 @@
 }
 
 /* PCの右側 */
-.p-contact__pop {
+.contact__pop {
   margin-top: rem(40);
 
   @include mq(md) {
@@ -98,17 +98,17 @@
   }
 }
 
-.p-contact__title .p-section-title__english{
+.contact__title .section-title__english{
   font-size: rem(80);
   line-height: 1;
 }
 
-.p-contact__title .p-section-title__japanese{
+.contact__title .section-title__japanese{
   /* ピクパ優先 */
   margin-top: rem(-5);
 }
 
-.p-contact__lead {
+.contact__lead {
   margin-top: rem(8);
   color: $green;
   font-size: rem(14);
@@ -116,14 +116,14 @@
   line-height: 1.28571429;
 }
 
-.p-contact__button {
+.contact__button {
   /* ピクパ優先（40→38） */
   margin-top: rem(38);
   text-align: center;
 }
 
 /* 縦棒 */
-.p-contact__stripe {
+.contact__stripe {
   @include mq(md) {
     width: rem(1);
     height: rem(255);
@@ -132,7 +132,7 @@
 }
 
 /* PCの左側 */
-.p-contact__contents {
+.contact__contents {
   // display: flex;
   // flex-direction: column;
 
@@ -154,7 +154,7 @@
 }
 
 /* ロゴ */
-.p-contact__logo {
+.contact__logo {
   width: 100%;
   // height: rem(75);
   position: relative;
@@ -169,7 +169,7 @@
   }
 }
 
-.p-contact__logoLink {
+.contact__logoLink {
   display: block;
   width: rem(174);
   margin-left: auto;
@@ -182,7 +182,7 @@
   }
 }
 
-.p-contact__access {
+.contact__access {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -194,7 +194,7 @@
   }
 }
 
-.p-contact__information {
+.contact__information {
   font-family: 'Noto sansJP';
   letter-spacing: 0;
   margin-top: rem(16);
@@ -210,7 +210,7 @@
 }
 
 
-.p-contact__items {
+.contact__items {
   font-family: "Noto sans JP";
 
   @include mq(md) {
@@ -218,16 +218,16 @@
   }
 }
 
-.p-contact__item:not(:first-child) {
+.contact__item:not(:first-child) {
   margin-top: rem(4);
 }
 
-.p-contact__14 {
+.contact__14 {
   font-size: rem(14);
 }
 
 /* 地図 */
-.p-contact__image {
+.contact__image {
   width: 100%;
   margin-top: rem(16);
 
@@ -247,7 +247,7 @@
 }
 
 /* イメージ画像 */
-.p-contact__image-wrap {
+.contact__image-wrap {
   /* 295×160 */
   padding-top: 54.237288%;
 
@@ -269,6 +269,6 @@
 
 
 
-// .p-card__img--contact {
+// .card__img--contact {
 
 // }
