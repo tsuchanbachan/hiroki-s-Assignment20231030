@@ -3,8 +3,16 @@
 
 .l-footer {
   margin-top: rem(100);
+  padding-bottom: rem(56);
+
+  /* 動画FB修正。上下paddingは、innerではなく「p-footer」で。 */
+  padding-top: rem(48);
+  // padding-bottom: 0;
+
   @include mq(md) {
     margin-top: rem(160);
+    padding-bottom: rem(80);
+    padding-top: rem(80);
   }
 }
 
@@ -12,12 +20,9 @@
   background-color: $green;
   width: 100%;
 
-  /* 動画FB修正。上下paddingは、innnerではなく「p-footer」で。 */
-  padding-top: rem(48);
-  padding-bottom: 0;
+
 
   @include mq(md) {
-        padding-top: rem(80);
   }
 
 }
@@ -26,7 +31,7 @@
   /* 擬似要素ヒトデ分の右余白は「」で */
   // padding: rem(48) rem(15) 0;
   padding-right: rem(15);
-    padding-left: rem(15);
+  padding-left: rem(15);
 
   /* 左右余白を15として（copyrightは別）375-15*2=345だけど、paddingは別計算なので375 */
   max-width: rem(375);
@@ -141,7 +146,7 @@
 /* コピーライト */
 .p-footer__copyright {
   text-align: center;
-  padding-bottom: rem(56);
+
   /* 上余白40-最後の「.nav-footer__item-a」padding12=28
   ピクパ優先28→21 */
   margin-top: rem(21);
@@ -151,7 +156,7 @@
   @include mq(md) {
     /* 80-12（ナビのpadding分） */
     margin-top: rem(68);
-    padding-bottom: rem(80);
+
   }
 }
 

@@ -21,21 +21,19 @@
 }
 
 .p-about__inner {
-  /* ピクパ対応 */
-  margin-top: rem(26);
+  // margin-top: rem(26);
   
   @include mq(md) {
     /* gridに変更するので不要と思いきや、あしらいで必要だった */
     position: relative;
+    // margin-top: rem(40);
 
-    margin-top: rem(40);
-
-    /* gridに変更 */
-    display: grid; //背景画像とテキストの重なりのgrid
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    /* align-itemsとjustify-itemsの一括指定*/
-    place-items: center;
+    /* gridに変更。背景画像とテキストの重なりのgrid */
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 1fr;
+    // /* align-itemsとjustify-itemsの一括指定*/
+    // place-items: center;
   }
 
 }
@@ -63,6 +61,23 @@
     background-size: cover;
     // overflow: hidden;
   }
+}
+
+.p-about__body {
+  margin-top: rem(26);
+  
+    @include mq(md) {
+      /* gridに変更するので不要と思いきや、あしらいで必要だった */
+      position: relative;
+      margin-top: rem(40);
+  
+      /* gridに変更。背景画像とテキストの重なりのgrid */
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      /* align-itemsとjustify-itemsの一括指定*/
+      place-items: center;
+    }
 }
 
 /* イメージ写真群 */

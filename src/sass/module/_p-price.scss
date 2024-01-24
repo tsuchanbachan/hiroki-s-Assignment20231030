@@ -32,12 +32,10 @@
 }
 
 .p-price__inner {
-  /* ピクパ */
-  padding-top: rem(24);
+
 
   @include mq(md) {
-    /* ピクパ40→43 */
-    padding-top: rem(40);
+
 
   }
 }
@@ -47,10 +45,16 @@
   flex-direction: column;
   width: 100%;
 
+  /* ピクパ */
+  margin-top: rem(24);
+
   @include mq(md) {
     flex-direction: row-reverse;
     /* 幅は1077 */
     max-width: rem(1077);
+
+    /* ピクパ40→43 */
+    margin-top: rem(40);
   }
 }
 

@@ -54,18 +54,22 @@
 }
 
 .p-voice__inner {
-  /* 修正24→42 */
-  padding-top: rem(43);
 
-  @include mq(md) {
-    padding-top: rem(30);
-    /* これがないと、背景画像がabsoluteなので下にいってしまう */
-    position: relative;
-  }
 }
 
 /* カード群 */
 .p-voice__items {
+
+  /* 修正24→42 */
+  margin-top: rem(43);
+
+  @include mq(md) {
+    margin-top: rem(30);
+    /* これがないと、背景画像がabsoluteなので下にいってしまう */
+    position: relative;
+  }
+
+
   /* flexからgridに */
   // display: flex;
   display: grid;

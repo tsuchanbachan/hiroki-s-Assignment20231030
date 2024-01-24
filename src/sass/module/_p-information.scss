@@ -23,11 +23,16 @@
 }
 
 .p-information__inner {
+
+}
+
+.p-information__body {
   /* ピクパ優先24→26 */
-  padding-top: rem(26);
+  margin-top: rem(26);
 
   @include mq(md) {
-    padding-top: rem(40);
+    margin-top: rem(40);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
