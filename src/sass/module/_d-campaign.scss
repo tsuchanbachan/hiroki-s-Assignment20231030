@@ -1,7 +1,12 @@
 @use 'global' as *;
+@use "sass:math";
 
 .d-campaign {
-
+  margin-top: rem(52);
+  
+  @include mq(md) {
+    margin-top: rem(150);
+  }
 }
 
 .d-campaign__inner {
@@ -23,6 +28,9 @@
 /* ページナビ */
 .d-campaign__page {
   margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(70);
+  }
 }
 
 .d-campaign__page-inner {
@@ -33,9 +41,79 @@
 
 }
 
+/* カードの集まり */
+.d-campaign__cards {
+  margin-top: rem(40);
 
+}
 
-/* 1枚のカード（divの中のaタグ） */
-.d-campaign__card-link {
+.d-campaign__cards-inner {
+  padding: 0 math.div(32, 345) * 100%;
+
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
+/* 1枚のカード */
+.d-campaign__card {
   height: 100%;
+  width: 100%;
+
+  @include mq(md) {
+    max-width: rem(520);
+    width: 50% - math.div(20, 1080)*100%;
+
+  }
+}
+
+.d-campaign__card:nth-of-type(2),
+.d-campaign__card:nth-of-type(4) {
+  @include mq(md) {
+    margin-left: math.div(40, 1080) * 100%;
+  }
+}
+
+.d-campaign__card:not(:first-of-type) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.d-campaign__card:nth-of-type(3),
+.d-campaign__card:nth-of-type(4) {
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.d-campaign__cards .introduction-card__name {
+  margin-top: rem(4);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.d-campaign__cards .introduction-card__footer {
+  // padding-bottom: rem(24);
+
+  @include mq(md) {
+    padding-bottom: 0;
+  }
+}
+
+.d-campaign__cards .introduction-card__detail-content {
+  @include mq(md) {
+    padding-top: rem(24);
+  }
+}
+
+.d-campaign__cards .introduction-card__detail {
+  @include mq(md) {
+    padding-bottom: rem(40);
+    
+  }
 }

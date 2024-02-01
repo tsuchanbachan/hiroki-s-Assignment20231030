@@ -22,7 +22,7 @@
   /* 擬似要素のinline要素のままだと高さ取れない */
   display: block;
   width: 100%;
-  aspect-ratio: 375 / 480;
+  aspect-ratio: 375 / 460;
 
   @include mq(md) {
     /* 幅1440、高さ548 */
@@ -46,7 +46,7 @@
 /* 文字 */
 .mv-down__title {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
