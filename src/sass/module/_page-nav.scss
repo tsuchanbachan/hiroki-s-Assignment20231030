@@ -1,0 +1,124 @@
+@use 'global' as *;
+
+/* ======
+ページのナビ
+====== */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(md) {
+    justify-content: center;
+  }
+}
+
+.page-nav__items {
+  display: flex;
+  flex-wrap: nowrap;
+
+  @include mq(md) {
+    padding: 0 rem(40);
+  }
+
+}
+
+
+
+
+.page-nav__arrow,
+.page-nav__item {
+  width: rem(38);
+}
+
+/* ======
+矢印
+======= */
+.page-nav__arrow a {
+  position: relative;
+}
+
+.page-nav__arrow a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: rem(10);
+  height: rem(10);
+  border-left: solid rem(1) $green;
+  border-bottom: solid rem(1) $green;
+  top: 50%;
+  left: 50%;
+}
+/* 数字の「前（before）」にある矢印 */
+.page-nav__arrow.before a::after {
+  /* https: //web-camp.io/magazine/archives/87247 */
+  transform: translate(-25%, -50%) rotate(45deg);
+}
+/* 数字の「後（after）」にある矢印 */
+.page-nav__arrow.after a::after {
+  /* https: //web-camp.io/magazine/archives/87247 */
+  transform: translate(-75%, -50%) rotate(225deg);
+}
+
+.page-nav__arrow a {
+  display: block;
+  border: solid rem(1) $green;
+  width: rem(38);
+  height: rem(38);
+}
+
+
+
+/* ======
+数字
+======= */
+// .page-nav__item:nth-of-type(2),
+// .page-nav__item:nth-of-type(4) {
+//   margin-left: rem(21);
+  
+//   @include mq(md) {
+//     margin-left: 0;
+//   }
+// }
+
+
+.page-nav__item:not(:first-of-type) {
+  margin-left: rem(12);
+}
+
+.page-nav__item:nth-of-type(5),
+.page-nav__item:nth-of-type(6) {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.page-nav__item a {
+  font-size: rem(16);
+  color: $green;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  display: block;
+  border: solid rem(1) $green;
+  line-height: 1;
+  padding: rem(10);
+  
+}
+
+/* hover、is-active時の動き */
+.page-nav__arrow a:hover,
+.page-nav__item a:hover,
+.page-nav__item a.is-active {
+  background-color: $green;
+  color: $white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+}
+
+/* https: //yoncoichi.com/pseudo-hover/ */
+/* 擬似要素にhover */
+.page-nav__arrow a:hover::after {
+  border-left: solid rem(1) white;
+  border-bottom: solid rem(1) white;
+}

@@ -1,0 +1,31 @@
+@use 'global' as *;
+
+.breadcrumb {
+  font-size: rem(14);
+  margin-top: rem(8);
+}
+
+.breadclumb__inner {
+  display: flex;
+}
+
+.breadclumb__piece {
+  position: relative;
+
+}
+
+.breadclumb__piece:not(:first-of-type)::before {
+  position: absolute;
+  content: "＞";
+  display: inline-block;
+  width: rem(4);
+  height: rem(8);
+  // top: 50%;
+  left: 0;
+  // transform: translateY(-50%);
+}
+
+.breadclumb__piece:not(:first-of-type) {
+  margin-left: rem(8);
+  padding-left: rem(4 + 8 + 8);
+}

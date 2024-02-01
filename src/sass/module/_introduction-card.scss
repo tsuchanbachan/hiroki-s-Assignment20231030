@@ -75,7 +75,8 @@
     width: rem(333);
   }
 }
-.introduction-card:hover {
+/* トップページのcampaignのみホバー */
+.campaign .introduction-card:hover {
   opacity: 0.4;
 }
 /* 比率管理した画像 */
@@ -227,6 +228,35 @@
 }
 
 
+
+
+/* ========
+下層のみで使用
+======== */
+.introduction-card__detail {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.introduction-card__detail-release {
+  color: $green;
+  text-align: center;
+  margin-top: rem(32);
+}
+
+.introduction-card__detail-lead {
+  color: $green;
+  font-size: rem(14);
+  text-align: center;
+  margin-top: rem(7);
+}
+
+.introduction-card__detail-button {
+  margin-top: rem(16);
+  text-align: center;
+}
 
 
 // .introduction-card__info {
