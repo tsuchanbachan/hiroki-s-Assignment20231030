@@ -12,12 +12,12 @@
   flex-wrap: wrap;
 
   @include mq(md) {
-    flex-wrap: nowrap;
+    flex-wrap: no-wrap;
+
   }
 }
 
 .genre__item {
-  // width: rem(162);
   width: calc(50% - rem(10.5));
 
   @include mq(md) {

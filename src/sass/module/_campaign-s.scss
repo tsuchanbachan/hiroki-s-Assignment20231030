@@ -1,0 +1,32 @@
+@use 'global' as *;
+@use "sass:math";
+
+.campaign-s {
+  margin-top: rem(24);
+}
+
+.campaign-s__card:not(:first-of-type) {
+  margin-top: rem(40);
+}
+
+.campaign-s .introduction-card__body {
+  padding-top: rem(16);
+}
+
+.campaign-s .introduction-card__name {
+  text-align: center;
+}
+
+.campaign-s .introduction-card__footer {
+  padding-bottom: rem(24);
+}
+
+.campaign-s__button {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+/* 比率管理した画像 */
+.campaign-s .introduction-card__img {
+  padding-top: math.div(188, 294) * 100%;
+}

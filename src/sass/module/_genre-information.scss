@@ -1,0 +1,138 @@
+@use 'global' as *;
+@use "sass:math";
+
+
+/* ======
+ジャンルのナビ
+====== */
+.genre-information {
+
+}
+
+.genre-information__items {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  @include mq(md) {
+
+  }
+}
+
+.genre-information__item {
+  /* やりたい計算＝(100% - 20px × 2) ÷ 3 */
+  width: calc(math.div(100%, 3) - rem(13.33333));
+
+  @include mq(md) {
+    /*やりたい計算＝(100% - 90px × 2) ÷ 3 */
+    width: calc(math.div(100%, 3) - rem(60));
+    
+  }
+}
+
+.genre-information__item:not(:first-of-type) {
+
+  @include mq(md) {
+    // margin-left: rem(32);
+  }
+}
+
+
+.genre-information__link {
+  /* アイコン用 */
+  font-size: rem(14);
+  color: $green;
+  text-align: center;
+  display: block;
+  background-color: #DDF0F1;
+  line-height: math.div(40, 28);
+  padding: rem(10);
+  box-shadow: 0px 0px 15px -5px #777777;
+  transition: all 0.5s 0s ease;
+  
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: 1;
+    /* 高さ90、font24：(90-64)/2=13 */
+    padding: rem(13) rem(5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.genre-information__link-image {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.genre-information__link-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+/* 最初のliの中にあるイメージ（通常） */
+.genre-information__item:first-of-type .genre-information__link-image {
+  background-image: url(../images/common/icon-fish-green-1.png);
+}
+/* 〃（liにホバー、aがactiveな時） */
+.genre-information__item:first-of-type:hover,
+.genre-information__item:first-of-type .is-active {
+  .genre-information__link-image {
+    background-image: url(../images/common/icon-fish-white-1.png);
+  }
+}
+
+/* 2つ目のliの中にあるイメージ（通常） */
+.genre-information__item:nth-of-type(2) .genre-information__link-image {
+  background-image: url(../images/common/icon-fish-green-2.png);
+}
+/* 〃（liにホバー、aがactiveな時） */
+.genre-information__item:nth-of-type(2):hover,
+.genre-information__item:nth-of-type(2) .is-active {
+  .genre-information__link-image {
+    background-image: url(../images/common/icon-fish-white-2.png);
+  }
+}
+
+/* 3枚目のliの中にあるイメージ（通常） */
+.genre-information__item:last-of-type .genre-information__link-image {
+  background-image: url(../images/common/icon-fish-green-3.png);
+}
+/* 〃（liにホバー、aがactiveな時） 3枚目*/
+.genre-information__item:last-of-type:hover,
+.genre-information__item:last-of-type .is-active  {
+  .genre-information__link-image {
+    background-image: url(../images/common/icon-fish-white-3.png);
+  }
+}
+
+
+// .test a .test-image image {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.genre-information__link span {
+  @include mq(md) {
+    margin-left: rem(8);
+  }
+}
+
+/* ホバー時の挙動 */
+.genre-information__item a:hover,
+.genre-information__item a.is-active {
+  background-color: $green;
+  color: $white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+}
+

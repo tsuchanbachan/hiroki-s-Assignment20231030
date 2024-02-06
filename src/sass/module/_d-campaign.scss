@@ -9,6 +9,35 @@
   }
 }
 
+/* あしらい用（前） */
+.d-campaign__background-fishes {
+  position: relative;
+}
+.d-campaign__background-fishes::before {
+  @include mq(md) {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: rem(-70);
+
+    /* テキストフィードバック */
+    /* ピクパ参考に80→50→56に */
+    // left: rem(-56);
+    /* キャンバス幅1440の半分720 - 左端から100 = 620 */
+    left: calc(50% - min(48vw, rem(620)));
+
+    /* 幅437、高さ201 */
+    width: rem(301);
+    height: rem(138);
+
+    background-image: url(../images/common/illustration3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+  }
+}
+
 .d-campaign__inner {
 
 }

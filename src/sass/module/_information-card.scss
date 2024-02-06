@@ -1,0 +1,88 @@
+@use 'global' as *;
+@use "sass:math";
+
+.information-card {
+  border: solid rem(1) $green;
+}
+
+.information-card__inner {
+  padding: rem(24);
+  display: flex;
+  flex-direction: column;
+  
+  @include mq(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.information-card__contents {
+  @include mq(md) {
+    width: math.div(492, 1032) * 100%;
+    
+  }
+}
+
+.information-card__contents-name {
+  font-size: rem(24);
+  line-height: 1;
+  font-weight: bold;
+  padding-bottom: rem(8);
+  border-bottom: solid 1px $green;
+}
+
+.information-card__contents-text {
+  padding-top: rem(8);
+  line-height: math.div(24, 16);
+
+  @include mq(md) {
+    padding-top: rem(16);
+  }
+}
+
+
+
+
+/* ===================
+画像の縦横比維持するカード
+=================== */
+/* 画像の比率管理① まずはrelative */
+.information-card__image {
+  position: relative;
+
+  width: 100%;
+  margin-top: rem(8);
+
+  @include mq(md) {
+    width: math.div(492, 1032) * 100%;
+    margin-top: 0;
+    /* 1080-24*2= */
+    margin-left: math.div(48, 1032) * 100%;
+  }
+}
+
+/* 画像の比率管理② 擬似要素を作る */
+.information-card__image::before {
+  content: "";
+  /* 擬似要素のinline要素のままだと高さ取れない */
+  display: block;
+  /* 幅297、高さ189、189÷297 */
+  padding-top: 63.636363%;
+
+  @include mq(md) {
+    /* 幅492、高さ313、313÷492 */
+    padding-top: 63.617886%;
+  }
+}
+
+/* 画像の比率管理③ ②で作った箱に画像を入れる
+画像の比率が違う時にもはみ出さない */
+.information-card__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

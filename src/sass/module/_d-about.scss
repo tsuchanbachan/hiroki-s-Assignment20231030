@@ -1,6 +1,6 @@
 @use 'global' as *;
 
-.l-about {
+.l-d-about {
   /* ピクパ対応5px加算 */
   // margin-top: rem(80 + 5);
   margin-top: rem(80);
@@ -12,15 +12,45 @@
   }
 }
 
-.about {
+.d-about {
 
 }
 
-.about__title {
+/* あしらい用（前） */
+.d-about__background-fishes {
+  position: relative;
+}
+
+.d-about__background-fishes::before {
+  @include mq(md) {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: rem(-70);
+
+    /* テキストフィードバック */
+    /* ピクパ参考に80→50→56に */
+    // left: rem(-56);
+    /* キャンバス幅1440の半分720 - 左端から100 = 620 */
+    left: calc(50% - min(48vw, rem(620)));
+
+    /* 幅437、高さ201 */
+    width: rem(301);
+    height: rem(138);
+
+    background-image: url(../images/common/illustration3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+  }
+}
+
+.d-about__title {
 
 }
 
-.about__inner {
+.d-about__inner {
   // margin-top: rem(26);
   
   @include mq(md) {
@@ -38,32 +68,8 @@
 
 }
 
-/* あしらい */
-.about__inner::after {
-  @include mq(md) {
-    position: absolute;
 
-    content: '';
-    display: inline-block;
-
-    bottom: rem(-90);
-    // right: rem(-97);
-    /* ピクパに合わせて650→635へ */
-    // right: calc(50% - min(50vw, 635px));
-    right: calc(50% - min(48vw, rem(635)));
-    width: rem(194);
-    height: rem(181);
-
-    background-image: url(../images/common/illustration1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    /* coverは覆いつくす */
-    background-size: cover;
-    // overflow: hidden;
-  }
-}
-
-.about__body {
+.d-about__body {
   margin-top: rem(26);
   
     @include mq(md) {
@@ -81,7 +87,7 @@
 }
 
 /* イメージ写真群 */
-.about__images {
+.d-about__images {
   /* gridへ変更で削除 */
   // position: relative;
 
@@ -117,15 +123,9 @@
   }
 }
 
-/* これがないと、比率管理できない！！！ */
-.about__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* 左 */
-.about__image:first-child {
+.d-about__image:first-child {
   /* 128/345=37.101449275%→gridに伴ってこれも不要 */
   // width: 37.101449275%;
   /* 高さは、p-card__img--aboutでpadding-top指定 */
@@ -149,7 +149,7 @@
 }
 
 /* 右 */
-.about__image:last-child {
+.d-about__image:last-child {
   /* 281/345=81.449275362%→gridに伴ってこれも不要 */
   // width: 81.449275362%;
   // height: rem(186);
@@ -171,7 +171,7 @@
   }
 }
 
-.about__contents {
+.d-about__contents {
   width: 100%;
 
 
@@ -196,10 +196,12 @@
     color: #fff;
     /* テキストフィードバック後のピクパで0→-10 */
     justify-content: space-between;
+
+    align-items: center;
   }
 }
 
-.about__lead {
+.d-about__lead {
   font-family: $english-font-family;
   font-size: rem(40);
   line-height: 1;
@@ -220,14 +222,14 @@
   }
 }
 
-.about__wrap {
+.d-about__wrap {
 
   @include mq(md) {
     max-width: rem(400);
   }
 }
 
-.about__text {
+.d-about__text {
   /* ピクパ優先16→18 */
   margin-top: rem(18);
   
@@ -236,11 +238,49 @@
   }
 }
 
-.about__button {
-  text-align: center;
-  margin-top: rem(48);
 
-    @include mq(md) {
-      margin-top: rem(40);
-    }
+/* モーダルテスト */
+.test-modal {
+  display: flex;
+  gap: 5%;
+}
+.test-modal li {
+  width: rem(200);
+  height: rem(200);
+}
+.test-modal a {
+  width: 100%;
+  height: 100%;
+}
+.test-modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* モーダルのスタイル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+.modal-content {
+  position: relative;
+  margin: 10% auto;
+  background: #fff;
+  width: 80%;
+  max-width: rem(920);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }

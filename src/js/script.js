@@ -84,6 +84,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
+  /* =============
+  ブログページのサイドバー、アーカイブの開閉
+  ============= */
+  $('.archive__link').click(function () {
+    $(this).toggleClass('is-open');
+    $(this).next('.archive__months').toggleClass('is-open');
+  });
+
   
 });
 
@@ -143,6 +151,33 @@ $(function () {
     });
   });
 
+  /* ================
+  モーダル
+  ================ */
+  // クリック時の処理
+  $('.gallery__card a').click(function () {
+    // クリックした画像の子要素（img）のsrc属性をimgSrcの変数位に設定
+    var imgSrc = $(this).children().attr('src');
+    // bigimgのsrc属性を、imgSrcに書き換える（＝モーダル内で拡大画像として表示される）
+    $('.bigimg').children().attr('src', imgSrc);
+    // モーダルを表示させる
+    $('.modal').fadeIn();
+    // モーダル表示中に画面の縦スクロールをさせない処理
+    $('body,html').css('overflow-y', 'hidden');
+    // aタグの遷移を無効化
+    return false
+  });
+
+  //  「✕」ボタン時の処理（「✕」以外どこでも閉じるようにclassを当ててみた）
+  $('.close-btn').click(function () {
+    // モーダルを非表示に
+    $('.modal').fadeOut();
+    // 無効化していた、縦スクロールの有効化の処理
+    $('body,html').css('overflow-y', 'visible');
+    return false
+  });
+
+  
 });
 
 /* ================

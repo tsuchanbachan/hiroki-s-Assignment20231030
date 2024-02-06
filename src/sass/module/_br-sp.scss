@@ -1,0 +1,10 @@
+@use 'global' as *;
+
+// スマホの時だけ改行させる
+.br-sp {
+  display: block;
+  
+  @include mq(md) {
+    display: none; 
+  }
+}
