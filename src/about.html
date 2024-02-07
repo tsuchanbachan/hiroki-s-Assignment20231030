@@ -315,27 +315,27 @@
           <div class="gallery__body">
             <!-- 1枚目-画像の縦横比維持するカード -->
             <div class="gallery__card card__img--d-about">
-              <a href=""><img src="./assets/images/common/gallery1.jpg" alt="ギャラリー写真1枚目"></a>
+              <a href="" class="js-modal-open"><img src="./assets/images/common/gallery1.jpg" alt="ギャラリー写真1枚目"></a>
             </div>
             <!-- 2枚目-画像の縦横比維持するカード -->
             <div class="gallery__card card__img--d-about">
-              <a href=""><img src="./assets/images/common/gallery2.jpg" alt="ギャラリー写真2枚目"></a>
+              <a href="" class="js-modal-open"><img src="./assets/images/common/gallery2.jpg" alt="ギャラリー写真2枚目"></a>
             </div>
             <!-- 3枚目-画像の縦横比維持するカード -->
             <div class="gallery__card card__img--d-about">
-              <a href="#"><img src="./assets/images/common/gallery3.jpg" alt="ギャラリー写真3枚目"></a>
+              <a href="#" class="js-modal-open"><img src="./assets/images/common/gallery3.jpg" alt="ギャラリー写真3枚目"></a>
             </div>
             <!-- 4枚目-画像の縦横比維持するカード -->
             <div class="gallery__card card__img--d-about">
-              <img src="./assets/images/common/gallery4.jpg" alt="ギャラリー写真4枚目">
+              <a href="#" class="js-modal-open"><img src="./assets/images/common/gallery4.jpg" alt="ギャラリー写真4枚目"></a>
             </div>
             <!-- 5枚目-画像の縦横比維持するカード -->
             <div class="gallery__card card__img--d-about">
-              <img src="./assets/images/common/gallery5.jpg" alt="ギャラリー写真5枚目">
+              <a href="#" class="js-modal-open"><img src="./assets/images/common/gallery5.jpg" alt="ギャラリー写真5枚目"></a>
             </div>
             <!-- 6枚目-画像の縦横比維持するカード -->
             <div class="gallery__card card__img--d-about">
-              <img src="./assets/images/common/gallery6.jpg" alt="ギャラリー写真6枚目">
+              <a href="#" class="js-modal-open"><img src="./assets/images/common/gallery6.jpg" alt="ギャラリー写真6枚目"></a>
             </div>
           
           </div><!-- /.gallery__body -->
@@ -343,18 +343,23 @@
 
       </div>
 
-      <!-- モーダル部分 -->
-      <div class="modal">
-        <div class="modal-content">
-          <!-- モーダル内の画像表示部分 -->
-          <div class="bigimg"><img src="" alt="Big Image"></div>
-          <!-- 閉じるボタン -->
-          <span class="close-btn">×</span>
-        </div>
-      </div>
-
     </section>
 
+    <!-- モーダル部分 -->
+    <div class="modal js-modal">
+
+      <!-- 薄暗い背景。ここをクリックでも閉じる -->
+      <div class="modal__overlay js-modal-close"></div>
+
+      <!-- 背景の上に乗っかっているところ -->
+      <div class="modal__content">
+        <!-- 画像 -->
+        <img src="" alt="about usの画像">
+        <!-- 閉じるボタン-->
+        <!-- <p><a class="js-modal-close" href="">閉じる</a></p> -->
+      </div>
+
+    </div>
 
     <!-- =============
     セクション・contact
