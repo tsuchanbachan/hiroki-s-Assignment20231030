@@ -142,7 +142,7 @@
 
 .d-campaign__cards .introduction-card__detail {
   @include mq(md) {
-    padding-bottom: rem(40);
+    padding: 0 rem(24) rem(40);
     
   }
 }

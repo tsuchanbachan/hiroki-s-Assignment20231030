@@ -122,26 +122,26 @@
 // }
 /* ブロック② */
 .introduction-card__body {
-  padding-top: rem(16);
-  // padding: rem(16) rem(16) rem(0);
+  // padding-top: rem(16);
+  padding: rem(16) rem(16) rem(0);
   /* 1rem のぼかしで 3rem の広がりの赤っぽい影 */
   /* https: //www.bad-company.jp/drop-shadow */
   
   @include mq(md) {
     /* ピクパtop24→25 */
-    // padding: rem(24) rem(16) rem(0);
+    // padding: rem(24) rem(24) rem(0);
     padding-top: rem(24);
   }
 }
 .introduction-card__inner {
-  padding: 0 rem(16);
+  // padding: 0 rem(16);
 }
 
 .introduction-card__inner--d {
-  padding: 0 rem(16);
-  
+  // padding: 0 rem(16);
+  padding: 0;
   @include mq(md) {
-    padding: 0 rem(24);
+    // padding: 0 rem(24);
   }
 }
 
@@ -174,27 +174,30 @@
   /* ピクパ優先 */
   margin-top: rem(7);
   font-weight: $normal;
+
+  padding-bottom: rem(8);
+  border-bottom: solid rem(1) $green;
 }
 
 /* ブロック③フッター部分（プライス） */
 .introduction-card__footer {
-  // padding: rem(0) rem(16) rem(24);
-  padding-bottom: rem(24);
+  padding: rem(0) rem(16) rem(24);
+  // padding-bottom: rem(24);
   /* 下寄せ */
   margin-top: auto;
 
   @include mq(md) {
-    // padding: rem(0) rem(16) rem(40);
-    padding-bottom: rem(40);
+    padding: rem(0) rem(16) rem(40);
+    // padding-bottom: rem(40);
   }
 }
 
 .introduction-card__text {
-  border-top: solid 1px $green;
+  // border-top: solid 1px $green;
   /* 24/16=1.5 */
   line-height: 1.5;
   /* ピクパ8→6 */
-  margin-top: rem(5);
+  // margin-top: rem(5);
   padding-top: rem(8);
   text-align: center;
   font-size: rem(14);

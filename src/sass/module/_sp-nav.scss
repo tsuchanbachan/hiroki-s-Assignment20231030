@@ -60,8 +60,8 @@
 
 .sp-nav__items {
   // min-height: 100vh;
-  // min-height: calc(100vh - 188px);
-  min-height: calc( 100vh - rem(188) );
+  // min-height: calc( 100vh - rem(188) );
+  min-height: rem(650);
 
   // width: 50%;
 }

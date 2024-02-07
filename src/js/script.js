@@ -154,27 +154,41 @@ $(function () {
   /* ================
   モーダル
   ================ */
-  // クリック時の処理
-  $('.gallery__card a').click(function () {
-    // クリックした画像の子要素（img）のsrc属性をimgSrcの変数位に設定
-    var imgSrc = $(this).children().attr('src');
-    // bigimgのsrc属性を、imgSrcに書き換える（＝モーダル内で拡大画像として表示される）
-    $('.bigimg').children().attr('src', imgSrc);
-    // モーダルを表示させる
-    $('.modal').fadeIn();
-    // モーダル表示中に画面の縦スクロールをさせない処理
-    $('body,html').css('overflow-y', 'hidden');
-    // aタグの遷移を無効化
-    return false
+  /* モーダルウィンドウ */
+  /* 「.js-modal-open」ボタンをクリックで.js-modalが表示、
+  「.js-modal-close」クリックで非表示 */
+  $(function () {
+
+    /* 「js-modal-open」をクリックした時 */
+    $(".js-modal-open").on("click", function () {
+
+      /* クリックした画像のsrc属性をimgSrcの変数位に設定 */
+      // クリックしたリンクの子要素である画像のsrc属性を取得
+      var imgSrc = $(this).children().attr('src');
+      // modal__content内の子要素（img）のsrc属性を、imgSrcに書き換える（＝モーダル内で拡大画像として表示される）
+      $('.modal__content').children().attr('src', imgSrc);
+
+      /* モーダルを表示させる */
+      $(".js-modal").fadeIn();
+      return false;
+    });
+    $(".js-modal-close").on("click", function () {
+      $(".js-modal").fadeOut();
+      return false;
+    });
   });
 
-  //  「✕」ボタン時の処理（「✕」以外どこでも閉じるようにclassを当ててみた）
-  $('.close-btn').click(function () {
-    // モーダルを非表示に
-    $('.modal').fadeOut();
-    // 無効化していた、縦スクロールの有効化の処理
-    $('body,html').css('overflow-y', 'visible');
-    return false
+  /* モーダルウィンドウオープン時の背景固定 */
+  $(function () {
+    let scrollPosition;
+    $(".js-modal-open").on("click", function () {
+      scrollPosition = $(window).scrollTop();
+      $("body").addClass("fixed").css({ top: -scrollPosition });
+    });
+    $(".js-modal-close").on("click", function () {
+      $("body").removeClass("fixed").css({ top: 0 });
+      window.scrollTo(0, scrollPosition);
+    });
   });
 
   
