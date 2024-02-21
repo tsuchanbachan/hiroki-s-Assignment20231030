@@ -1,0 +1,72 @@
+@use 'global' as *;
+@use "sass:math";
+
+.d-site {
+
+}
+
+/* あしらい用（前） */
+.d-site__background-fishes {
+  position: relative;
+}
+
+.d-site__background-fishes::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background-image: url(../images/common/illustration3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* coverは覆いつくす */
+  background-size: cover;
+
+  width: rem(120);
+  height: rem(55);
+  top: rem(-24);
+  // left: calc(50% - min(48vw, rem(0)));
+  left: calc(50% - min(48vw, rem(620)));
+
+  @include mq(md) {
+    top: rem(-70);
+
+    /* テキストフィードバック */
+    /* ピクパ参考に80→50→56に */
+    // left: rem(-56);
+    /* キャンバス幅1440の半分720 - 左端から100 = 620 */
+    left: calc(50% - min(48vw, rem(620)));
+
+    /* 幅437、高さ201 */
+    width: rem(301);
+    height: rem(138);
+
+  }
+}
+
+.d-site__nav {
+  /* 52-12 */
+  margin-top: rem(40);
+
+  @include mq(md) {
+    /* 150-12=138 */
+    margin-top: rem(138);
+  }
+}
+
+.d-site__nav .nav-footer__item a {
+  color: $black1;
+}
+
+.d-site__nav /* ヒトデ */
+.nav-footer__item-a::before {
+  // position: absolute;
+  // content: '';
+  // width: rem(18);
+  // height: rem(18);
+  /* 幅18+余白4 */
+  // left: rem(-22);
+  // top: rem(12);
+  // transform: translateY(-50%);
+  background-image: url(../images/common/icon-star-green.png);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+}

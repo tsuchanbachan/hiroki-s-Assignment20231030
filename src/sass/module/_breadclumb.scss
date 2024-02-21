@@ -29,3 +29,10 @@
   margin-left: rem(8);
   padding-left: rem(4 + 8 + 8);
 }
+
+.breadclumb__piece:nth-of-type(2).breadclumb__piece:not(:last-of-type) {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}

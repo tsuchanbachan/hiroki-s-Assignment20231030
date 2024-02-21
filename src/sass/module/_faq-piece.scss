@@ -1,0 +1,107 @@
+@use 'global' as *;
+@use "sass:math";
+
+
+.faq-piece {
+
+}
+
+.faq-piece__q {
+  font-size: rem(16);
+  line-height: math.div(28, 16);
+  padding: rem(13.5) rem(16);
+  background-color: $green;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  @include mq(md) {
+    font-size: rem(20);
+    line-height: math.div(32, 20);
+    padding: rem(24) rem(40);
+  }
+}
+
+.faq-piece__q span {
+  display: block;
+  width: rem(28);
+  height: rem(28);
+  margin-left: auto;
+  // background-color: red;
+  position: relative;
+
+  @include mq(md) {
+    width: rem(32);
+    height: rem(32);
+  }
+}
+
+// .faq-piece__q::before,
+// .faq-piece__q::after {
+.faq-piece__q span::before,
+.faq-piece__q span::after {
+  content: '';
+  position: absolute;
+  // width: rem(32);
+  // height: rem(1);
+  background-color: #fff;
+  top: 50%;
+}
+
+/* 横棒 */
+.faq-piece__q span::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: rem(28);
+  height: rem(1);
+
+  @include mq(md) {
+    width: rem(32);
+  }
+}
+/* 縦棒 */
+.faq-piece__q span::after {
+  left: 50%;
+  // transform: translate(-50%, -50%) rotate(90deg);
+  transition: all 0.3s ease 0s;
+  
+  width: rem(1);
+  height: rem(28);
+  transform: translate(-50%, -50%);
+
+  @include mq(md) {
+    height: rem(32);
+  }
+}
+
+/* 「.js-accordion-btn」に「.open」付与された時の、「.faq-piece__q span::after」 */
+.js-accordion-btn.open span::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-piece__a {
+
+}
+
+.faq-piece__a-inner {
+  @include mq(md) {
+    padding-top: rem(16)
+    
+  }
+}
+/* jsでコントロールされる要素ではなくその子要素にcss当てないと崩れる */
+.faq-piece__a p {
+
+  color: #0D2936;
+  border: solid rem(1) $green;
+  padding: rem(24) rem(16);
+  line-height: math.div(161, 112);
+  
+  @include mq(md) {
+    padding: rem(40) rem(40);
+    // margin-top: rem(16);
+    line-height: math.div(92, 64);
+  }
+
+}

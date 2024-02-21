@@ -7,7 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="noindex">
   <!-- meta情報 -->
-  <title>CodeUps-課題-information</title>
+  <title>CodeUps-課題-voice</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <!-- ogp -->
@@ -227,12 +227,12 @@
         <div class="mv-down__img">
           <picture>
             <!-- 767以下の場合 -->
-            <source srcset="./assets/images/common/mv-down-sp3-information.jpg" media="(max-width: 767px)">
+            <source srcset="./assets/images/common/mv-down-sp5-voice.jpg" media="(max-width: 767px)">
             <!-- それ以外の場合 -->
-            <img src="../assets/images/common/mv-down-pc3-information.jpg" alt="">
+            <img src="../assets/images/common/mv-down-pc5-voice.jpg" alt="">
           </picture>
         </div><!-- /.mv-down__img -->
-        <h2 class="mv-down__title">Information</h2>
+        <h2 class="mv-down__title">Voice</h2>
       </div><!-- /.mv-down__inner -->
     </section>
 
@@ -242,89 +242,281 @@
     <div class="breadcrumb">
       <div class="breadclumb__inner inner">
         <span class="breadclumb__piece"><a href="#">TOP</a></span>
-        <span class="breadclumb__piece"><a href="#">キャンペーン</a></span>
+        <span class="breadclumb__piece"><a href="#">お客様の声</a></span>
       </div><!-- /.breadclumb__inner -->
     </div><!-- /.breadcrumb -->
 
 
-    <!-- ========
-    セクション・d-インフォーメーション
-    ========= -->
-    <section class="d-information">
+
+
+
+
+
+
+
+    <section class="d-voice">
 
       <!-- あしらい -->
-      <div class="d-information__background-fishes inner"></div>
+      <div class="d-voice__background-fishes inner"></div>
 
-      <div class="d-information__inner inner">
+      <div class="d-voice__inner inner">
   
         <!-- ========
         ジャンルのナビ
         ========= -->
-        <div class="d-information__navi">
-          <div class="d-information__navi-inner">
-            <nav class="d-information__navi-genre genre-information">
-              <ul class="genre-information__items">
-                <!-- 1枚目 -->
-                <li class="genre-information__item">
-                  <a class="genre-information__link is-active" href="#">
-                    <div class="genre-information__link-image"></div>
-                    <span>ライセンス<br class="br-sp">講習</span>
-                  </a>
-                </li>
-                <!-- 2枚前 -->
-                <li class="genre-information__item">
-                  <a class="genre-information__link" href="#">
-                    <div class="genre-information__link-image"></div>
-                    <span>ファン<br class="br-sp">ダイビング</span>
-                  </a>
-                </li>
-                <!-- 3枚目 -->
-                <li class="genre-information__item">
-                  <a class="genre-information__link" href="#">
-                    <div class="genre-information__link-image"></div>
-                    <span>体験<br class="br-sp">ダイビング</span>
-                  </a>
-                </li>
-              </ul><!-- /.genre-information-items -->
-            </nav><!-- /.d-information__navi-genre -->
-          </div><!-- /.d-information__navi-inner -->
-        </div><!-- /.d-information__navi -->
+        <div class="d-voice__navi">
+          <div class="d-voice__navi-inner">
+            <nav class="d-voice__navi-genre genre">
+              <ul class="genre__items">
+                <li class="genre__item"><a class="is-active" href="#">ALL</a></li><!-- /.genre-item -->
+                <li class="genre__item"><a href="#">ライセンス講習</a></li><!-- /.genre-item -->
+                <li class="genre__item"><a href="#">ファンダイビング</a></li><!-- /.genre-item -->
+                <li class="genre__item"><a href="#">体験ダイビング</a></li><!-- /.genre-item -->
+              </ul><!-- /.genre-items -->
+            </nav><!-- /.d-campaign__navi-genre -->
+          </div><!-- /.d-campaign__navi-inner -->
+        </div><!-- /.d-voice__navi -->
+
 
         <!-- =======
         カードの集まり
         ========= -->
-        <div class="d-information__cards">
-
-          <!-- 1枚のカード -->
-          <div class="d-information__card information-card">
-            <div class="information-card__inner">
-              <!-- 文章 -->
-              <div class="information-card__contents">
-                <div class="information-card__contents-name">ライセンス講習</div>
-                <div class="information-card__contents-text">
-                  泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！</div>
+        <!-- カード群のグループ化 -->
+        <div class="d-voice__items voice-cards">
+        
+          <!-- =======
+          カード3（grid仕様・hirokiライブタイプ別より）
+          リンクなし
+          1枚目
+          ======== -->
+          <div class="voice-cards__card voice-card">
+        
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(女性)</div>
+                  <div class="voice-card__thema"><span>ライセンス講習</span></div>
+                </div>
+                <div class="voice-card__title">
+                  ここにタイトルが入ります。ここにタイトル
+                </div>
               </div>
-              <!-- 画像 -->
-              <div class="information-card__image">
-                <img src="./assets/images/common/information1.jpg" alt="information写真">
-              </div><!-- /.information-card__image -->
-            </div><!-- /.information-card__inner -->
-
+        
+              <!-- サイズ（幅・高さ）を指定 -->
+              <div class="voice-card__image">
+                <!-- 枠を作る（擬似要素もセットで） -->
+                <!-- 「.colorbox」でアニメーション -->
+                <figure class="voice-card__image-figure voice-card__img colorbox">
+                  <img src="./assets/images/common/sec5-voice1.jpg" alt="お客様の声1">
+                </figure>
+              </div>
+        
+            </div>
+        
+            <div class="voice-card__contents">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。
+            </div>
+        
           </div>
+        
+          <!-- =======
+          2枚目
+          ======== -->
+          <div class="voice-cards__card voice-card">
+        
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(男性)</div>
+                  <div class="voice-card__thema"><span>ファンダイビング</span></div>
+                </div>
+                <div class="voice-card__title">
+                  ここにタイトルが入ります。ここにタイトル
+                </div>
+              </div>
+        
+              <div class="voice-card__image">
+                <figure class="voice-card__image-figure voice-card__img colorbox">
+                  <img src="./assets/images/common/sec5-voice2.jpg" alt="お客様の声2">
+                </figure>
+              </div>
+        
+            </div>
+        
+            <div class="voice-card__contents">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。
+            </div>
+        
+          </div>
+        
+          <!-- =======
+          3枚目
+          ======== -->
+          <div class="voice-cards__card voice-card">
+        
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(男性)</div>
+                  <div class="voice-card__thema"><span>ファンダイビング</span></div>
+                </div>
+                <div class="voice-card__title">
+                  ここにタイトルが入ります。ここにタイトル
+                </div>
+              </div>
+        
+              <div class="voice-card__image">
+                <figure class="voice-card__image-figure voice-card__img colorbox">
+                  <img src="./assets/images/common/sec5-voice3.jpg" alt="お客様の声2">
+                </figure>
+              </div>
+        
+            </div>
+        
+            <div class="voice-card__contents">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。
+            </div>
+        
+          </div>
+        
+          <!-- =======
+          4枚目
+          ======== -->
+          <div class="voice-cards__card voice-card">
+        
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(男性)</div>
+                  <div class="voice-card__thema"><span>ファンダイビング</span></div>
+                </div>
+                <div class="voice-card__title">
+                  ここにタイトルが入ります。ここにタイトル
+                </div>
+              </div>
+        
+              <div class="voice-card__image">
+                <figure class="voice-card__image-figure voice-card__img colorbox">
+                  <img src="./assets/images/common/sec5-voice4.jpg" alt="お客様の声2">
+                </figure>
+              </div>
+        
+            </div>
+        
+            <div class="voice-card__contents">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。
+            </div>
+        
+          </div>
+        
+          <!-- =======
+          5枚目
+          ======== -->
+          <div class="voice-cards__card voice-card">
+        
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(男性)</div>
+                  <div class="voice-card__thema"><span>ファンダイビング</span></div>
+                </div>
+                <div class="voice-card__title">
+                  ここにタイトルが入ります。ここにタイトル
+                </div>
+              </div>
+        
+              <div class="voice-card__image">
+                <figure class="voice-card__image-figure voice-card__img colorbox">
+                  <img src="./assets/images/common/sec5-voice5.jpg" alt="お客様の声2">
+                </figure>
+              </div>
+        
+            </div>
+        
+            <div class="voice-card__contents">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。
+            </div>
+        
+          </div>
+        
+          <!-- =======
+          6枚目
+          ======== -->
+          <div class="voice-cards__card voice-card">
+        
+            <div class="voice-card__head">
+              <div class="voice-card__information">
+                <div class="voice-card__category">
+                  <div class="voice-card__generation">20代(男性)</div>
+                  <div class="voice-card__thema"><span>ファンダイビング</span></div>
+                </div>
+                <div class="voice-card__title">
+                  ここにタイトルが入ります。ここにタイトル
+                </div>
+              </div>
+        
+              <div class="voice-card__image">
+                <figure class="voice-card__image-figure voice-card__img colorbox">
+                  <img src="./assets/images/common/sec5-voice6.jpg" alt="お客様の声2">
+                </figure>
+              </div>
+        
+            </div>
+        
+            <div class="voice-card__contents">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。
+            </div>
+        
+          </div>
+        
+        </div><!-- /.voice__items -->
 
-        </div>
+      </div><!-- /.d-voice__inner -->
+    </section><!-- /.d-voice -->
 
 
-      </div>
-    </section>
+    <!-- ========
+    ページのナビ
+    ========= -->
+    <div class="d-voice__page">
+      <div class="d-voice__page-inner inner">
+        <nav class="d-voice__page-nav page-nav">
+          <!-- 矢印 -->
+          <div class="page-nav__arrow before"><a href="#"></a></div>
+          <!-- 数字 -->
+          <ul class="page-nav__items">
+            <li class="page-nav__item"><a class="is-active" href="#">1</a></li>
+            <li class="page-nav__item"><a class="" href="#">2</a></li>
+            <li class="page-nav__item"><a class="" href="#">3</a></li>
+            <li class="page-nav__item"><a class="" href="#">4</a></li>
+            <li class="page-nav__item"><a class="" href="#">5</a></li>
+            <li class="page-nav__item"><a class="" href="#">6</a></li>
+          </ul><!-- /.page-nav__items -->
+          <!-- 矢印 -->
+          <div class="page-nav__arrow after"><a href="#"></a></div>
+        </nav><!-- /.d-voice__page-nav -->
+      </div><!-- /.d-voice__page-inner -->
+    </div><!-- /.d-voice__page -->
 
+    
 
 
     <!-- =============
     contact
     ============== -->
-    <!-- <section class="d-contact contact"> -->
-    <section class="d-information__contact contact">
+    <section class="l-contact contact">
       
       <div class="inner">
         

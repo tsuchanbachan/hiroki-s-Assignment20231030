@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+/* ファイルを作る「voice-cards」 */
+.voice-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(41);
+
+  @include mq(md) {
+    /* これがないと、背景画像がabsoluteなので下にいってしまう */
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: rem(80)
+  }
+}
+
+.voice-cards__card {
+
+}

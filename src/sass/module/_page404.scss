@@ -1,0 +1,39 @@
+@use 'global' as *;
+@use "sass:math";
+
+.page404__block {
+  background-color: $green;
+}
+
+.page404__inner {
+  text-align: center;
+}
+
+.page404__contents {
+  font-size: rem(80);
+  letter-spacing: 0.5em;
+  font-family: 'Lato';
+  line-height: math.div(192, 160);
+  // margin-right: -.5em;
+
+  @include mq(md) {
+    font-size: rem(160);
+  }
+}
+
+.page404__text {
+  line-height: 1.5;
+
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}
+
+.page404__btn {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+

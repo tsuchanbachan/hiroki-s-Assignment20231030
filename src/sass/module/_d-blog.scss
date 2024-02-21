@@ -71,16 +71,15 @@
 }
 
 /* カードの集まり */
-.d-blog__cards {
-  display: flex;
+.d-blog__items {
+  margin-top: rem(27);
   gap: rem(40);
-  flex-direction: column;
+  grid-template-columns: repeat(1, 1fr);
 
   @include mq(md) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: rem(80) rem(40);
-    // padding: 0;
+    margin-top: rem(80);
+    row-gap: rem(80);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -89,65 +88,7 @@
   height: 100%;
   width: 100%;
 
-  @include mq(md) {
-    max-width: rem(333);
-    /* (100%-40px)/2=50%-20px */
-    width: calc(50% - rem(20));
-
-  }
 }
-
-// .d-blog__item:nth-of-type(2),
-// .d-blog__item:nth-of-type(4) {
-//   @include mq(md) {
-//     margin-left: math.div(40, 1080) * 100%;
-//   }
-// }
-
-// .d-campaign__card:not(:first-of-type) {
-//   margin-top: rem(40);
-
-//   @include mq(md) {
-//     margin-top: 0;
-//   }
-// }
-
-// .d-campaign__card:nth-of-type(3),
-// .d-campaign__card:nth-of-type(4) {
-//   @include mq(md) {
-//     margin-top: rem(80);
-//   }
-// }
-
-// .d-campaign__cards .introduction-card__name {
-//   margin-top: rem(4);
-
-//   @include mq(md) {
-//     font-size: rem(24);
-//   }
-// }
-
-// .d-campaign__cards .introduction-card__footer {
-//   // padding-bottom: rem(24);
-
-//   @include mq(md) {
-//     padding-bottom: 0;
-//   }
-// }
-
-// .d-campaign__cards .introduction-card__detail-content {
-//   @include mq(md) {
-//     padding-top: rem(24);
-//   }
-// }
-
-// .d-campaign__cards .introduction-card__detail {
-//   @include mq(md) {
-//     padding-bottom: rem(40);
-
-//   }
-// }
-
 
 
 /* ページナビ */

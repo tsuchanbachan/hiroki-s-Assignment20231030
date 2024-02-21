@@ -7,7 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="noindex">
   <!-- meta情報 -->
-  <title>CodeUps-課題-information</title>
+  <title>CodeUps-課題-contact</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <!-- ogp -->
@@ -227,12 +227,12 @@
         <div class="mv-down__img">
           <picture>
             <!-- 767以下の場合 -->
-            <source srcset="./assets/images/common/mv-down-sp3-information.jpg" media="(max-width: 767px)">
+            <source srcset="./assets/images/common/mv-down-sp5-voice.jpg" media="(max-width: 767px)">
             <!-- それ以外の場合 -->
-            <img src="../assets/images/common/mv-down-pc3-information.jpg" alt="">
+            <img src="../assets/images/common/mv-down-pc5-voice.jpg" alt="">
           </picture>
         </div><!-- /.mv-down__img -->
-        <h2 class="mv-down__title">Information</h2>
+        <h2 class="mv-down__title">Contact</h2>
       </div><!-- /.mv-down__inner -->
     </section>
 
@@ -242,163 +242,121 @@
     <div class="breadcrumb">
       <div class="breadclumb__inner inner">
         <span class="breadclumb__piece"><a href="#">TOP</a></span>
-        <span class="breadclumb__piece"><a href="#">キャンペーン</a></span>
+        <span class="breadclumb__piece"><a href="#">お問い合わせ</a></span>
       </div><!-- /.breadclumb__inner -->
     </div><!-- /.breadcrumb -->
 
 
-    <!-- ========
-    セクション・d-インフォーメーション
-    ========= -->
-    <section class="d-information">
+
+    <section class="d-contact">
 
       <!-- あしらい -->
-      <div class="d-information__background-fishes inner"></div>
+      <div class="d-contact__background-fishes inner"></div>
 
-      <div class="d-information__inner inner">
-  
-        <!-- ========
-        ジャンルのナビ
-        ========= -->
-        <div class="d-information__navi">
-          <div class="d-information__navi-inner">
-            <nav class="d-information__navi-genre genre-information">
-              <ul class="genre-information__items">
-                <!-- 1枚目 -->
-                <li class="genre-information__item">
-                  <a class="genre-information__link is-active" href="#">
-                    <div class="genre-information__link-image"></div>
-                    <span>ライセンス<br class="br-sp">講習</span>
-                  </a>
-                </li>
-                <!-- 2枚前 -->
-                <li class="genre-information__item">
-                  <a class="genre-information__link" href="#">
-                    <div class="genre-information__link-image"></div>
-                    <span>ファン<br class="br-sp">ダイビング</span>
-                  </a>
-                </li>
-                <!-- 3枚目 -->
-                <li class="genre-information__item">
-                  <a class="genre-information__link" href="#">
-                    <div class="genre-information__link-image"></div>
-                    <span>体験<br class="br-sp">ダイビング</span>
-                  </a>
-                </li>
-              </ul><!-- /.genre-information-items -->
-            </nav><!-- /.d-information__navi-genre -->
-          </div><!-- /.d-information__navi-inner -->
-        </div><!-- /.d-information__navi -->
+      <!-- <div class="d-contact__inner inner"> -->
+      <div class="d-contact__inner">
 
-        <!-- =======
-        カードの集まり
-        ========= -->
-        <div class="d-information__cards">
+        <div class="d-contact__content form">
+          <!-- ヒロキさんの「formコーディングのパッケージ」 -->
+          <!-- https: //upsdelight.notion.site/Form-a628397c5cba46e8b0a9f99ad1e3962a -->
+          
+          <form action="" method="post" id="">
+          
 
-          <!-- 1枚のカード -->
-          <div class="d-information__card information-card">
-            <div class="information-card__inner">
-              <!-- 文章 -->
-              <div class="information-card__contents">
-                <div class="information-card__contents-name">ライセンス講習</div>
-                <div class="information-card__contents-text">
-                  泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！</div>
-              </div>
-              <!-- 画像 -->
-              <div class="information-card__image">
-                <img src="./assets/images/common/information1.jpg" alt="information写真">
-              </div><!-- /.information-card__image -->
-            </div><!-- /.information-card__inner -->
+            <!-- テキスト（名前） -->
+            <dl class="form__name">
+              <dt>
+                お名前
+              </dt>
+              <dd>
+                <input type="text" name="name" value="" />
+              </dd>
+            </dl>
 
-          </div>
+            <!-- メールアドレス -->
+            <dl class="form__address">
+              <dt>
+                メールアドレス
+              </dt>
+              <dd>
+                <input type="email" name="mail_address" value="" class="validate[]" />
+              </dd>
+            </dl>
 
+            <!-- 電話番号 -->
+            <dl class="form__telephone">
+              <dt>
+                電話番号
+              </dt>
+              <dd>
+                <input type="tel" name="telephone" value="" class="validate[]" />
+              </dd>
+            </dl>
+
+            <!-- チェックボックス -->
+            <dl class="form__check">
+              <dt class="">
+                お問合せ項目
+              </dt>
+              <dd class="">
+                <label><input checked type="checkbox" name="diving" value="チェックボックス1" /><span>ダイビング講習について</span></label>
+                <label><input type="checkbox" name="fan" value="チェックボックス2" /><span>ファンダイビングについて</span></label>
+                <label><input type="checkbox" name="try" value="チェックボックス2" /><span>体験ダイビングについて</span></label>
+              </dd>
+            </dl>
+          
+            <!-- セレクト -->
+            <dl class="form__select">
+              <dt>
+                キャンペーン
+              </dt>
+              <dd class="">
+                <select name="hoge" class="">
+                  <option value="">キャンペーン内容を選択</option>
+                  <option value="セレクト1">セレクト1</option>
+                  <option value="セレクト2">セレクト2</option>
+                </select>
+              </dd>
+            </dl>
+          
+            <!-- テキストボックス -->
+            <dl class="form__text">
+              <dt>
+                お問合せ内容
+              </dt>
+              <dd>
+                <textarea name="contents"></textarea>
+              </dd>
+            </dl>
+
+            <!-- 同意して送信 -->
+            <div class="form__concent">
+              <label><input type="checkbox" name="consent" value="送信チェック"><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>
+            </div><!-- /.form__check -->
+
+
+            <!-- 送信ボタン -->
+            <!-- <div class="form__btn">
+              <input type="button" class="form__btn-input" value="タイプ：ボタン" />
+            </div> -->
+
+            <!-- =======
+            ボタン（more）
+            ======== -->
+            <div class="form__button button-wrap">
+              <!-- <button type="submit" class="button">Send -->
+              <button type="" class="button">Send
+                <!-- 矢印 -->
+                <span></span>
+              </button>
+            </div>
+
+          </form>
         </div>
 
+      </div><!-- /.d-contact__inner -->
+    </section><!-- /.d-contact -->
 
-      </div>
-    </section>
-
-
-
-    <!-- =============
-    contact
-    ============== -->
-    <!-- <section class="d-contact contact"> -->
-    <section class="d-information__contact contact">
-      
-      <div class="inner">
-        
-        <div class="contact__inner">
-
-          <!-- PCの左側 -->
-          <div class="contact__contents">
-          
-            <!-- ロゴ -->
-            <div class="contact__logo">
-              <a href="#" class="contact__logoLink"><img src="/assets/images/common/LogoBllue-pc-CodeUps.svg" alt="ロゴ"></a>
-            </div>
-          
-            <!-- ロゴ下の住所・地図 -->
-            <div class="contact__access">
-          
-              <div class="contact__information contact__items">
-                <div class="contact__item">沖縄県那覇市1-1</div>
-                <div class="contact__item">TEL:0120-000-0000</div>
-                <div class="contact__item">営業時間:8:30-19:00</div>
-                <div class="contact__item">定休日:毎週火曜日</div>
-              </div><!-- /.contact__contents -->
-          
-              <!-- 地図 -->
-              <div class="contact__image">
-                <div class="contact__image-wrap card__img--contact">
-                  <!-- <img src="./assets/images/common/sec6-price-sp1.jpg" alt=""> -->
-                  <!-- Googleの最低高さが200だったため、カンプPCサイズ「273×148」から200÷148×273=369としている -->
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57273.023195588365!2d127.64350249878416!3d26.210859430337553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1703714891889!5m2!1sja!2sjp"
-                    width="369" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-
-            </div>
-          
-          </div><!-- /.contact__contents -->
-
-          <!-- 縦棒 -->
-          <div class="contact__stripe"></div>
-
-          <!-- PCの右側 -->
-          <div class="contact__pop">
-
-            <div class="contact__pop-inner">
-              <!-- タイトル -->
-              <div class="contact__title section-title">
-                <div class="section-title__english section-title__english--normal">Contact</div>
-                <h2 class="section-title__japanese">お問い合わせ</h2>
-              </div>
-              
-              <div class="contact__lead">
-                ご予約・お問い合わせはコチラ
-              </div>
-
-              <!-- =======
-              ボタン（more）
-              ======== -->
-              <div class="contact__button button-wrap">
-                <a href="#" class="button">
-                  View more
-                  <!-- 矢印 -->
-                  <span></span>
-                </a>
-              </div>
-            </div>
-          </div><!-- /.contact__pop-inner -->
-
-        </div><!-- /.contact__inner -->
-
-      </div>
-    
-    </section>
 
   </main>
 

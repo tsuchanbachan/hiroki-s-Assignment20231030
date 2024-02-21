@@ -1,0 +1,74 @@
+@use 'global' as *;
+
+.d-privacy {
+  margin-top: rem(52);
+
+  @include mq(md) {
+    margin-top: rem(150);
+  }}
+
+/* あしらい用（前） */
+.d-privacy__background-fishes {
+  position: relative;
+}
+
+.d-privacy__background-fishes::before {
+  position: absolute;
+    content: '';
+    display: inline-block;
+    background-image: url(../images/common/illustration3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* coverは覆いつくす */
+    background-size: cover;
+  
+    width: rem(120);
+    height: rem(55);
+    top: rem(-24);
+    // left: calc(50% - min(48vw, rem(0)));
+    left: calc(50% - min(48vw, rem(620)));
+  
+    @include mq(md) {
+      top: rem(-70);
+  
+      /* テキストフィードバック */
+      /* ピクパ参考に80→50→56に */
+      // left: rem(-56);
+      /* キャンバス幅1440の半分720 - 左端から100 = 620 */
+      left: calc(50% - min(48vw, rem(620)));
+  
+      /* 幅437、高さ201 */
+      width: rem(301);
+      height: rem(138);
+  
+    }
+}
+.d-privacy__inner {
+
+  width: 100%;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+
+  /* テキストフィードバック（767px以下の中途半端なサイズ用に） */
+  max-width: rem(600);
+
+  @include mq("md") {
+    max-width: rem(800 + 25 * 2);
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.d-privacy__wrap {
+
+}
+
+.d-privacy__contact {
+  margin-top: rem(80);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}

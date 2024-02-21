@@ -58,6 +58,8 @@
   font-weight: $normal;
   /* 48/40=1.2 */
   line-height: 1.2;
+  /* 改行させない */
+  white-space: nowrap;
 
   @include mq(md) {
     top: 60%;

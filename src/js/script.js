@@ -239,3 +239,18 @@ $(document).ready(function () {
     }
   });
 });
+
+
+/* アコーディオン */
+document.querySelectorAll('.js-accordion-btn').forEach(function (el) {
+  const next = el.nextElementSibling
+  const nextDistance = next.getBoundingClientRect().height // next要素までの距離
+  // const nextH = next.scrollHeight + 'px'
+  // const nextH = next.scrollHeight + nextDistance + 'px'
+  const nextH = nextDistance + 'px'
+  next.style.overflow = 'hidden'
+  next.style.transition = '0.5s'
+  next.style.height = 0
+  el.onclick = () => next.style.height = el.classList.toggle('open') ? nextH : 0
+  console.log(next.scrollHeight);
+})

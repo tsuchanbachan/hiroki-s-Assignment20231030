@@ -1,8 +1,8 @@
 @use 'global' as *;
 @use "sass:math";
 
-.d-information {
-  margin-top: rem(121);
+.d-voice {
+  margin-top: rem(52);
   
   @include mq(md) {
     margin-top: rem(150);
@@ -10,10 +10,10 @@
 }
 
 /* あしらい用（前） */
-.d-information__background-fishes {
+.d-voice__background-fishes {
   position: relative;
 }
-.d-information__background-fishes::before {
+.d-voice__background-fishes::before {
   @include mq(md) {
     position: absolute;
     content: '';
@@ -35,47 +35,52 @@
     background-position: center;
     /* coverは覆いつくす */
     background-size: cover;
-
-    z-index: -1;
   }
 }
 
-.d-information__inner {
+.d-voice__inner {
 
 }
 
-.d-information__navi {
+.d-voice__navi {
 
 }
 
-.d-information__navi-inner {
+.d-voice__navi-inner {
 
 }
 
-.d-information__navi-genre {
+.d-voice__navi-genre {
 
 }
 
-
-/* カードの集まり */
-.d-information__cards {
-  margin-top: rem(16);
-
+/* ページナビ */
+.d-voice__page {
+  margin-top: rem(80);
   @include mq(md) {
-    margin-top: rem(24);
+    margin-top: rem(70);
   }
+}
+
+.d-voice__page-inner {
 
 }
 
-.d-information-card {
+// .d-voice__page-nav {
 
+// }
+
+/* カード群 */
+.d-voice__items {
+  margin-top: rem(43);
 }
 
-.d-information__contact {
-  margin-top: rem(106);
+/* 1枚のカード全体 */
+.d-voice__item {
+  // width: 100%;
 
   @include mq(md) {
-    margin-top: rem(140);
-    // margin-bottom: rem(160);
+    // max-width: calc(50% - rem(40) * 1 / 2);
+
   }
 }

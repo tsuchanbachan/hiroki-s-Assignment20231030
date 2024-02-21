@@ -1,0 +1,57 @@
+@use 'global' as *;
+
+.d-page404 {
+  background-color: $green;
+  color: white;
+  padding-top: rem(80);
+  
+  @include mq(md) {
+    padding-top: rem(90);
+  }
+}
+
+.d-page404__block {
+
+}
+
+.d-page404__inner {
+  position: relative;
+}
+
+.d-page404__inner::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background-image: url(../images/common/icon-fish-404page.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  width: rem(345);
+  aspect-ratio: 1 / 1;
+
+  @include mq(md) {
+    width: rem(698);
+  }
+}
+
+.d-page404__bread {
+
+}
+
+.d-page404__block {
+  margin-top: rem(52);
+
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
+
+
+.d-page404__footer {
+  padding-top: rem(88);
+  padding-bottom: rem(56);
+  @include mq(md) {
+    padding-top: rem(228);
+    padding-bottom: rem(80);
+  }
+}
