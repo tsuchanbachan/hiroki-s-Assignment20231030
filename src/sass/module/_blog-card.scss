@@ -1,43 +1,21 @@
 @use 'global' as *;
 
-/* ---------
-１枚のカード（.blog-cardより）
---------- */
 .blog-card {
   background-color: $white;
-
-  /* 要素がインラインなのでblock要素に。 */
-  // display: block;
-  /* フッター（カテゴリ＆日付）を底辺固定のためblockではなくflexに
-  これで、margin-topが有効となる。理由は不明 */
-  // display: flex;
   display: inline-block;
-  // flex-direction: column;
-  // border: solid 1px $black0;
-  /* ピクパ優先、bottomを24→23→20 */
   padding: rem(16) rem(16) rem(21);
-
-  // width: 100%;
-
-  /* ぼかし */
-  /* https: //hiroyuki-n.github.io/boxShadow_generator/ */
   box-shadow: 0px 0px 15px -5px #777777;
-
-  @include mq(md) {
-    // max-width: calc(33.3333% - rem(25) * 2 / 3);
-  }
 }
 
 .blog-card:hover {
   opacity: 0.7;
 }
 
-/* 比率管理した画像 */
 .blog-card__img {
-  /* 201/301=66.777408% */
   padding-top: 66.777408%;
   position: relative;
 }
+
 .blog-card__img img {
   position: absolute;
   top: 50%;
@@ -49,11 +27,9 @@
 }
 
 .blog-card__body {
-  /* ピクパ優先 */
   margin-top: rem(24 - 4);
   
   @include mq(md) {
-    /* ピクパ優先 */
     margin-top: rem(20);
   }
 }
@@ -65,22 +41,17 @@
 }
 
 .blog-card__title {
-  /* 24/16=1.5 */
   line-height: 1.5;
- 
   padding-bottom: rem(1);
-
   color: $black1;
   border-bottom: solid 1px $green;
 
   @include mq(md) {
-    /* ピクパで合わせる */
     padding-bottom: 0;
   }
 }
 
 .blog-card__content {
   color: #000;
-  /* ピクパ優先16→18 */
   margin-top: rem(18);
 }

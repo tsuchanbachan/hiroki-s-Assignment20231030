@@ -1,6 +1,6 @@
 @use 'global' as *;
 
-.c-hamburger {
+.hamburger {
   position: relative;
   width: rem(30);
   // height: rem(30);
@@ -12,7 +12,7 @@
   z-index: 100;
 }
 
-.c-hamburger span {
+.hamburger span {
   position: absolute;
   width: inherit;
   height: rem(2);
@@ -21,31 +21,31 @@
 }
 
 /* 通常 */
-.c-hamburger span:nth-child(1) {
+.hamburger span:nth-child(1) {
   top: 15%;
 }
 
-.c-hamburger span:nth-child(2) {
+.hamburger span:nth-child(2) {
   top: 51%;
   opacity: 1;
 }
 
-.c-hamburger span:nth-child(3) {
+.hamburger span:nth-child(3) {
   top: 85%;
 }
 
 /* クリック時 */
-.c-hamburger.is-active span:nth-child(1) {
+.hamburger.is-active span:nth-child(1) {
   top: 60%;
   transform: rotate(45deg);
 }
 
-.c-hamburger.is-active span:nth-child(2) {
+.hamburger.is-active span:nth-child(2) {
   top: 51%;
   opacity: 0;
 }
 
-.c-hamburger.is-active span:nth-child(3) {
+.hamburger.is-active span:nth-child(3) {
   top: 60%;
   transform: rotate(-45deg);
 }
