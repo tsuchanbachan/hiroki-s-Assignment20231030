@@ -1,6 +1,5 @@
 @use 'global' as *;
 
-/* priceの中の料金一覧部分 */
 .service {
 
 }
@@ -8,7 +7,6 @@
 .service__items {
 
 }
-
 
 .service__item {
   margin-top: rem(41);
@@ -27,20 +25,9 @@
   font-weight: $bold;
 }
 
-// .service__item h3::after {
-//   content: '';
-//   width: 100%;
-//   height: rem(1);
-//   bottom: 0;
-//   left: 0;
-//   background-color: $green;
-//   position: absolute;
-// }
-
 .service__item dl {
   display: flex;
   font-size: rem(14);
-  /* 24/14 */
   line-height: 1.71428571428;
   margin-top: rem(8);
 
@@ -54,12 +41,10 @@
 .service__item dt {
   /* 253/345 */
   width: 73.33333333%;
-
 }
 
 .service__item dd {
   width: 26.6666666%;
   text-align: right;
-  /* 指定しないと、数字なので？、Gotuになる */
   font-family: 'Noto Sans JP'
 }
